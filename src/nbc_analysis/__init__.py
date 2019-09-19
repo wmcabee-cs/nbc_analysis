@@ -12,3 +12,6 @@ finally:
 
 # import to top namespace
 from .extracts.main import main as run_extracts
+from .proc_events.main import main as proc_events
+from .size_batches.main import main as size_batches
+from .agg_video_end.main import main as agg_video_end

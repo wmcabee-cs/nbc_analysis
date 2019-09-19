@@ -1,14 +1,10 @@
 from ..utils.file_utils import init_dir
+from ..utils.aws_utils import get_bucket
 from ..utils.config_utils import get_config
 import itertools
 from toolz import take, partial
 import pandas as pd
 import boto3
-
-
-def get_bucket(name):
-    s3 = boto3.resource('s3')
-    return s3.Bucket(name)
 
 
 def write_sample(extract, spec, day, bucket, workdir, limit):
