@@ -5,6 +5,8 @@ from pathlib import Path
 from nbc_analysis import run_extracts
 from nbc_analysis import proc_events
 from nbc_analysis import size_batches
+from nbc_analysis import build_aggregate_run
+from nbc_analysis import agg_video_end
 
 __author__ = "William McAbee"
 __copyright__ = "William McAbee"
@@ -26,6 +28,15 @@ def test_proc_events():
     return proc_events()
 
 
+@pytest.mark.skip()
+def test_build_aggregate_run():
+    return build_aggregate_run()
+
+def test_agg_video_end():
+    return agg_video_end()
+
+
+@pytest.mark.skip()
 def test_all():
     # run_extracts()
     test_size_batches()

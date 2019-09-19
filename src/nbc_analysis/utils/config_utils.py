@@ -45,6 +45,7 @@ SAMPLE_DAYS = ['20190701', '20190702']
 DEFAULT_CONFIG = {
     'EVENT_SET_D': '$DATA_TOP/NBC2/event_set',
     'BATCHES_D': '$DATA_TOP/NBC2/batches',
+    'AGGREGATES_D': '$DATA_TOP/NBC2/aggregates',
     'LIMIT': 3000,
     'RAW_EVENTS_BUCKET': 'nbc-digital-cloned',
     'EXTRACT_SPECS': {
@@ -55,8 +56,8 @@ DEFAULT_CONFIG = {
         # 'tvOS': {'prefix': 'NBCProd/tvOS/NBC_{day}'},
     },
     'PLATFORM': 'android',
-    'BATCH_LIMIT': 1,
-    'EVENT_LIMIT': 100,
+    'BATCH_LIMIT': 2,
+    # 'EVENT_LIMIT': 100,
     'DAYS': SAMPLE_DAYS,
     # 'DAYS': MONTH_DAYS,
     'EVENT_SETS_IN_BATCH': 10,
@@ -83,7 +84,7 @@ def get_config(config_f=None) -> Dict:
     config = yaml.safe_load(config_f.read_text())
 
     # Expand directories
-    for name in ['EVENT_SET_D', 'BATCHES_D']:
+    for name in ['EVENT_SET_D', 'BATCHES_D', 'AGGREGATES_D']:
         config[name] = os.path.expandvars(config[name])
 
     return config

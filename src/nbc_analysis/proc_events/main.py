@@ -207,8 +207,8 @@ def proc_batch(batch_id, df, bucket, outdir, event_limit=None):
                           cleanup=True)
               for key, filename_gz, batch_id in reader)
     reader = concat(reader)
-    #reader = print_events(reader)  # Prints first event
-    reader = print_events(reader, select_func=lambda event_rec, event_cnt: (event_rec.event_name == 'Video Start', 1))
+    # reader = print_events(reader)  # Prints first event
+    # reader = print_events(reader, select_func=lambda event_rec, event_cnt: (event_rec.event_name == 'Video Start', 1))
     reader = map(parse_event, reader)  # record from parsed event
     if event_limit:
         reader = take(event_limit, reader)
