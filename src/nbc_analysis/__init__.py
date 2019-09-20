@@ -16,3 +16,4 @@ from .proc_events.main import main as proc_events
 from .size_batches.main import main as size_batches
 from .agg_video_end.main import main as agg_video_end
 from .build_aggregate_run.main import main as build_aggregate_run
+from .concat_filtered_events.main import main as concat_filtered_events

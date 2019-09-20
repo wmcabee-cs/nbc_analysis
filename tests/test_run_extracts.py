@@ -7,6 +7,7 @@ from nbc_analysis import proc_events
 from nbc_analysis import size_batches
 from nbc_analysis import build_aggregate_run
 from nbc_analysis import agg_video_end
+from nbc_analysis import concat_filtered_events
 
 __author__ = "William McAbee"
 __copyright__ = "William McAbee"
@@ -32,8 +33,14 @@ def test_proc_events():
 def test_build_aggregate_run():
     return build_aggregate_run()
 
+
+@pytest.mark.skip()
 def test_agg_video_end():
     return agg_video_end()
+
+
+def test_concat_filtered_events():
+    return concat_filtered_events()
 
 
 @pytest.mark.skip()

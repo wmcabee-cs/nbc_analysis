@@ -45,6 +45,7 @@ SAMPLE_DAYS = ['20190701', '20190702']
 DEFAULT_CONFIG = {
     'EVENT_SET_D': '$DATA_TOP/NBC2/event_set',
     'BATCHES_D': '$DATA_TOP/NBC2/batches',
+    'CONCAT_D': '$DATA_TOP/NBC2/concat',
     'AGGREGATES_D': '$DATA_TOP/NBC2/aggregates',
     'LIMIT': 3000,
     'RAW_EVENTS_BUCKET': 'nbc-digital-cloned',
@@ -84,7 +85,7 @@ def get_config(config_f=None) -> Dict:
     config = yaml.safe_load(config_f.read_text())
 
     # Expand directories
-    for name in ['EVENT_SET_D', 'BATCHES_D', 'AGGREGATES_D']:
+    for name in ['EVENT_SET_D', 'BATCHES_D', 'AGGREGATES_D', 'CONCAT_D']:
         config[name] = os.path.expandvars(config[name])
 
     return config
