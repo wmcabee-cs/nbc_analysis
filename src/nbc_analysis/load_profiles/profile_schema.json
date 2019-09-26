@@ -1,0 +1,197 @@
+{
+  "camel": "2.0.0",
+  "context": "cortex/profile-schema",
+  "name": "nbc/User",
+  "title": "NBC User",
+  "description": "Profile Schema for a NBC User",
+  "attributes": [
+    {
+      "name": "mpid",
+      "questions": [],
+      "tags": [
+        "info-classification/declared"
+      ],
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-integer",
+        "innerTypes": []
+      },
+      "label": "User",
+      "description": "User ID"
+    },
+    {
+      "name": "video_cnt",
+      "questions": [],
+      "tags": [
+        "info-classification/declared"
+      ],
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-integer",
+        "innerTypes": []
+      },
+      "label": "Video Cnt",
+      "description": "Number of videos ended for the day"
+    },
+    {
+      "name": "ad_watch_cnt",
+      "questions": [],
+      "tags": [
+        "info-classification/declared"
+      ],
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-integer",
+        "innerTypes": []
+      },
+      "label": "Ad Watch Cnt",
+      "description": "Number of ad watched that ended during the day"
+    },
+    {
+      "name": "ad_duration_watched",
+      "questions": [],
+      "tags": [
+        "info-classification/declared"
+      ],
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "label": "Ad Duration Watched",
+      "description": "Total time user spent watching ads"
+    },
+    {
+      "name": "duration_watched",
+      "questions": [],
+      "tags": [
+        "info-classification/declared"
+      ],
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "label": "Duration Watched",
+      "description": "Total time user spent watching videos"
+    },
+    {
+      "name": "ads_per_video_cnt_avg",
+      "questions": [],
+      "tags": [
+        "info-classification/declared"
+      ],
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "label": "Ads per Video Cnt Avg",
+      "description": "Average # of ads watched vs # videos watched"
+    },
+    {
+      "name": "ad_vs_video_time_avg",
+      "questions": [],
+      "tags": [
+        "info-classification/declared"
+      ],
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-number",
+        "innerTypes": []
+      },
+      "label": "Ads per Video Time Avg",
+      "description": "Average time spent watching ads divided by time spent watching videos"
+    },
+    {
+      "name": "most_frequent_show",
+      "questions": [],
+      "tags": [
+        "info-classification/declared"
+      ],
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "label": "Show",
+      "description": "Most frequent show user watched during this time period"
+    },
+    {
+      "name": "most_frequent_platform",
+      "questions": [],
+      "tags": [
+        "info-classification/declared"
+      ],
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "label": "Platform",
+      "description": "Most frequent platform used by user during this time period"
+    },
+    {
+      "name": "most_frequent_ip",
+      "questions": [],
+      "tags": [
+        "info-classification/declared"
+      ],
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "label": "IP",
+      "description": "Most frequent IP used by user during this time period"
+    },
+    {
+      "name": "day",
+      "questions": [],
+      "tags": [
+        "info-classification/declared"
+      ],
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "label": "Day",
+      "description": "Day of events"
+    }
+  ],
+  "attributeTags": [
+    {
+      "context": "cortex/profile-attribute-tag",
+      "id": "d5e162f9-cf06-455d-b7da-2c5c65bd1869",
+      "name": "info-classification/declared",
+      "label": "ICD",
+      "description": "Which attributes are declared by the profile themself?"
+    },
+    {
+      "context": "cortex/profile-attribute-tag",
+      "id": "4954aec4-7815-484f-afd1-4b37a031e0a5",
+      "name": "info-classification/inferred",
+      "label": "ICI",
+      "description": "Which attributes are inferred "
+    },
+    {
+      "context": "cortex/profile-attribute-tag",
+      "id": "2bc53818-b5b5-40c7-84f7-a9131d7e6a23",
+      "name": "info-classification/observed",
+      "label": "ICO",
+      "description": "Which attributes are observed"
+    },
+    {
+      "context": "cortex/profile-attribute-tag",
+      "id": "544009cd-cf29-4da8-bb4b-4d0a07183c83",
+      "name": "info-classification/algorithmic",
+      "label": "ICA",
+      "description": "Which attributes are generated algorithimically"
+    }
+  ],
+  "facets": [],
+  "taxonomy": [],
+  "profileType": "nbc/User",
+  "tags": []
+}

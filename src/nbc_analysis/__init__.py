@@ -11,9 +11,12 @@ finally:
     del get_distribution, DistributionNotFound
 
 # import to top namespace
+from .utils.config_utils import get_config
 from .extracts.main import main as run_extracts
 from .proc_events.main import main as proc_events
 from .size_batches.main import main as size_batches
 from .agg_video_end.main import main as agg_video_end
 from .build_aggregate_run.main import main as build_aggregate_run
 from .concat_filtered_events.main import main as concat_filtered_events
+from .load_profiles.main import main as load_profiles
+from .load_profiles.main import load_schema

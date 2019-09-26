@@ -62,6 +62,7 @@ DEFAULT_CONFIG = {
     'DAYS': SAMPLE_DAYS,
     # 'DAYS': MONTH_DAYS,
     'EVENT_SETS_IN_BATCH': 10,
+    'CORTEX_SCHEMA_VERSION': 'nbc/User',
 }
 
 

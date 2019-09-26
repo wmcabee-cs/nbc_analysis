@@ -1,0 +1,46 @@
+@startuml
+!pragma teoz true
+
+hide footbox
+title Graph Service
+
+
+
+participant "Po1\nClient" as Po1Client
+
+box
+participant GraphService
+database RequestsDB  << MongoDB >>
+
+entity RequestQueue <<RabbitMQ>>
+participant DBWriter <<Deamon>>
+database MongoPo1
+participant GraphWriter <<Deamon>>
+database GraphDB <<Redis>>
+end box
+
+activate GraphService
+{start} Po1Client -> GraphService: ProfileBuilder.build()
+GraphService -> RequestsDB: rawEntityEvent
+GraphService -> RequestQueue: enqueue
+{end} GraphService -->> Po1Client
+deactivate GraphService
+
+activate DBWriter
+RequestQueue -> DBWriter: dequeue
+DBWriter -> MongoPo1: saveProfileAttribute
+deactivate DBWriter
+
+activate GraphWriter
+RequestQueue -> GraphWriter: dequeue
+GraphWriter -> GraphDB: updateEntity
+deactivate GraphWriter
+
+Po1Client -> MongoPo1: pollUntilComplete
+Po1Client -> GraphDB: pollUntilComplete
+
+
+{start} <-> {end} : latency=\n0.2secs\n x #rows
+
+
+@enduml
