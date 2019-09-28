@@ -131,7 +131,8 @@ def write_record(file, record_cnt, idx, record, profile_schema, skip_writes, sto
         end = timer()
         ret['duration'] = end - start
         ret['end_ts'] = arrow.utcnow().isoformat()
-        print( f'>>write record,{ret["file"].name},{ret["idx"]},{ret["record_cnt"]},{ret["status"]},{round(ret["duration"], 5)}')
+        print( f'>>write record,{ret["file"].name},"'
+            f'{ret["idx"]},{ret["record_cnt"]},{ret["status"]},{round(ret["duration"], 5)}')
 
 
 def main(sample_size=25, skip_writes=False, stop_on_fail=True):

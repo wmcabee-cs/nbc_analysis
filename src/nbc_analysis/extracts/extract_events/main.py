@@ -1,3 +1,4 @@
+from typing import Optional
 from toolz import take, partial, first, concat, frequencies
 from itertools import starmap
 import pandas as pd
@@ -7,10 +8,13 @@ import gzip
 from collections import namedtuple
 import pprint
 
-from ..utils.config_utils import get_config
-from ..utils.aws_utils import get_bucket
-from ..utils.file_utils import init_dir
-from ..utils.debug_utils import retval
+from ...utils.config_utils import get_config
+from ...utils.aws_utils import get_bucket
+from ...utils.file_utils import init_dir
+from ...utils.io_utils.csv_io import read_event_batches
+from ...utils.io_utils.aws_io import read_events_in_batch
+
+from ...utils.debug_utils import retval
 import shutil
 
 EVENT_NAMES_TO_KEEP = {
@@ -178,14 +182,6 @@ def parse_event(event_rec: EventRec):
     return drec
 
 
-def read_batches(indir, platform):
-    infile = indir / f'batches_{platform}.csv'
-
-    df = pd.read_csv(infile)
-    reader = df[df.extract == platform][['batch_id', 'key', 'extract_f']].groupby(['batch_id'])
-    return reader
-
-
 def proc_batch(batch_id, df, bucket, outdir, event_limit=None):
     work_d = outdir / f'_{batch_id}'
     tmp_f = (work_d / batch_id).with_suffix('.csv')
@@ -219,23 +215,29 @@ def proc_batch(batch_id, df, bucket, outdir, event_limit=None):
     return df
 
 
-def main(config_f=None):
-    # get inputs from config file
-    print(">> init proc events")
-    config = get_config(config_f)
-    batch_limit = config.get('BATCH_LIMIT')
-    event_limit = config.get('EVENT_LIMIT')
-    platform = 'android'
+def read_events_by_batch(config, batches):
+    def read_events(batch):
+        retval(batch)
 
-    print(f">> start proc run, config={config}")
-    batches_d = Path(config['BATCHES_D'])
-    bucket = get_bucket(config['RAW_EVENTS_BUCKET'])
+    reader = map(read_events, batches)
+    return reader
+
+
+def main(batches: Optional[str] = None, config_f=None):
+    config = get_config(config_f=config_f, overrides={})
+    print(f">> start extract events, config={config}")
+
+    batches = read_event_batches(config, batches)
+    reader = (read_events_in_batch(config=config, path=path, batch=batch) for path, batch in batches)
+
+    retval(first(reader))
 
     outdir = batches_d / platform
     init_dir(outdir, exist_ok=True)
 
     # Read batch files
     reader = read_batches(indir=batches_d, platform=platform)
+
     if batch_limit:
         reader = take(batch_limit, reader)
 

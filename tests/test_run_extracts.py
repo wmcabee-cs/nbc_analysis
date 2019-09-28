@@ -8,15 +8,21 @@ from nbc_analysis import size_batches
 from nbc_analysis import build_aggregate_run
 from nbc_analysis import agg_video_end
 from nbc_analysis import concat_filtered_events
+from nbc_analysis import get_config
+from importlib.resources import read_text, read_binary
+from nbc_analysis.utils.debug_utils import retval
+
+from nbc_analysis import get_test_data
 
 __author__ = "William McAbee"
 __copyright__ = "William McAbee"
 __license__ = "mit"
 
 
-@pytest.mark.skip()
 def test_run_extracts():
-    return run_extracts()
+    days = get_test_data('days.csv')
+    days = days[:2]
+    return run_extracts(days=days, use_default_config=True)
 
 
 @pytest.mark.skip()
@@ -39,6 +45,7 @@ def test_agg_video_end():
     return agg_video_end()
 
 
+@pytest.mark.skip()
 def test_concat_filtered_events():
     return concat_filtered_events()
 

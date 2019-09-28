@@ -8,50 +8,11 @@ from .debug_utils import retval
 
 CONFIG_TOP = Path.home() / '.config' / 'nbc_analysis'
 
-SAMPLE_DAYS = [
-    '20190701',
-    '20190702',
-    '20190703',
-    '20190704',
-    '20190705',
-    '20190706',
-    '20190707',
-    '20190708',
-    '20190709',
-    '20190710',
-    '20190711',
-    '20190712',
-    '20190713',
-    '20190714',
-    '20190715',
-    '20190716',
-    '20190717',
-    '20190718',
-    '20190719',
-    '20190720',
-    '20190721',
-    '20190722',
-    '20190723',
-    '20190724',
-    '20190725',
-    '20190726',
-    '20190727',
-    '20190728',
-    '20190729',
-    '20190730',
-    '20190731',
-]
-SAMPLE_DAYS = SAMPLE_DAYS[:2]
-
-
 DEFAULT_CONFIG = {
 
-    # Temporary way to pass in list of days
-    'DAYS': SAMPLE_DAYS,
     'VIDEO_END_BUCKET': 'nbc-event',
-    'LIMIT_BATCH_CNT': 2,
-    'LIMIT_EVENTS_PER_BATCH': 10,
-    'EXTRACTS_D': '$DATA_TOP/NBC2/extracts',
+    'EVENT_BATCHES_D': '$DATA_TOP/NBC2/batches',
+    'LIMIT_EVENTS_PER_BATCH': None,
 
     # 'BATCHES_D': '$DATA_TOP/NBC2/batches',
     # 'LIMIT_EVENT_CNT': 3000,
@@ -63,27 +24,42 @@ DEFAULT_CONFIG = {
 }
 
 
-
 def check_data_top():
     data_top = os.environ.get('DATA_TOP', None)
     if data_top is None:
         raise Exception("Must set environment variable DATA_TOP to run this script")
 
 
-def get_config(overrides: Dict, config_f=None) -> Dict:
+def write_example_config(config_top):
+    example_config_f = config_top / "config_example.yaml"
+    with example_config_f.open('w') as fh:
+        yaml.safe_dump(DEFAULT_CONFIG, fh)
+        print(f">> created example config file '{example_config_f}'")
+
+
+def _get_config(config_f):
+    if config_f == 'default':
+        config = DEFAULT_CONFIG
+        print(">> Using default config")
+    else:
+        config_f = Path(config_f)
+        if not config_f.is_file():
+            raise Exception(f"config file not found, '{config_f}'")
+
+        config = yaml.safe_load(config_f.read_text())
+        print(f">> loaded config '{config_f}'")
+    return config
+
+
+def get_config(*, overrides: Dict, config_f: Optional[str] = None) -> Dict:
     check_data_top()
     init_dir(CONFIG_TOP, exist_ok=True, parents=True)
-    default_config_f = CONFIG_TOP / "extracts.yaml"
+    default_config_f = CONFIG_TOP / "config.yaml"
     config_f = config_f or default_config_f
+    write_example_config(config_top=CONFIG_TOP)
 
-    always_replace = Path(CONFIG_TOP / "always_replace_config.txt").is_file()
-
-    if always_replace or not config_f.is_file():
-        with config_f.open('w') as fh:
-            yaml.safe_dump(DEFAULT_CONFIG, fh)
-            print(f">> created default config file,config_f={config_f}")
-
-    config = yaml.safe_load(config_f.read_text())
+    # merge overrides
+    config = _get_config(config_f)
     config = merge(overrides, config)
 
     # Expand directories
