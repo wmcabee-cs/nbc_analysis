@@ -12,7 +12,11 @@ DEFAULT_CONFIG = {
 
     'VIDEO_END_BUCKET': 'nbc-event',
     'EVENT_BATCHES_D': '$DATA_TOP/NBC2/batches',
-    'LIMIT_EVENTS_PER_BATCH': None,
+    'PARTITIONS_D': '$DATA_TOP/NBC2/partitions',
+
+    # For development and debugging
+    'BATCH_LIMIT': 5,  # Number of batches to process before stopping
+    'LIMIT_EVENTS_PER_BATCH': 50000,  # For development. Normally should be None
 
     # 'BATCHES_D': '$DATA_TOP/NBC2/batches',
     # 'LIMIT_EVENT_CNT': 3000,
@@ -51,7 +55,8 @@ def _get_config(config_f):
     return config
 
 
-def get_config(*, overrides: Dict, config_f: Optional[str] = None) -> Dict:
+def get_config(*, overrides: Optional[Dict] = None,
+               config_f: Optional[str] = None) -> Dict:
     check_data_top()
     init_dir(CONFIG_TOP, exist_ok=True, parents=True)
     default_config_f = CONFIG_TOP / "config.yaml"
@@ -60,7 +65,8 @@ def get_config(*, overrides: Dict, config_f: Optional[str] = None) -> Dict:
 
     # merge overrides
     config = _get_config(config_f)
-    config = merge(overrides, config)
+    if overrides is not None:
+        config = merge(overrides, config)
 
     # Expand directories
     dir_keys = list(filter(lambda x: x.endswith('_D'), config.keys()))

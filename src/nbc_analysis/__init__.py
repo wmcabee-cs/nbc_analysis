@@ -28,7 +28,7 @@ def get_test_data(filename):
     import pandas as pd
     from importlib.resources import path as data_path
     with  data_path(DATA_PATH, filename) as fh:
-        return pd.read_csv(fh, dtype=str).day.tolist()
+        return pd.read_csv(fh)
 
 
 def list_test_data():

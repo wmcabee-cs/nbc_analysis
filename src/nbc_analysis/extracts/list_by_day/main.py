@@ -4,6 +4,7 @@ from ...utils.config_utils import get_config
 from ...utils.io_utils.aws_io import list_events_by_day
 from ...utils.io_utils.csv_io import write_event_batches
 from nbc_analysis.utils.debug_utils import retval
+from toolz import first
 
 
 def save_locals(local_dict: Dict, exclude):
