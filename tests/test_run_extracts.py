@@ -36,6 +36,7 @@ def test_list_by_day():
 def test_extract_events():
     return extract_events(config_f=CONFIG_F)
 
+"""
 
 @pytest.mark.skip()
 def test_size_batches():
@@ -67,3 +68,4 @@ def test_all():
     # run_extracts()
     test_size_batches()
     return proc_events()
+"""
