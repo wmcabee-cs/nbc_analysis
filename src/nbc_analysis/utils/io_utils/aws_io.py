@@ -2,42 +2,63 @@ from ..aws_utils import get_client, get_bucket
 from ..date_utils import parse_day, get_now_zulu
 from ..func_utils import take_if_limit
 from toolz import first, concat, take, merge
+from itertools import starmap
 import time
 import json
 import pprint
 from ..debug_utils import retval
 
 import pandas as pd
+import numpy as np
 from pathlib import Path
 
 
 # TODO: Separate application code from usable component
 
-def list_events_by_day(config, days):
+def list_files_by_day(config, days):
     bucket_key = config['VIDEO_END_BUCKET']
-    limit_events_per_batch = config['LIMIT_EVENTS_PER_BATCH']
-    bucket = get_bucket(bucket_key)
-    extract_spec = 'year={year}/month={month}/event=video_end/NBCUniversal_{day}'
 
-    def list_events(day):
+    # for testing. Only pull N number of files per pattern
+    limit_files_per_day = config.get('LIMIT_FILES_PER_DAY')
+    bucket = get_bucket(bucket_key)
+    pattern_prefix = Path('year={year}/month={month}/event=video_end')
+    extract_specs = {
+        'ios': 'NBCUniversal_',
+        'android': 'NBC_',  # android, roku, tvOS
+        'web': 'NBC_App_',
+    }
+
+    def get_files(pattern_type, prefix, day):
+        # print(f">> start get_files,pattern_type={pattern_type},prefix={prefix},day={day}")
+        prefix_w_day = prefix + day
+        reader = bucket.objects.filter(Prefix=prefix_w_day).all()
+        reader = ((obj.key, obj.size) for obj in reader if obj.key.endswith('.txt'))
+        reader = take_if_limit(reader, limit_files_per_day)
+        df = pd.DataFrame.from_records(reader, columns=['file', 'size'])
+        df['pattern_type'] = pattern_type
+        regex = prefix + r'(\d+)_.+.txt'
+        df['file_dt'] = df.file.str.extract(regex, expand=False)
+        df['file_dt'] = df['file_dt']
+        # print(f">> end get_files,pattern_type={pattern_type},prefix={prefix}")
+        return df
+
+    def list_files(day):
         asof_dt = get_now_zulu()
         day_info = parse_day(day)
-        batch_id = f'evnt_vdend_{day}_{asof_dt}'
-        prefix = extract_spec.format(day=day, **day_info)
-        # print(f">> start list_objects_for_day,day={day},prefix={prefix},asof_dt={asof_dt}")
+        reader = ((pattern_type, str(pattern_prefix / f'{spec}'))
+                  for pattern_type, spec in extract_specs.items())
+        reader = (get_files(pattern_type=pattern_type,
+                            prefix=prefix_tmpl.format(**day_info),
+                            day=day)
+                  for pattern_type, prefix_tmpl in reader)
+        df = pd.concat(reader)
 
-        reader = bucket.objects.filter(Prefix=prefix).all()
-        reader = ((obj.key, obj.size) for obj in reader if obj.key.endswith('.txt'))
-        reader = take_if_limit(reader, limit_events_per_batch)
-        df = pd.DataFrame.from_records(reader, columns=['name', 'size'])
-
-        # add info to dataframe
-        df['batch_id'] = batch_id
+        df['day'] = day
         df['asof_dt'] = asof_dt
-        # print(f">> end list_objects_for_day,day={day},asof={asof_dt},cnt={len(df)},duration={duration}")
-        return (day, asof_dt), df
+        #print(f">> end list_objects_for_day,day={day},asof={asof_dt},cnt={len(df)}")
+        return day, df
 
-    return map(list_events, days)
+    return map(list_files, days)
 
 
 def safe_json_loads(line):

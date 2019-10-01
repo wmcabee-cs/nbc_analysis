@@ -2,7 +2,7 @@
 import pytest
 from pathlib import Path
 
-from nbc_analysis import get_config, get_test_data, list_by_day, extract_events
+from nbc_analysis import get_config, get_test_data, extract_file_lists, extract_events
 from nbc_analysis.utils.debug_utils import retval
 import numpy as np
 
@@ -22,26 +22,11 @@ def test_get_config():
     return config
 
 
-@pytest.mark.skip()
-def test_list_by_day():
-    days = get_test_data('days.csv')
-    config = test_get_config()
-    batch_limit = config.get('BATCH_LIMIT', None)
-    days = days[:batch_limit].day.astype(np.str).tolist()
-
-    list_by_day(days=days, config_f=CONFIG_F)
-    return None
-
 
 def test_extract_events():
     return extract_events(config_f=CONFIG_F)
 
 """
-
-@pytest.mark.skip()
-def test_size_batches():
-    return size_batches()
-
 
 @pytest.mark.skip()
 def test_proc_events():

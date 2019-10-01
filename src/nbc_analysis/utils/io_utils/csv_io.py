@@ -7,6 +7,18 @@ import pandas as pd
 from ...utils.debug_utils import retval
 
 
+def write_file_lists(config, reader):
+    # read configuration
+    outdir = Path(config['FILE_LISTS_D'])
+    outdir = init_dir(outdir, parents=True, exist_ok=True, rmtree=True)
+
+    for day, df in reader:
+        filename = f've_{day}.csv.gz'
+        outfile = outdir / filename
+        df.to_csv(outfile, index=False)
+        print(f">> wrote {outfile},cnt={len(df)}")
+
+
 def write_event_batches(config, reader):
     # read configuration
     extract_d = Path(config['EVENT_BATCHES_D'])
@@ -22,7 +34,7 @@ def write_event_batches(config, reader):
 def mk_batch_id(file):
     file = file.stem
     batch_id = file.replace('.csv', '').replace('.gz', '')
-    return  batch_id
+    return batch_id
 
 
 def read_event_batches(config):

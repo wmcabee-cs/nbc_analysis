@@ -12,11 +12,19 @@ DEFAULT_CONFIG = {
 
     'VIDEO_END_BUCKET': 'nbc-event',
     'EVENT_BATCHES_D': '$DATA_TOP/NBC2/batches',
+    'FILE_LISTS_D': '$DATA_TOP/NBC2/file_lists',
+    'BATCH_SPEC_D': '$DATA_TOP/NBC2/batch_spec',
     'PARTITIONS_D': '$DATA_TOP/NBC2/partitions',
 
-    # For development and debugging
-    'BATCH_LIMIT': 5,  # Number of batches to process before stopping
-    'LIMIT_EVENTS_PER_BATCH': 50000,  # For development. Normally should be None
+    'BATCH_SIZE': 2 * 10 ** 8,  # start new batch when cummulative size gets to this limit
+
+    # FOR DEVELOPMENT
+    'DAYS_LIMIT': 7,  # FOR DEV. Number of days to process before stopping
+    # 'LIMIT_FILES_PER_DAY': 2000,  # FOR DEV. Max # of files in the file list each day
+    # 'LIMIT_FILE_LISTS': 3  FOR DEV. # of days that will be included in batch spec file
+
+    ############
+    # ?? 'LIMIT_EVENTS_PER_BATCH': 50000,  # FOR DEV. Normally should be None
 
     # 'BATCHES_D': '$DATA_TOP/NBC2/batches',
     # 'LIMIT_EVENT_CNT': 3000,
