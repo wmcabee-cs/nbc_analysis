@@ -11,17 +11,19 @@ CONFIG_TOP = Path.home() / '.config' / 'nbc_analysis'
 DEFAULT_CONFIG = {
 
     'VIDEO_END_BUCKET': 'nbc-event',
-    'EVENT_BATCHES_D': '$DATA_TOP/NBC2/batches',
+    'BATCHES_D': '$DATA_TOP/NBC2/batches',
     'FILE_LISTS_D': '$DATA_TOP/NBC2/file_lists',
     'BATCH_SPEC_D': '$DATA_TOP/NBC2/batch_spec',
-    'PARTITIONS_D': '$DATA_TOP/NBC2/partitions',
+    'DAYS_D': '$DATA_TOP/NBC2/days',
 
     'BATCH_SIZE': 2 * 10 ** 8,  # start new batch when cummulative size gets to this limit
 
     # FOR DEVELOPMENT
-    'DAYS_LIMIT': 7,  # FOR DEV. Number of days to process before stopping
-    # 'LIMIT_FILES_PER_DAY': 2000,  # FOR DEV. Max # of files in the file list each day
-    # 'LIMIT_FILE_LISTS': 3  FOR DEV. # of days that will be included in batch spec file
+    'DAYS_LIMIT': 2,  # FOR DEV. Number of days to process before stopping
+    'LIMIT_FILES_PER_DAY': None,  #2000,  # FOR DEV. Max # of files in the file list each day
+    'LIMIT_FILE_LISTS': None,  #  FOR DEV. # of days that will be included in batch spec file
+    'BATCH_LIMIT': 2,
+    'BATCH_FILES_LIMIT': 2,
 
     ############
     # ?? 'LIMIT_EVENTS_PER_BATCH': 50000,  # FOR DEV. Normally should be None
@@ -45,7 +47,7 @@ def check_data_top():
 def write_example_config(config_top):
     example_config_f = config_top / "config_example.yaml"
     with example_config_f.open('w') as fh:
-        yaml.safe_dump(DEFAULT_CONFIG, fh)
+        yaml.dump(DEFAULT_CONFIG, fh, default_flow_style=False)
         print(f">> created example config file '{example_config_f}'")
 
 

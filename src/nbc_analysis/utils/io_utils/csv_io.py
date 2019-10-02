@@ -31,14 +31,28 @@ def write_event_batches(config, reader):
         print(f">> wrote {outfile},cnt={len(df)}")
 
 
-def mk_batch_id(file):
-    file = file.stem
-    batch_id = file.replace('.csv', '').replace('.gz', '')
-    return batch_id
+def read_event_batches(batch_spec_d, batch_limit, batch_files_limit):
+    infile = batch_spec_d / 'batch_to_file.csv'
+    files = pd.read_csv(infile)
 
+    if batch_limit is not None:
+        print(f">> WARNING: Limit batch count,batch_limit={batch_limit}")
+    if batch_files_limit is not None:
+        print(f">> WARNING: Limit files in batch to first n,batch_files_limit={batch_files_limit}")
 
-def read_event_batches(config):
-    batches_d = Path(config['EVENT_BATCHES_D'])
-    batches = sorted(concatv(batches_d.glob('*.csv'), batches_d.glob('*.csv.gz')))
-    reader = ((mk_batch_id(file), pd.read_csv(file)) for file in batches)
+    def get_files_for_batch(batch):
+        df = files[files.batch_id == batch.batch_id]
+        if batch_files_limit is not None:
+            df = df.iloc[:batch_files_limit]
+        df = df.copy()
+        df.set_index('order_idx', inplace=True)
+        return batch, df
+
+    infile = batch_spec_d / 'batches.csv'
+    batches = pd.read_csv(infile)
+    if batch_limit is not None:
+        batches = batches[:batch_limit]
+    reader = batches.itertuples(name="Batch")
+    reader = map(get_files_for_batch, reader)
+
     return reader

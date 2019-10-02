@@ -55,7 +55,7 @@ def list_files_by_day(config, days):
 
         df['day'] = day
         df['asof_dt'] = asof_dt
-        #print(f">> end list_objects_for_day,day={day},asof={asof_dt},cnt={len(df)}")
+        # print(f">> end list_objects_for_day,day={day},asof={asof_dt},cnt={len(df)}")
         return day, df
 
     return map(list_files, days)
@@ -72,31 +72,28 @@ def safe_json_loads(line):
 
 # TODO: Separate application code from usable component
 # TODO: Logging too much per batch.  Add init section for one time logging
-def read_events_in_batch(config, batch_id, batch):
-    first_rec = batch.iloc[0]
-    asof_dt = first_rec.asof_dt
+def read_events_in_batch(config, batch, files):
     bucket = config['VIDEO_END_BUCKET']
+
+    batch_id = batch.batch_id
     print(f'>> start event download,batch_id={batch_id}')
-    limit_events_per_batch = config.get("LIMIT_EVENTS_PER_BATCH")
-    if limit_events_per_batch is None:
-        print(f">> WARNING: Limiting events to no more than {limit_events_per_batch} events per batch")
     s3 = get_client()
 
-    def download_events(name):
-        print(f">>downloading {name}")
+    as_of_dt = get_now_zulu()
 
-        filename = Path(name).name
+    def download_events(file):
+        #print(f">>downloading file='{file.file}'")
 
-        retr = s3.get_object(Bucket=bucket, Key=str(name))
+        filename = Path(file.file).name
+
+        retr = s3.get_object(Bucket=bucket, Key=str(file.file))
         reader = retr['Body'].iter_lines()
         reader = map(safe_json_loads, reader)
-        reader = (merge(x, {'file_idx': file_idx, 'file': filename, 'asof_dt': asof_dt})
+        reader = (merge(x, {'file_idx': file.Index, 'file': filename, 'asof_dt': as_of_dt})
                   for file_idx, x in enumerate(reader))
         return reader
 
-    reader = map(download_events, batch.name)
+    reader = map(download_events, files.itertuples(name="EventFile"))
     reader = concat(reader)
-    if limit_events_per_batch is not None:
-        reader = take(limit_events_per_batch, reader)
 
-    return batch_id, reader
+    return batch, reader

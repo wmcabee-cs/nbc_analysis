@@ -17,61 +17,69 @@ from ...utils.io_utils.aws_io import read_events_in_batch
 from ...utils.debug_utils import retval, StopEarlyException
 import shutil
 
+EMPTY_DICT = {}
 
-def parse_event(batch_id, event):
+MISSING = 'Not Set'
+
+
+def replace_none(astr):
+    if astr == 'None':
+        return None
+    return astr
+
+
+def parse_event(batch, event):
     try:
         detail = event['events'][0]
         data = detail['data']
         custom_attrs = data['custom_attributes']
-        device_current_state = data['device_current_state']
+        user_attrs = event.get('user_attributes', EMPTY_DICT)
+        device_current_state = data.get('device_current_state', EMPTY_DICT)
         # $retval(custom_attrs)
         # customer_id = parse_customer_id(user_identities=event.get('user_identities'))
         drec = {
-            'batch_id': batch_id,
+            'batch_id': batch.batch_id,
             'file': event['file'],
             'file_idx': event['file_idx'],
             'asof_dt': event['asof_dt'],
 
             # USER
             'mpid': event['mpid'],
-            'nbc_profile': custom_attrs.get('User Profile', 'None'),
-            'mvpd': custom_attrs.get('MVPD', 'None'),
-            'profile_status': 'TBD',  # calculated
+            'nbc_profile': user_attrs.get('User Profile', MISSING),
+            'mvpd': custom_attrs.get('MVPD', MISSING),
 
             # EVENT_TYPE
             'event_name': data['event_name'],
             'event_type': detail['event_type'],
 
             # PLATFORM
-            'platform': event['device_info']['platform'],
-            'data_connection_type': device_current_state.get('data_connection_type', 'None'),
+            'platform': event['device_info'].get('platform', MISSING),
+            'data_connection_type': device_current_state.get('data_connection_type', MISSING),
 
             # IP
-            'ip': event.get('ip', 'None'),
+            'ip': event.get('ip', MISSING),
 
             # VIDEO
-            'video_id': custom_attrs.get('Video ID', 'None'),
-            'video_type': custom_attrs.get('Video Type', 'None'),
-            'show': custom_attrs.get('Show', 'None'),
-            'season': custom_attrs.get('Season', 'None'),
-            'episode_number': custom_attrs.get('Episode Number', 'None'),
-            'episode_title': custom_attrs.get('Episode Title', 'None'),
-            'genre': custom_attrs.get('Genre', None),
-            'video_duration_mv': custom_attrs.get('Video Duration'),
+            'video_id': custom_attrs.get('Video ID', MISSING),
+            'video_type': custom_attrs.get('Video Type', MISSING),
+            'show': custom_attrs.get('Show', MISSING),
+            'season': custom_attrs.get('Season', MISSING),
+            'episode_number': custom_attrs.get('Episode Number', MISSING),
+            'episode_title': custom_attrs.get('Episode Title', MISSING),
+            'genre': custom_attrs.get('Genre', MISSING),
+            'video_duration': replace_none(custom_attrs.get('Video Duration')),
 
             # EVENT_TYPE
-            'video_end_type': custom_attrs.get('Video End Type', 'None'),
-            'resume': custom_attrs.get('Resume', 'None'),
+            'video_end_type': custom_attrs.get('Video End Type', MISSING),
+            'resume': custom_attrs.get('Resume', MISSING),
 
             # FACT
             'event_id': data['event_id'],
-            'event_num': data.get('event_num'),
             'session_id': data['session_id'],
-            'video_duration': custom_attrs.get('Video Duration'),
             'video_duration_watched': custom_attrs.get('Duration Watched'),
             'event_start_unixtime_ms': data['event_start_unixtime_ms'],
-            'session_start_unixtime_ms': data['session_start_unixtime_ms'],
-            'resume_time': custom_attrs.get('Resume Time'),
+            'session_start_unixtime_ms': data.get('session_start_unixtime_ms', None),
+            'resume_time': custom_attrs.get('Resume Time', None),
         }
         return drec
     except StopEarlyException as e:
@@ -82,50 +90,53 @@ def parse_event(batch_id, event):
         raise
 
 
-def parse_events_in_batch(batch_id, reader):
-    reader = (parse_event(batch_id=batch_id, event=event) for event in reader)
-    return batch_id, reader
+fill_null_fields = ['genre', 'video_type', 'episode_number', 'episode_title']
+def parse_events_in_batch(batch, reader):
+    reader = (parse_event(batch=batch, event=event) for event in reader)
+    df = pd.DataFrame.from_records(reader)
+    df[fill_null_fields] = df[fill_null_fields].fillna(MISSING)
+    return batch, df
 
 
-def get_partition_writer(partitions_d):
-    init_dir(partitions_d, parents=False, exist_ok=True, rmtree=True)
+def get_batch_writer(batches_d):
+    init_dir(batches_d, parents=False, exist_ok=True, rmtree=False)
 
-    def write_partition(batch_id, reader):
-        outfile = partitions_d / f"{batch_id}.parquet.gz"
-        tmp_f = partitions_d / f"_{batch_id}.parquet.gz"
-        df = pd.DataFrame.from_records(reader)
+    def write_batch(batch, df):
+        batch_id = batch.batch_id
+        outfile = batches_d / f"{batch_id}.parquet.gz"
+        tmp_f = batches_d / f"_{batch_id}.parquet.gz"
+
         df.to_parquet(tmp_f, index=False)
         shutil.move(tmp_f, outfile)
         print(f">> wrote partition {outfile},row_cnt={len(df)}")
 
-    return write_partition
+    return write_batch
 
 
-def main(config_f=None, overrides=None):
-    config = get_config(config_f=config_f, overrides=overrides)
+def take_when_value(reader, limit, msg):
+    if limit is not None:
+        print(f">> WARNING: {msg} has limit set, limit={limit}")
+        return take(limit, reader)
+
+
+def main(config_f=None):
+    config = get_config(config_f=config_f)
     print(f">> start extract events, config={config}")
 
+    batch_spec_d = Path(config['BATCH_SPEC_D'])
+    batches_d = Path(config['BATCHES_D'])
     batch_limit = config.get('BATCH_LIMIT')
-    partitions_d = Path(config['PARTITIONS_D'])
-    write_partition = get_partition_writer(partitions_d=partitions_d)
+    batch_files_limit = config.get('BATCH_FILES_LIMIT')
 
-    batches = read_event_batches(config)
-    if batch_limit:
-        print(f">> WARNING: limiting run to no more than {batch_limit} batches")
-        batches = take(batch_limit, batches)
+    # setup IO
+    write_batches = get_batch_writer(batches_d=batches_d)
 
-    reader = (read_events_in_batch(config=config, batch_id=batch_id, batch=batch)
-              for batch_id, batch
-              in batches)
+    reader = read_event_batches(batch_spec_d=batch_spec_d, batch_limit=batch_limit, batch_files_limit=batch_files_limit)
+    reader = (read_events_in_batch(config=config, batch=batch, files=files) for batch, files in reader)
+    reader = (parse_events_in_batch(batch=batch, reader=rdr) for batch, rdr in reader)
 
-    reader = (parse_events_in_batch(batch_id=batch_id,
-                                    reader=rdr)
-              for batch_id, rdr in reader)
-
-    reader = (write_partition(batch_id, rdr)
-              for batch_id, rdr
-              in reader)
+    reader = (write_batches(batch, rdr) for batch, rdr in reader)
 
     for x in reader:
         pass
-    print(">> end proc events")
+    print(">> end start extracts")
