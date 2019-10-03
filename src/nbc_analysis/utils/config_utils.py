@@ -15,6 +15,7 @@ DEFAULT_CONFIG = {
     'FILE_LISTS_D': '$DATA_TOP/NBC2/file_lists',
     'BATCH_SPEC_D': '$DATA_TOP/NBC2/batch_spec',
     'DAYS_D': '$DATA_TOP/NBC2/days',
+    'ANALYSIS_D': '$DATA_TOP/NBC2/ana',
 
     'BATCH_SIZE': 2 * 10 ** 8,  # start new batch when cummulative size gets to this limit
 

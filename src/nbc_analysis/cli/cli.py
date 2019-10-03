@@ -3,6 +3,7 @@ import click
 from pathlib import Path
 
 from nbc_analysis import get_config, get_test_data, extract_file_lists, size_batches, extract_events
+from nbc_analysis.analysis import write_viewer_counts
 from nbc_analysis.utils.file_utils import init_dir
 import pprint
 import pandas as pd
@@ -61,6 +62,11 @@ def batch_specs():
 @cli.command(help="size batches")
 def events():
     extract_events(config_f=None)
+
+
+@cli.command(help="count unique viewers")
+def view_counts():
+    write_viewer_counts(config_f=None)
 
 
 if __name__ == '__main__':
