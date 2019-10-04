@@ -53,5 +53,16 @@
                 "Talk and Interview": 0.02
             }
         }
+    },
+    "loc_demograph": {
+        "time_zone": "America/New_York",
+        "occup_housing_units": 4937,
+        "postal_code": "12528",
+        "median_costs": 1382,
+        "city_name": "Highland",
+        "network": "24.186.72.0/21",
+        "median_income": 71857,
+        "education_level": "PhD",
+        "state": "New York"
     }
 }
