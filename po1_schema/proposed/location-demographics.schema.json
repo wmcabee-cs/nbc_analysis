@@ -5,16 +5,13 @@
   "description": "nbc/LocationDemographic",
   "attributes": [
     {
-      "description": "What is the cidr from which the user has connected",
+      "description": "What is the CIDR for the subnet from which the user has connected",
       "label": "cidr",
       "type": "cortex/attributes-observed",
       "valueType": {
         "outerType": "nbc/attribute-value-string",
         "innerTypes": []
       },
-      "tags": [
-        "attr/observed"
-      ],
       "name": "cidr"
     },
     {
@@ -25,9 +22,6 @@
         "outerType": "cortex/attribute-value-string",
         "innerTypes": []
       },
-      "tags": [
-        "attr/inferred"
-      ],
       "name": "postal.code"
     },
     {
@@ -38,9 +32,6 @@
         "outerType": "cortex/attribute-value-string",
         "innerTypes": []
       },
-      "tags": [
-        "attr/inferred"
-      ],
       "name": "city"
     },
     {
@@ -51,9 +42,6 @@
         "outerType": "cortex/attribute-value-string",
         "innerTypes": []
       },
-      "tags": [
-        "attr/inferred"
-      ],
       "name": "state_iso_code"
     },
     {
@@ -64,9 +52,6 @@
         "outerType": "cortex/attribute-value-string",
         "innerTypes": []
       },
-      "tags": [
-        "attr/inferred"
-      ],
       "name": "state"
     },
     {
@@ -77,9 +62,6 @@
         "outerType": "cortex/attribute-value-string",
         "innerTypes": []
       },
-      "tags": [
-        "attr/inferred"
-      ],
       "name": "country_iso_code"
     },
     {
@@ -90,9 +72,6 @@
         "outerType": "cortex/attribute-value-string",
         "innerTypes": []
       },
-      "tags": [
-        "attr/inferred"
-      ],
       "name": "country"
     },
     {
@@ -103,9 +82,6 @@
         "outerType": "cortex/attribute-value-string",
         "innerTypes": []
       },
-      "tags": [
-        "attr/inferred"
-      ],
       "name": "median_house_income"
     },
     {
@@ -116,9 +92,6 @@
         "outerType": "cortex/attribute-value-string",
         "innerTypes": []
       },
-      "tags": [
-        "attr/inferred"
-      ],
       "name": "median_house_cost"
     },
     {
@@ -129,74 +102,7 @@
         "outerType": "cortex/attribute-value-string",
         "innerTypes": []
       },
-      "tags": [
-        "attr/inferred"
-      ],
       "name": "education_level"
-    }
-  ],
-  "attributeTags": [
-    {
-      "name": "attr/inferred",
-      "label": "inferred",
-      "description": "attr/inferred",
-      "context": "cortex/profile-attribute-tag"
-    },
-    {
-      "name": "attr/observed",
-      "label": "observed",
-      "description": "attr/observed",
-      "context": "cortex/profile-attribute-tag"
-    }
-  ],
-  "facets": [
-    {
-      "tags": [
-        "attr/inferred",
-        "attr/observed"
-      ],
-      "name": "attr",
-      "label": "attr",
-      "description": "attr",
-      "context": "cortex/profile-attribute-facet"
-    }
-  ],
-  "taxonomy": [
-    {
-      "name": "inferred",
-      "label": "Inferred",
-      "description": "Group of inferred attributes.",
-      "tags": [
-        "attr/inferred"
-      ],
-      "context": "cortex/profile-attribute-taxonomy"
-    },
-    {
-      "name": "observed",
-      "label": "Observed",
-      "description": "Group of observed attributes.",
-      "tags": [
-        "attr/observed"
-      ],
-      "context": "cortex/profile-attribute-taxonomy"
-    },
-    {
-      "name": "declared",
-      "label": "Declared",
-      "description": "Group of declared attributes.",
-      "tags": [
-        "attr/declared"
-      ],
-      "context": "cortex/profile-attribute-taxonomy"
-    },
-    {
-      "name": "assigned",
-      "label": "Assigned",
-      "description": "Group of assigned attributes.",
-      "tags": [
-        "attr/assigned"
-      ],
-      "context": "cortex/profile-attribute-taxonomy"
     }
   ]
 }

@@ -5,29 +5,18 @@
   "description": "nbc/ViewerSegment",
   "attributes": [
     {
-      "description": "What is the name of the viewer segment?",
-      "label": "Viewer Segment",
-      "type": "cortex/attributes-inferred",
-      "valueType": {
-        "outerType": "cortex/attribute-value-string",
-        "innerTypes": []
-      },
-      "tags": [
-        "attr/inferred"
-      ],
-      "name": "genre.preferences.early_morning"
-    },
-    {
       "description": "What genres is the segment likely to viewed early morning?",
       "label": "Early morning genres",
       "type": "cortex/attributes-inferred",
       "valueType": {
-        "outerType": "cortex/attribute-value-string",
-        "innerTypes": []
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          }
+        ]
       },
-      "tags": [
-        "attr/inferred"
-      ],
       "name": "genre.preferences.early_morning"
     },
     {
@@ -35,116 +24,55 @@
       "label": "Morning genres",
       "type": "cortex/attributes-inferred",
       "valueType": {
-        "outerType": "cortex/attribute-value-string",
-        "innerTypes": []
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          }
+        ]
       },
-      "tags": [
-        "attr/inferred"
-      ],
       "name": "genre.preferences.morning"
     },
     {
       "description": "What genres is the segment likely to viewed in the afternoon?",
-      "label": "Afternoon genre",
+      "label": "Afternoon genres",
       "type": "cortex/attributes-inferred",
       "valueType": {
-        "outerType": "cortex/attribute-value-string",
-        "innerTypes": []
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          }
+        ]
       },
-      "tags": [
-        "attr/inferred"
-      ],
       "name": "genre.preferences.afternoon"
     },
     {
       "description": "What genres is the segment likely to viewed evening?",
-      "label": "Evenining genre",
+      "label": "Evening genres",
       "type": "cortex/attributes-inferred",
       "valueType": {
-        "outerType": "cortex/attribute-value-string",
-        "innerTypes": []
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          }
+        ]
       },
-      "tags": [
-        "attr/inferred"
-      ],
       "name": "genre.preferences.evening"
     },
     {
       "description": "What genres is the segment likely to viewed late night?",
-      "label": "Late night genre",
+      "label": "Late night genres",
       "type": "cortex/attributes-inferred",
       "valueType": {
         "outerType": "cortex/attribute-value-string",
         "innerTypes": []
       },
-      "tags": [
-        "attr/inferred"
-      ],
       "name": "genre.preferences.late_night"
-    }
-  ],
-  "attributeTags": [
-    {
-      "name": "attr/declared",
-      "label": "declared",
-      "description": "attr/declared",
-      "context": "cortex/profile-attribute-tag"
-    },
-    {
-      "name": "attr/inferred",
-      "label": "inferred",
-      "description": "attr/inferred",
-      "context": "cortex/profile-attribute-tag"
-    }
-  ],
-  "facets": [
-    {
-      "tags": [
-        "attr/declared",
-        "attr/inferred"
-      ],
-      "name": "attr",
-      "label": "attr",
-      "description": "attr",
-      "context": "cortex/profile-attribute-facet"
-    }
-  ],
-  "taxonomy": [
-    {
-      "name": "inferred",
-      "label": "Inferred",
-      "description": "Group of inferred attributes.",
-      "tags": [
-        "attr/inferred"
-      ],
-      "context": "cortex/profile-attribute-taxonomy"
-    },
-    {
-      "name": "observed",
-      "label": "Observed",
-      "description": "Group of observed attributes.",
-      "tags": [
-        "attr/observed"
-      ],
-      "context": "cortex/profile-attribute-taxonomy"
-    },
-    {
-      "name": "declared",
-      "label": "Declared",
-      "description": "Group of declared attributes.",
-      "tags": [
-        "attr/declared"
-      ],
-      "context": "cortex/profile-attribute-taxonomy"
-    },
-    {
-      "name": "assigned",
-      "label": "Assigned",
-      "description": "Group of assigned attributes.",
-      "tags": [
-        "attr/assigned"
-      ],
-      "context": "cortex/profile-attribute-taxonomy"
     }
   ]
 }
