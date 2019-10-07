@@ -22,8 +22,13 @@
       "label": "Segment",
       "type": "cortex/attributes-inferred",
       "valueType": {
-        "outerType": "nbc/ViewerSegment",
-        "innerTypes": []
+        "outerType": "cortex/profile-link",
+        "innerTypes": [
+          {
+            "outerType": "nbc/ViewerSegment",
+            "innerTypes": []
+          }
+        ]
       },
       "tags": [
         "attr/inferred"
@@ -35,7 +40,7 @@
       "label": "Location Demographics",
       "type": "cortex/attributes-inferred",
       "valueType": {
-        "outerType": "cortex/attribute-value-list",
+        "outerType": "cortex/profile-link",
         "innerTypes": [
           {
             "outerType": "nbc/LocationDemographics",
