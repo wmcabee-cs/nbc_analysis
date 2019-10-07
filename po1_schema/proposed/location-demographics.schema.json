@@ -1,0 +1,202 @@
+{
+  "name": "nbc/LocationDemographic",
+  "title": "nbc/LocationDemographic",
+  "profileType": "nbc/LocationDemographic",
+  "description": "nbc/LocationDemographic",
+  "attributes": [
+    {
+      "description": "What is the cidr from which the user has connected",
+      "label": "cidr",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "nbc/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/observed"
+      ],
+      "name": "cidr"
+    },
+    {
+      "description": "What is the postal code associated with the subnet?",
+      "label": "Postal Code",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/inferred"
+      ],
+      "name": "postal.code"
+    },
+    {
+      "description": "What is the city associated with the subnet?",
+      "label": "City",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/inferred"
+      ],
+      "name": "city"
+    },
+    {
+      "description": "What is the state iso code of associated with the subnet",
+      "label": "State ISO Code",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/inferred"
+      ],
+      "name": "state_iso_code"
+    },
+    {
+      "description": "What is the state associated with the subnet",
+      "label": "State",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/inferred"
+      ],
+      "name": "state"
+    },
+    {
+      "description": "What is the country iso code of associated with the subnet",
+      "label": "Country ISO Code",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/inferred"
+      ],
+      "name": "country_iso_code"
+    },
+    {
+      "description": "What is the country associated with the subnet",
+      "label": "Country",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/inferred"
+      ],
+      "name": "country"
+    },
+    {
+      "description": "What is the median household income for the postal code",
+      "label": "Median Household Income",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/inferred"
+      ],
+      "name": "median_house_income"
+    },
+    {
+      "description": "What is the median household cost for the postal code",
+      "label": "Median Household Costs",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/inferred"
+      ],
+      "name": "median_house_cost"
+    },
+    {
+      "description": "What is the expected education level for the postal code",
+      "label": "Education Level",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/inferred"
+      ],
+      "name": "education_level"
+    }
+  ],
+  "attributeTags": [
+    {
+      "name": "attr/inferred",
+      "label": "inferred",
+      "description": "attr/inferred",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "attr/observed",
+      "label": "observed",
+      "description": "attr/observed",
+      "context": "cortex/profile-attribute-tag"
+    }
+  ],
+  "facets": [
+    {
+      "tags": [
+        "attr/inferred",
+        "attr/observed"
+      ],
+      "name": "attr",
+      "label": "attr",
+      "description": "attr",
+      "context": "cortex/profile-attribute-facet"
+    }
+  ],
+  "taxonomy": [
+    {
+      "name": "inferred",
+      "label": "Inferred",
+      "description": "Group of inferred attributes.",
+      "tags": [
+        "attr/inferred"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "observed",
+      "label": "Observed",
+      "description": "Group of observed attributes.",
+      "tags": [
+        "attr/observed"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "declared",
+      "label": "Declared",
+      "description": "Group of declared attributes.",
+      "tags": [
+        "attr/declared"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "assigned",
+      "label": "Assigned",
+      "description": "Group of assigned attributes.",
+      "tags": [
+        "attr/assigned"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    }
+  ]
+}

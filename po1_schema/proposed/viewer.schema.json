@@ -1,0 +1,116 @@
+{
+  "name": "nbc/Viewer",
+  "title": "nbc/Viewer",
+  "profileType": "nbc/Viewer",
+  "description": "nbc/Viewer",
+  "attributes": [
+    {
+      "name": "mpid",
+      "description": "What is the viewer's id?",
+      "label": "MPID",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/observed"
+      ]
+    },
+    {
+      "description": "What viewer segments is the viewer a member of?",
+      "label": "Segment",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "nbc/ViewerSegment",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/inferred"
+      ],
+      "name": "viewer.segment"
+    },
+    {
+      "description": "What location demographic information can be derived from the network ip address?",
+      "label": "Location Demographics",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "nbc/LocationDemographics",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "attr/inferred"
+      ],
+      "name": "location.demographics"
+    }
+  ],
+  "attributeTags": [
+    {
+      "name": "attr/inferred",
+      "label": "inferred",
+      "description": "attr/inferred",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "attr/observed",
+      "label": "observed",
+      "description": "attr/observed",
+      "context": "cortex/profile-attribute-tag"
+    }
+  ],
+  "facets": [
+    {
+      "tags": [
+        "attr/inferred",
+        "attr/observed"
+      ],
+      "name": "attr",
+      "label": "attr",
+      "description": "attr",
+      "context": "cortex/profile-attribute-facet"
+    }
+  ],
+  "taxonomy": [
+    {
+      "name": "inferred",
+      "label": "Inferred",
+      "description": "Group of inferred attributes.",
+      "tags": [
+        "attr/inferred"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "observed",
+      "label": "Observed",
+      "description": "Group of observed attributes.",
+      "tags": [
+        "attr/observed"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "declared",
+      "label": "Declared",
+      "description": "Group of declared attributes.",
+      "tags": [
+        "attr/declared"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "assigned",
+      "label": "Assigned",
+      "description": "Group of assigned attributes.",
+      "tags": [
+        "attr/assigned"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    }
+  ]
+}

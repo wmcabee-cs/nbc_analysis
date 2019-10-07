@@ -1,0 +1,203 @@
+{
+  "name": "nbc/ViewerSegment",
+  "title": "nbc/ViewerSegment",
+  "profileType": "nbc/ViewerSegment",
+  "description": "nbc/ViewerSegment",
+  "attributes": [
+    {
+      "description": "Which viewers are a part of this segment?",
+      "label": "Viewers in Segment",
+      "type": "cortex/attributes-declared",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/profile-link",
+            "innerTypes": [
+              {
+                "outerType": "nbc/Viewer",
+                "innerTypes": []
+              }
+            ]
+          }
+        ]
+      },
+      "tags": [
+        "attr/declared"
+      ],
+      "name": "viewers"
+    },
+    {
+      "description": "What genres is the segment likely to view during primetime on weekdays?",
+      "label": "Weekday Primetime Genre Prefs",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "attr/inferred"
+      ],
+      "name": "genre.preferences.primetime.onWeekdays"
+    },
+    {
+      "description": "What genres is the segment likely to view during primetime on weekends?",
+      "label": "Weekend Primetime Genre Prefs",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "attr/inferred"
+      ],
+      "name": "genre.preferences.primetime.onWeekends"
+    },
+    {
+      "description": "What genres is the segment likely to view during primetime on holidays?",
+      "label": "Holiday Primetime Genre Prefs",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "attr/inferred"
+      ],
+      "name": "genre.preferences.primetime.onHolidays"
+    },
+    {
+      "description": "What genres is the segment likely to view during latenight on weekdays?",
+      "label": "Weekday Late Night Genre Prefs",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "attr/inferred"
+      ],
+      "name": "genre.preferences.latenight.onWeekdays"
+    },
+    {
+      "description": "What genres is the segment likely to view during latenight on weekends?",
+      "label": "Weekend Late Night Genre Prefs",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "attr/inferred"
+      ],
+      "name": "genre.preferences.latenight.onWeekends"
+    },
+    {
+      "description": "What genres is the segment likely to view during latenight on holidays?",
+      "label": "Holiday Late Night Genre Prefs",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "attr/inferred"
+      ],
+      "name": "genre.preferences.latenight.onHolidays"
+    }
+  ],
+  "attributeTags": [
+    {
+      "name": "attr/declared",
+      "label": "declared",
+      "description": "attr/declared",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "attr/inferred",
+      "label": "inferred",
+      "description": "attr/inferred",
+      "context": "cortex/profile-attribute-tag"
+    }
+  ],
+  "facets": [
+    {
+      "tags": [
+        "attr/declared",
+        "attr/inferred"
+      ],
+      "name": "attr",
+      "label": "attr",
+      "description": "attr",
+      "context": "cortex/profile-attribute-facet"
+    }
+  ],
+  "taxonomy": [
+    {
+      "name": "inferred",
+      "label": "Inferred",
+      "description": "Group of inferred attributes.",
+      "tags": [
+        "attr/inferred"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "observed",
+      "label": "Observed",
+      "description": "Group of observed attributes.",
+      "tags": [
+        "attr/observed"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "declared",
+      "label": "Declared",
+      "description": "Group of declared attributes.",
+      "tags": [
+        "attr/declared"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "assigned",
+      "label": "Assigned",
+      "description": "Group of assigned attributes.",
+      "tags": [
+        "attr/assigned"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    }
+  ]
+}

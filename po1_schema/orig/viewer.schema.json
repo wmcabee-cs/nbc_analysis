@@ -1,0 +1,157 @@
+{
+  "name": "nbc/Viewer",
+  "title": "nbc/Viewer",
+  "profileType": "nbc/Viewer",
+  "description": "nbc/Viewer",
+  "attributes": [
+    {
+      "description": "What is the viewer's most likely age range?",
+      "label": "Age Group",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-string",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/inferred"
+      ],
+      "name": "age.range"
+    },
+    {
+      "description": "What IP Addresses has the user ever connected from?",
+      "label": "IPs",
+      "type": "cortex/attributes-observed",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "attr/observed"
+      ],
+      "name": "ips"
+    },
+    {
+      "description": "What is the estimated income of the viewer?",
+      "label": "Income",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-total",
+        "innerTypes": []
+      },
+      "tags": [
+        "attr/inferred"
+      ],
+      "name": "income"
+    },
+    {
+      "description": "What City does the user probably live in?",
+      "label": "Locations",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          }
+        ]
+      },
+      "tags": [
+        "attr/inferred"
+      ],
+      "name": "locations"
+    },
+    {
+      "description": "What viewer segments is the viewer a member of?",
+      "label": "Segments",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/profile-link",
+            "innerTypes": [
+              {
+                "outerType": "nbc/ViewerSegment",
+                "innerTypes": []
+              }
+            ]
+          }
+        ]
+      },
+      "tags": [
+        "attr/inferred"
+      ],
+      "name": "segments"
+    }
+  ],
+  "attributeTags": [
+    {
+      "name": "attr/inferred",
+      "label": "inferred",
+      "description": "attr/inferred",
+      "context": "cortex/profile-attribute-tag"
+    },
+    {
+      "name": "attr/observed",
+      "label": "observed",
+      "description": "attr/observed",
+      "context": "cortex/profile-attribute-tag"
+    }
+  ],
+  "facets": [
+    {
+      "tags": [
+        "attr/inferred",
+        "attr/observed"
+      ],
+      "name": "attr",
+      "label": "attr",
+      "description": "attr",
+      "context": "cortex/profile-attribute-facet"
+    }
+  ],
+  "taxonomy": [
+    {
+      "name": "inferred",
+      "label": "Inferred",
+      "description": "Group of inferred attributes.",
+      "tags": [
+        "attr/inferred"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "observed",
+      "label": "Observed",
+      "description": "Group of observed attributes.",
+      "tags": [
+        "attr/observed"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "declared",
+      "label": "Declared",
+      "description": "Group of declared attributes.",
+      "tags": [
+        "attr/declared"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    },
+    {
+      "name": "assigned",
+      "label": "Assigned",
+      "description": "Group of assigned attributes.",
+      "tags": [
+        "attr/assigned"
+      ],
+      "context": "cortex/profile-attribute-taxonomy"
+    }
+  ]
+}
