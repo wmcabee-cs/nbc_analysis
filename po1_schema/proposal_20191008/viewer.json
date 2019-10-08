@@ -1,0 +1,53 @@
+{
+  "name": "nbc/Viewer",
+  "title": "nbc/Viewer",
+  "profileType": "nbc/Viewer",
+  "description": "nbc/Viewer",
+  "attributes": [
+    {
+      "description": "What shows may the viewer enjoy",
+      "label": "Shows",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          }
+        ]
+      },
+      "name": "shows"
+    },
+    {
+      "description": "What genres may the viewer enjoy",
+      "label": "Genre",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          }
+        ]
+      },
+      "name": "genres"
+    },
+    {
+      "description": "What keywords characterize the shows the user may enjoy",
+      "label": "keywords",
+      "type": "cortex/attributes-inferred",
+      "valueType": {
+        "outerType": "cortex/attribute-value-list",
+        "innerTypes": [
+          {
+            "outerType": "cortex/attribute-value-string",
+            "innerTypes": []
+          }
+        ]
+      },
+      "name": "keywords"
+    }
+  ]
+}
