@@ -11,6 +11,7 @@ CONFIG_TOP = Path.home() / '.config' / 'nbc_analysis'
 DEFAULT_CONFIG = {
 
     'VIDEO_END_BUCKET': 'nbc-event',
+    'VIDEO_END_PARTITIONS_BUCKET': 'nbc-partitions-video-end',
     'BATCHES_D': '$DATA_TOP/NBC2/batches',
     'FILE_LISTS_D': '$DATA_TOP/NBC2/file_lists',
     'BATCH_SPEC_D': '$DATA_TOP/NBC2/batch_spec',
