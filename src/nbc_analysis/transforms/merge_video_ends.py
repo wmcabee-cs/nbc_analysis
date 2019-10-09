@@ -76,8 +76,8 @@ def write_partitions(df, partition_num, outdir):
         df.to_parquet(outfile, index=False)
         print(f">> wrote viewer_partition {outfile},records={len(df)}")
 
+    init_dir(outdir, exist_ok=True)
     start_day, end_day = calc_day_range(df)
-
     # initialize partition directories
     print(f">> grouping by partitions")
     reader = df.groupby('viewer_partition_id')
@@ -90,14 +90,16 @@ def main(config_f, **overrides):
     config = get_config(config_f=config_f, overrides=overrides)
     indir = Path(config['BATCHES_D'])
     outdir = Path(config['WORK_D'])
-
+    stop_after_merge = config.get('STOP_AFTER_MERGE')
     merge_limit = config.get('BATCH_MERGE_LIMIT', None)
     partition_num = config['VIEWER_PARTITION_NUM']
-    init_dir(outdir, exist_ok=True)
 
     files = list_batches(indir=indir, merge_limit=merge_limit)
     df = load_files(indir=indir, files=files)
     df = add_calculated_fields(df, partition_num=partition_num)
+
+    if stop_after_merge is not None:
+        return df
 
     write_partitions(df=df, partition_num=partition_num, outdir=outdir)
     print(f">> nd merge ve_events,records={len(df)}")

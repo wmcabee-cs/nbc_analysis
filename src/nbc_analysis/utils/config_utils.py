@@ -8,8 +8,13 @@ from .debug_utils import retval
 
 CONFIG_TOP = Path.home() / '.config' / 'nbc_analysis'
 
+# CHANGE TO TOML
+
 DEFAULT_CONFIG = {
 
+    'START_DAY_KEY': '20170101',
+    'END_DAY_KEY': '20210101',
+    'CALENDAR_D': '$DATA_TOP/NBC2/calendar',
     'VIDEO_END_BUCKET': 'nbc-event',
     'VIDEO_END_PARTITIONS_BUCKET': 'nbc-partitions-video-end',
     'BATCHES_D': '$DATA_TOP/NBC2/batches',
@@ -20,6 +25,7 @@ DEFAULT_CONFIG = {
     'BATCH_SIZE': 2 * 10 ** 8,  # start new batch when cummulative size gets to this limit
     'WORK_D': '$DATA_TOP/NBC2/work',
     'GEOLITE2_DB': Path.home() / '_NBC/datasets/GeoLite2-City_20191001/GeoLite2-City.mmdb',
+    'VIEWER_PARTITION_NUM': 60,
 
     # FOR DEVELOPMENT
     'DAYS_LIMIT': 2,  # FOR DEV. Number of days to process before stopping
@@ -71,7 +77,7 @@ def _get_config(config_f):
 def get_config(*, overrides: Optional[Dict] = None,
                config_f: Optional[str] = None) -> Dict:
     if isinstance(config_f, dict):
-        config = merge(config_f, overrides)
+        config = merge(config_f, overrides) if overrides is not None else config_f
         return config
 
     check_data_top()
