@@ -71,7 +71,8 @@ def _get_config(config_f):
 def get_config(*, overrides: Optional[Dict] = None,
                config_f: Optional[str] = None) -> Dict:
     if isinstance(config_f, dict):
-        return config_f
+        config = merge(config_f, overrides)
+        return config
 
     check_data_top()
     init_dir(CONFIG_TOP, exist_ok=True, parents=True)
