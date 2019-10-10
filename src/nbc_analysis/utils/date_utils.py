@@ -19,6 +19,20 @@ def get_now_zulu():
     return arrow.utcnow().isoformat('T').replace('+00:00', 'Z')
 
 
+def get_today():
+    return arrow.get().format("YYYYMMDD")
+
+
+def check_day_key(astr: str):
+    try:
+        ts = pd.to_datetime(astr, format="%Y%m%d")
+        return True
+
+    except ValueError as e:
+        print(f">> ERROR Problem parsing day value '{astr}'. Expecting format 'YYYYMMDD")
+        return False
+
+
 #################################################################
 # Conversion between nbc unixtime_ms format to pandas ds and back
 #################################################################

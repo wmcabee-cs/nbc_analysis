@@ -8,13 +8,13 @@ import gzip
 from collections import namedtuple
 import pprint
 
-from ...utils.config_utils import get_config
-from ...utils.aws_utils import get_bucket
-from ...utils.file_utils import init_dir
-from ...utils.io_utils.csv_io import read_event_batches
-from ...utils.io_utils.aws_io import read_events_in_batch
+from nbc_analysis.utils.config_utils import get_config
+from nbc_analysis.utils.aws_utils import get_bucket
+from nbc_analysis.utils.file_utils import init_dir
+from nbc_analysis.utils.io_utils.csv_io import read_event_batches
+from nbc_analysis.utils.io_utils.aws_io import read_events_in_batch
 
-from ...utils.debug_utils import retval, StopEarlyException
+from nbc_analysis.utils.debug_utils import retval, StopEarlyException
 import shutil
 
 EMPTY_DICT = {}
@@ -35,8 +35,6 @@ def parse_event(batch, event):
         custom_attrs = data['custom_attributes']
         user_attrs = event.get('user_attributes', EMPTY_DICT)
         device_current_state = data.get('device_current_state', EMPTY_DICT)
-        # $retval(custom_attrs)
-        # customer_id = parse_customer_id(user_identities=event.get('user_identities'))
         drec = {
             'batch_id': batch.batch_id,
             'file': event['file'],
@@ -75,7 +73,7 @@ def parse_event(batch, event):
 
             # FACT
             'event_id': data['event_id'],
-            'session_id': data['session_id'],
+            'session_id': data.get('session_id', MISSING),
             'video_duration_watched': custom_attrs.get('Duration Watched'),
             'event_start_unixtime_ms': data['event_start_unixtime_ms'],
             'session_start_unixtime_ms': data.get('session_start_unixtime_ms', None),
@@ -87,10 +85,13 @@ def parse_event(batch, event):
     except Exception as e:
         print(f"EROROR: problem parsing event: '{e}'", type(e))
         pprint.pprint(event)
+        retval(event)
         raise
 
 
 fill_null_fields = ['genre', 'video_type', 'episode_number', 'episode_title']
+
+
 def parse_events_in_batch(batch, reader):
     reader = (parse_event(batch=batch, event=event) for event in reader)
     df = pd.DataFrame.from_records(reader)
@@ -119,24 +120,25 @@ def take_when_value(reader, limit, msg):
         return take(limit, reader)
 
 
-def main(config_f=None):
-    config = get_config(config_f=config_f)
-    print(f">> start extract events, config={config}")
+def main(week_config):
+    print(f">> start events extract, week_config={week_config}")
 
-    batch_spec_d = Path(config['BATCH_SPEC_D'])
-    batches_d = Path(config['BATCHES_D'])
-    batch_limit = config.get('BATCH_LIMIT')
-    batch_files_limit = config.get('BATCH_FILES_LIMIT')
+    batch_spec_d = Path(week_config['BATCH_SPEC_D'])
+    batches_d = Path(week_config['BATCHES_D'])
+    bucket = week_config['VIDEO_END_BUCKET']
+
+    batch_limit = week_config.get('BATCH_LIMIT')
+    batch_files_limit = week_config.get('BATCH_FILES_LIMIT')
 
     # setup IO
     write_batches = get_batch_writer(batches_d=batches_d)
 
     reader = read_event_batches(batch_spec_d=batch_spec_d, batch_limit=batch_limit, batch_files_limit=batch_files_limit)
-    reader = (read_events_in_batch(config=config, batch=batch, files=files) for batch, files in reader)
+    reader = (read_events_in_batch(bucket=bucket, batch=batch, files=files) for batch, files in reader)
     reader = (parse_events_in_batch(batch=batch, reader=rdr) for batch, rdr in reader)
 
     reader = (write_batches(batch, rdr) for batch, rdr in reader)
 
     for x in reader:
         pass
-    print(">> end start extracts")
+    print(">> end events extract")

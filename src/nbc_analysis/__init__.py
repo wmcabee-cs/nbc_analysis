@@ -12,9 +12,9 @@ finally:
 
 # import to top namespace
 from .utils.config_utils import get_config
-from .extracts.extract_file_lists.main import main as extract_file_lists
-from .extracts.extract_events.main import main as extract_events
-from .extracts.size_batches.main import main as size_batches
+from nbc_analysis.batch.extract_file_lists import main as extract_file_lists
+from nbc_analysis.batch.extract_events import main as extract_events
+from nbc_analysis.batch.size_batches.main import main as size_batches
 
 # from .agg_video_end.main import main as agg_video_end
 # from .build_aggregate_run.main import main as build_aggregate_run

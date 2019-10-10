@@ -6,4 +6,4 @@ from nbc_analysis.transforms import merge_video_ends
 def main(config_f, df):
     config = get_config(config_f=config_f)
 
-    retval(batches_d)
+    retval(config)

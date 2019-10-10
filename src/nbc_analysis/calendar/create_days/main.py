@@ -12,7 +12,7 @@ END_DAY = '20200101'
 
 DayRecord = namedtuple('DayRecord', ['day_key', 'ordinal',
                                      'day', 'month', 'year', 'dayofweek', 'day_name', 'month_name', 'days_in_month',
-                                     'quarter', 'dayofyear', 'week', 'weekday', 'weekofyear', 'is_leap_year',
+                                     'quarter', 'dayofyear', 'week', 'weekday', 'weekofyear', 'week_id', 'is_leap_year',
                                      'is_week_start', 'is_week_end', 'is_month_start', 'is_month_end',
                                      'is_quarter_start', 'is_quarter_end', 'is_year_start', 'is_year_end',
                                      'start_time', 'end_time', 'start_uts_ms', 'end_uts_ms',
@@ -42,6 +42,7 @@ def get_period_info(day):
         week=day.week,
         weekday=day.weekday,
         weekofyear=day.weekofyear,
+        week_id=f"{day.year}W{day.weekofyear:02d}",
 
         quarter=day.start_time.quarter,
         is_week_start=(1 if day.weekday == 0 else 0),
@@ -60,13 +61,13 @@ def get_period_info(day):
     return rec
 
 
-def main(config_f):
-    config = get_config(config_f=config_f)
-    start_day_key = config['START_DAY_KEY']
-    end_day_key = config['END_DAY_KEY']
+def main(config):
+    config = get_config(config=config)
+    start_day_key = config['CALENDAR_START_DAY_KEY']
+    end_day_key = config['CALENDAR_END_DAY_KEY']
     calendar_d = Path(config['CALENDAR_D'])
     print(f">> creating days calendar,start_day_key={start_day_key},end_day_key={end_day_key}")
-    init_dir(calendar_d, exist_ok=True)
+    init_dir(calendar_d, exist_ok=True, parents=True)
 
     dates = pd.period_range(start=start_day_key, end=end_day_key, )[:-1]
     df = pd.DataFrame.from_records(map(get_period_info, dates), columns=DayRecord._fields)

@@ -20,24 +20,32 @@ def size_batches(path: str, batch_size: int) -> pd.DataFrame:
     return df
 
 
-def get_file_lists(config, ):
-    indir = Path(config['FILE_LISTS_D'])
-    limit_file_lists = config.get('LIMIT_FILE_LISTS')
-
-    reader = indir.glob('ve_*')
+def get_file_lists(file_lists_d, limit_file_lists):
+    reader = file_lists_d.glob('ve_*')
     reader = take(limit_file_lists, reader)
     return reader
 
 
-def main(config_f):
-    config = get_config(config_f=config_f)
-    batch_size = config['BATCH_SIZE']
-    batch_spec_d = Path(config['BATCH_SPEC_D'])
+def main(week_config):
+    run_id = week_config['RUN_ID']
+    week_id = week_config['WEEK_ID']
+
+    print(f">>start batch size,run_id={run_id},week_id={week_id}")
+    batch_spec_d = Path(week_config['BATCH_SPEC_D'])
+    batch_size = week_config['BATCH_SIZE']
+    file_lists_d = Path(week_config['FILE_LISTS_D'])
+    limit_file_lists = week_config.get('LIMIT_FILE_LISTS')
 
     init_dir(batch_spec_d, rmtree=True)
 
-    reader = get_file_lists(config)
-    reader = map(partial(size_batches, batch_size=batch_size), reader)
+    reader = get_file_lists(file_lists_d=file_lists_d, limit_file_lists=limit_file_lists)
+    files = list(reader)
+
+    if len(files) == 0:
+        print(f">>WARNING,no events found for week {week_id}, skipping")
+        return None
+
+    reader = map(partial(size_batches, batch_size=batch_size), files)
     df = pd.concat(reader)
     df.sort_values(['batch_id', 'order_idx'], inplace=True)
 

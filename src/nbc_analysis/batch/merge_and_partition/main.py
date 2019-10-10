@@ -37,11 +37,11 @@ def list_batches(indir, merge_limit):
     return files
 
 
-def load_files(indir, files):
-    print(f">> Loading batches,batch_cnt={len(files)},indir={indir}")
+def merge_files(indir, files):
+    print(f">> merging batches,batch_cnt={len(files)},indir={indir}")
     reader = map(pd.read_parquet, files)
     df = pd.concat(reader)
-    print(f">> finished read of batch files,files={len(files)},records={len(df)}")
+    print(f">> finished merging of batches,files={len(files)},records={len(df)}")
     return df
 
 
@@ -86,22 +86,25 @@ def write_partitions(df, partition_num, outdir):
     for x in reader: pass
 
 
-def main(config_f, **overrides):
-    config = get_config(config_f=config_f, overrides=overrides)
-    indir = Path(config['BATCHES_D'])
-    outdir = Path(config['WORK_D'])
-    stop_after_merge = config.get('STOP_AFTER_MERGE')
-    merge_limit = config.get('BATCH_MERGE_LIMIT', None)
-    partition_num = config['VIEWER_PARTITION_NUM']
+def main(week_config, stop_after_merge=None):
+    week_id = week_config['WEEK_ID']
+    run_id = week_config['RUN_ID']
+    print(f">> start merge and partition,run_id={run_id},week_id={week_id}")
+
+    indir = Path(week_config['BATCHES_D'])
+    outdir = Path(week_config['VIEWER_PARTITION_D'])
+    partition_num = week_config['VIEWER_PARTITION_NUM']
+
+    merge_limit = week_config.get('BATCH_MERGE_LIMIT', None)
 
     files = list_batches(indir=indir, merge_limit=merge_limit)
-    df = load_files(indir=indir, files=files)
+    df = merge_files(indir=indir, files=files)
     df = add_calculated_fields(df, partition_num=partition_num)
 
-    if stop_after_merge is not None:
+    if stop_after_merge:
         return df
 
     write_partitions(df=df, partition_num=partition_num, outdir=outdir)
-    print(f">> nd merge ve_events,records={len(df)}")
+    print(f">> end merge and partition,run_id={run_id},week_id={week_id}")
 
     return df

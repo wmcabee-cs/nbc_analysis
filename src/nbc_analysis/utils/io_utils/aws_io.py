@@ -15,11 +15,11 @@ from pathlib import Path
 
 # TODO: Separate application code from usable component
 
-def list_files_by_day(config, days):
-    bucket_key = config['VIDEO_END_BUCKET']
+def list_files_by_day(week_config, days):
+    bucket_key = week_config['VIDEO_END_BUCKET']
 
     # for testing. Only pull N number of files per pattern
-    limit_files_per_day = config.get('LIMIT_FILES_PER_DAY')
+    limit_files_per_day = week_config.get('LIMIT_FILES_PER_DAY')
     bucket = get_bucket(bucket_key)
     pattern_prefix = Path('year={year}/month={month}/event=video_end')
     extract_specs = {
@@ -72,8 +72,7 @@ def safe_json_loads(line):
 
 # TODO: Separate application code from usable component
 # TODO: Logging too much per batch.  Add init section for one time logging
-def read_events_in_batch(config, batch, files):
-    bucket = config['VIDEO_END_BUCKET']
+def read_events_in_batch(bucket, batch, files):
 
     batch_id = batch.batch_id
     print(f'>> start event download,batch_id={batch_id}')
@@ -82,7 +81,7 @@ def read_events_in_batch(config, batch, files):
     as_of_dt = get_now_zulu()
 
     def download_events(file):
-        #print(f">>downloading file='{file.file}'")
+        # print(f">>downloading file='{file.file}'")
 
         filename = Path(file.file).name
 

@@ -7,17 +7,19 @@ import pandas as pd
 from ...utils.debug_utils import retval
 
 
-def write_file_lists(config, reader):
+def write_file_lists(week_config, reader):
     # read configuration
-    outdir = Path(config['FILE_LISTS_D'])
+    outdir = Path(week_config['FILE_LISTS_D'])
     outdir = init_dir(outdir, parents=True, exist_ok=True, rmtree=True)
 
     for day, df in reader:
         filename = f've_{day}.csv.gz'
         outfile = outdir / filename
-        df.to_csv(outfile, index=False)
-        print(f">> wrote {outfile},cnt={len(df)}")
-
+        if len(df) == 0:
+            print(f">> No events for dat={day}, skipping")
+        else:
+            df.to_csv(outfile, index=False)
+            print(f">> wrote {outfile},cnt={len(df)}")
 
 def write_event_batches(config, reader):
     # read configuration
