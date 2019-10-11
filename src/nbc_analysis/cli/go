@@ -1,0 +1,5 @@
+#!/bin/bash -eu
+RUN_ID=r_test_run
+
+#./main.py init-run --weeks=3 --run_id=r_test_run  --rmtree=True --exist_ok=True
+./main.py proc-run --run_id=r_test_run

@@ -69,18 +69,17 @@ def read_config_yaml(infile):
 
 
 def write_example_config(outdir):
-    outdir = outdir or '.'
     outdir = Path(outdir)
     example_config_f = outdir / "config_example.yaml"
     write_config_yaml(outfile=example_config_f, config=DEFAULT_CONFIG)
-    log.info(f"wrote config file to '{example_config_f}'")
+    print(f"wrote example config file to '{example_config_f}'")
 
 
 def _get_config(config):
     if isinstance(config, dict):
         return config
 
-    config_path = CONFIG_TOP/ 'config.yaml'
+    config_path = CONFIG_TOP / 'config.yaml'
     config_f = config or CONFIG_TOP / "config.yaml"
     if config == 'default':
         log.warning(f"The 'default' config is intended for testing only. For production, use {config_path}")
