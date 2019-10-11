@@ -7,8 +7,12 @@ from pathlib import Path
 from nbc_analysis.utils.debug_utils import retval
 from toolz import first
 
+from nbc_analysis.utils.log_utils import get_logger
+
+log = get_logger(__name__)
+
 START_DAY = '20170101'
-END_DAY = '20200101'
+END_DAY = '20210101'
 
 DayRecord = namedtuple('DayRecord', ['day_key', 'ordinal',
                                      'day', 'month', 'year', 'dayofweek', 'day_name', 'month_name', 'days_in_month',
@@ -66,7 +70,7 @@ def main(config):
     start_day_key = config['CALENDAR_START_DAY_KEY']
     end_day_key = config['CALENDAR_END_DAY_KEY']
     calendar_d = Path(config['CALENDAR_D'])
-    print(f">> creating days calendar,start_day_key={start_day_key},end_day_key={end_day_key}")
+    log.info(f"start create_days_calendar,start_day_key={start_day_key},end_day_key={end_day_key}")
     init_dir(calendar_d, exist_ok=True, parents=True)
 
     dates = pd.period_range(start=start_day_key, end=end_day_key, )[:-1]
@@ -75,4 +79,5 @@ def main(config):
     # write dataset
     outfile = calendar_d / 'cal_days.parquet'
     df.to_parquet(outfile, index=False)
-    print(f">> wrote file,outfile={outfile},records={len(df)}")
+    log.info(f"wrote {outfile},records={len(df)}")
+    log.info(f"end create_days_calendar,start_day_key={start_day_key},end_day_key={end_day_key}")

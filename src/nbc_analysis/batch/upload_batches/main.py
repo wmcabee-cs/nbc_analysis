@@ -4,6 +4,9 @@ from nbc_analysis.utils.aws_utils import get_bucket
 from pathlib import Path
 from toolz import first
 import re
+from ...utils.log_utils import get_logger
+
+log = get_logger(__name__)
 
 
 def parse_batch_file(week_id, infile):
@@ -17,7 +20,7 @@ def parse_batch_file(week_id, infile):
 
 
 def upload_batch(bucket, infile, key):
-    print(f">>    uploading to {key} ")
+    log.info(f"upload batch s3,dest={key} ")
     bucket.upload_file(Filename=str(infile), Key=key)
     return None
 
@@ -26,7 +29,7 @@ def main(week_config):
     week_id = week_config['WEEK_ID']
     run_id = week_config['RUN_ID']
 
-    print(f">>start upload batches,run_id={run_id},week_id={week_id}")
+    log.info(f"start upload_batches,run_id={run_id},week_id={week_id}")
     batches_d = Path(week_config['BATCHES_D'])
     video_end_partitions_bucket = week_config['VIDEO_END_PARTITIONS_BUCKET']
     bucket = get_bucket(video_end_partitions_bucket)
@@ -35,3 +38,4 @@ def main(week_config):
     reader = (parse_batch_file(week_id=week_id, infile=infile) for infile in reader)
     reader = (upload_batch(bucket=bucket, infile=infile, key=key) for infile, key in reader)
     for x in reader: pass
+    log.info(f"end upload_batches,run_id={run_id},week_id={week_id}")

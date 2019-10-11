@@ -6,6 +6,9 @@ import pandas as pd
 import numpy as np
 
 from nbc_analysis.utils.debug_utils import retval
+from ...utils.log_utils import get_logger
+
+log = get_logger(__name__)
 
 
 def size_batches(path: str, batch_size: int) -> pd.DataFrame:
@@ -30,7 +33,7 @@ def main(week_config):
     run_id = week_config['RUN_ID']
     week_id = week_config['WEEK_ID']
 
-    print(f">>start batch size,run_id={run_id},week_id={week_id}")
+    log.info(f"start size_batches,run_id={run_id},week_id={week_id}")
     batch_spec_d = Path(week_config['BATCH_SPEC_D'])
     batch_size = week_config['BATCH_SIZE']
     file_lists_d = Path(week_config['FILE_LISTS_D'])
@@ -42,7 +45,7 @@ def main(week_config):
     files = list(reader)
 
     if len(files) == 0:
-        print(f">>WARNING,no events found for week {week_id}, skipping")
+        log.warning(f"no events found,week_id={week_id}, skipping")
         return None
 
     reader = map(partial(size_batches, batch_size=batch_size), files)
@@ -51,7 +54,7 @@ def main(week_config):
 
     outfile = batch_spec_d / 'batch_to_file.csv'
     df.to_csv(outfile, index=False)
-    print(f">> wrote outfile={outfile},cnt={len(df)}")
+    log.info(f"wrote outfile={outfile},records={len(df)}")
 
     df = df.groupby(['batch_id', 'day', 'batch_num']).agg(
         {'size': np.sum, 'file': np.size, 'file_dt': np.min}).reset_index()
@@ -59,5 +62,5 @@ def main(week_config):
 
     outfile = batch_spec_d / 'batches.csv'
     df.to_csv(outfile, index=False)
-    print(f">> wrote outfile={outfile},cnt={len(df)}")
+    log.info(f"wrote outfile={outfile},log={len(df)}")
     return df

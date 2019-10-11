@@ -6,6 +6,9 @@ from nbc_analysis.utils.debug_utils import retval
 import arrow
 import pandas as pd
 import re
+from nbc_analysis.utils.log_utils import get_logger
+
+log = get_logger(__name__)
 
 RUN_SPEC = {'START_DAY': None, 'WEEKS_BACK': 5, }
 
@@ -73,7 +76,7 @@ def get_runs_d(config, runs_d):
 
 
 def main(*, config, start_day=None, weeks=1, run_id=None, runs_d=None, exist_ok=False, rmtree=False):
-    print(f">> start run init,run_id={run_id},start_day={start_day},weeks={weeks},runs_d={runs_d}")
+    log.info(f"start run init,run_id={run_id},start_day={start_day},weeks={weeks},runs_d={runs_d}")
 
     # load calendar
     config = get_config(config=config)
@@ -86,26 +89,26 @@ def main(*, config, start_day=None, weeks=1, run_id=None, runs_d=None, exist_ok=
     start_day = get_start_day(start_day, calendar)
 
     # initialize directory for run
-    print(f">> initializing run directory,run_d='{run_d},exist_ok={exist_ok},rmtree={rmtree}")
+    log.info(f"initializing run directory,run_d='{run_d},exist_ok={exist_ok},rmtree={rmtree}")
     init_dir(run_d, exist_ok=exist_ok, rmtree=exist_ok)
 
     # Calculated days in run
     days = get_days_in_run(weeks=weeks, start_day=start_day, calendar=calendar)
     outfile = run_d / 'days.csv'
     days.to_csv(outfile, index=False)
-    print(f">> wrote {outfile},records={len(days)}")
+    log.info(f"wrote {outfile},records={len(days)}")
 
     # Calculate weeks in run
     weeks = get_weeks_in_run(days_in_run=days)
     outfile = run_d / 'weeks.csv'
     weeks.to_csv(outfile, index=False)
-    print(f">> wrote {outfile},records={len(weeks)}")
+    log.info(f"wrote {outfile},records={len(weeks)}")
 
     # write configuration information to run directory
     outfile = run_d / "run_config.yaml"
     run_config = {'RUN_ID': run_id}
     write_config_yaml(outfile=outfile, config=run_config)
-    print(f">> wrote {outfile}")
-    print(">> end run init")
+    log.info(f"wrote {outfile}")
+    log.info("end run init")
 
     return run_d

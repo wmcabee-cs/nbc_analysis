@@ -5,7 +5,7 @@ from nbc_analysis.runs import init_run, run_batches
 from nbc_analysis.utils.debug_utils import retval
 
 TEST_RUN_ID = 'r_testrun'
-WEEKS = 10
+WEEKS = 3
 
 
 def _get_config():

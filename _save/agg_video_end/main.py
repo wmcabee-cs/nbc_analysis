@@ -2,9 +2,9 @@ import pandas as pd
 from toolz import first, take, concat
 import arrow
 from pathlib import Path
-from ..utils.file_utils import init_dir
-from ..utils.config_utils import get_config
-from ..utils.debug_utils import retval
+from nbc_analysis.utils.file_utils import init_dir
+from nbc_analysis.utils.config_utils import get_config
+from nbc_analysis.utils.debug_utils import retval
 import shutil
 import pprint
 import gzip

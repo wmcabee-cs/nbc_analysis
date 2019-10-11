@@ -5,31 +5,41 @@ from nbc_analysis.batch import (extract_file_lists, size_batches,
 from nbc_analysis.utils.file_utils import init_dir
 import pandas as pd
 
+from nbc_analysis import get_logger, fmt_cfg
+
+LOG = get_logger(__name__)
+
 from nbc_analysis.utils.debug_utils import retval
 
 
 def proc_week(week_id, days, run_config):
-    print(f">> start week processing,week_id={week_id}")
-    days = days[days.week_id == week_id].day_key.astype(str)
-    days = sorted(days, reverse=True)
-    week_config = get_week_config(run_config=run_config, week_id=week_id, days=days)
-    week_d = Path(week_config['WEEK_D'])
-    init_dir(week_d, exist_ok=True)
-    extract_file_lists(week_config=week_config)
-    result = size_batches(week_config=week_config)
-    if result is None:
-        return {'week_id': week_id, 'result': 'empty'}
-    extract_events(week_config=week_config)
-    merge_and_partition(week_config=week_config)
-    upload_batches(week_config=week_config)
+    try:
 
-    print(f">> end week processing,week_id={week_id}")
+        # prepare list of days to process for this week
+        days = days[days.week_id == week_id].day_key.astype(str)
+        days = sorted(days, reverse=True)
+
+        week_config = get_week_config(run_config=run_config, week_id=week_id, days=days)
+        LOG.info(f"start week,week_id={week_id}")
+        week_d = Path(week_config['WEEK_D'])
+        init_dir(week_d, exist_ok=True)
+        extract_file_lists(week_config=week_config)
+        result = size_batches(week_config=week_config)
+        if result is None:
+            return {'week_id': week_id, 'result': 'empty'}
+        extract_events(week_config=week_config)
+        upload_batches(week_config=week_config)
+        # merge_and_partition(week_config=week_config)
+    except:
+        LOG.exception(f"error week,week_id={week_id}")
+    finally:
+        LOG.info(f"end week_id={week_id}")
 
 
 def main(run_config):
-    run_d = Path(run_config['RUN_D'])
     run_id = run_config['RUN_ID']
-    print(f">> start run,run_id={run_id},run_d={run_d}")
+    LOG.info(f"start run,run_id={run_id},run_config={fmt_cfg(run_config)}")
+    run_d = Path(run_config['RUN_D'])
 
     # load weeks
     weeks = pd.read_csv(run_d / 'weeks.csv')
@@ -43,4 +53,4 @@ def main(run_config):
     reader = (proc_week(rec.week_id, days=days, run_config=run_config) for rec in reader)
 
     for x in reader: pass
-    print(f">> end run,run_id={run_id},run_d={run_d}")
+    LOG.info(f"end run,run_id={run_id}")

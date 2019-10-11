@@ -2,12 +2,15 @@ import geoip2.database
 from geoip2.errors import AddressNotFoundError
 
 from nbc_analysis import get_config
+from nbc_analysis.utils.log_utils import get_logger
 from pathlib import Path
 from collections import namedtuple
 from nbc_analysis.utils.debug_utils import retval, StopEarlyException
 
 IPInfo = namedtuple('IPInfo',
                     'ip geoname_id postal_code time_zone city state_iso_code state country_iso_code country_name')
+
+log = get_logger(__name__)
 
 
 def init_ip_db(config_f):
@@ -58,7 +61,7 @@ def main(ips_db, ips):
         except StopEarlyException as e:
             raise e
         except Exception as e:
-            print(f">> ERROR: Problem parsing IP {ip}, {e}")
+            log.exception(f"Problem parsing IP {ip}, {e}")
             raise
 
     return map(func, ips)

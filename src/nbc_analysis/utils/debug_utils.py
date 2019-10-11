@@ -25,6 +25,6 @@ def runit(func: Callable, **kwargs):
         raise
 
 
-def retval(*args: Any):
-    print("!! stopping run early...")
+def retval(*args: Any, msg=None):
+    print(f"!! stopping run early... {msg}")
     raise StopEarlyException(*args)

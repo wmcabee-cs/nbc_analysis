@@ -2,15 +2,15 @@ from ..aws_utils import get_client, get_bucket
 from ..date_utils import parse_day, get_now_zulu
 from ..func_utils import take_if_limit
 from toolz import first, concat, take, merge
-from itertools import starmap
-import time
 import json
 import pprint
 from ..debug_utils import retval
 
 import pandas as pd
-import numpy as np
 from pathlib import Path
+from ..log_utils import get_logger
+
+log = get_logger(__name__)
 
 
 # TODO: Separate application code from usable component
@@ -65,17 +65,16 @@ def safe_json_loads(line):
     try:
         return json.loads(line)
     except Exception as e:
-        print(">> ERROR: during json parse,problem line :")
-        pprint.pprint(line)
+        log.error("problem during json parse,problem")
+        log.error(pprint.pprint(line))
         raise
 
 
 # TODO: Separate application code from usable component
 # TODO: Logging too much per batch.  Add init section for one time logging
 def read_events_in_batch(bucket, batch, files):
-
     batch_id = batch.batch_id
-    print(f'>> start event download,batch_id={batch_id}')
+    log.info(f'start event_download,batch_id={batch_id}')
     s3 = get_client()
 
     as_of_dt = get_now_zulu()

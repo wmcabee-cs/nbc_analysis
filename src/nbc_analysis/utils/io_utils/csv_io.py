@@ -6,6 +6,10 @@ from ..file_utils import init_dir
 import pandas as pd
 from ...utils.debug_utils import retval
 
+from ...utils.log_utils import get_logger
+
+log = get_logger(__name__)
+
 
 def write_file_lists(week_config, reader):
     # read configuration
@@ -16,10 +20,11 @@ def write_file_lists(week_config, reader):
         filename = f've_{day}.csv.gz'
         outfile = outdir / filename
         if len(df) == 0:
-            print(f">> No events for dat={day}, skipping")
+            log.warning(f"No events extracted for day={day}.")
         else:
             df.to_csv(outfile, index=False)
-            print(f">> wrote {outfile},cnt={len(df)}")
+            log.info(f"wrote {outfile},cnt={len(df)}")
+
 
 def write_event_batches(config, reader):
     # read configuration
@@ -30,7 +35,7 @@ def write_event_batches(config, reader):
         filename = f've_{day}_{asof_dt}.csv.gz'
         outfile = extract_d / filename
         df.to_csv(outfile, index=False)
-        print(f">> wrote {outfile},cnt={len(df)}")
+        log.info(f"wrote {outfile},cnt={len(df)}")
 
 
 def read_event_batches(batch_spec_d, batch_limit, batch_files_limit):
@@ -38,9 +43,9 @@ def read_event_batches(batch_spec_d, batch_limit, batch_files_limit):
     files = pd.read_csv(infile)
 
     if batch_limit is not None:
-        print(f">> WARNING: Limit batch count,batch_limit={batch_limit}")
+        log.warning(f"Limit batch count,batch_limit={batch_limit}")
     if batch_files_limit is not None:
-        print(f">> WARNING: Limit files in batch to first n,batch_files_limit={batch_files_limit}")
+        log.warning(f"Limit files in batch to first n,batch_files_limit={batch_files_limit}")
 
     def get_files_for_batch(batch):
         df = files[files.batch_id == batch.batch_id]

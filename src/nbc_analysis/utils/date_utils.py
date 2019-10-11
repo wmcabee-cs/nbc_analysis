@@ -3,6 +3,11 @@ import re
 import pandas as pd
 import numpy as np
 
+from nbc_analysis.utils.log_utils import get_logger
+
+
+log = get_logger(__name__)
+
 
 # TODO: add round trip unit test for calendar utilities
 
@@ -29,7 +34,7 @@ def check_day_key(astr: str):
         return True
 
     except ValueError as e:
-        print(f">> ERROR Problem parsing day value '{astr}'. Expecting format 'YYYYMMDD")
+        log.exception(f"Problem parsing day value '{astr}'. Expecting format 'YYYYMMDD")
         return False
 
 

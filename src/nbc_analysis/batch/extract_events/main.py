@@ -1,21 +1,17 @@
-from typing import List, Optional
-from toolz import take, partial, first, concat, frequencies
-from itertools import starmap
+from toolz import take
 import pandas as pd
 from pathlib import Path
-import json
-import gzip
-from collections import namedtuple
 import pprint
 
-from nbc_analysis.utils.config_utils import get_config
-from nbc_analysis.utils.aws_utils import get_bucket
 from nbc_analysis.utils.file_utils import init_dir
 from nbc_analysis.utils.io_utils.csv_io import read_event_batches
 from nbc_analysis.utils.io_utils.aws_io import read_events_in_batch
-
 from nbc_analysis.utils.debug_utils import retval, StopEarlyException
 import shutil
+
+from ...utils.log_utils import get_logger
+
+log = get_logger(__name__)
 
 EMPTY_DICT = {}
 
@@ -83,9 +79,8 @@ def parse_event(batch, event):
     except StopEarlyException as e:
         raise
     except Exception as e:
-        print(f"EROROR: problem parsing event: '{e}'", type(e))
-        pprint.pprint(event)
-        retval(event)
+        log.exception(f"problem parsing event")
+        log.error(pprint.pformat(event))
         raise
 
 
@@ -109,19 +104,15 @@ def get_batch_writer(batches_d):
 
         df.to_parquet(tmp_f, index=False)
         shutil.move(tmp_f, outfile)
-        print(f">> wrote partition {outfile},row_cnt={len(df)}")
+        log.info(f"wrote partition {outfile},records={len(df)}")
 
     return write_batch
 
 
-def take_when_value(reader, limit, msg):
-    if limit is not None:
-        print(f">> WARNING: {msg} has limit set, limit={limit}")
-        return take(limit, reader)
-
-
 def main(week_config):
-    print(f">> start events extract, week_config={week_config}")
+    run_id = week_config['RUN_ID']
+    week_id = week_config['WEEK_ID']
+    log.info(f"start extract_events,run_id={run_id},week_id={week_id}")
 
     batch_spec_d = Path(week_config['BATCH_SPEC_D'])
     batches_d = Path(week_config['BATCHES_D'])
@@ -141,4 +132,4 @@ def main(week_config):
 
     for x in reader:
         pass
-    print(">> end events extract")
+    log.info(f"end events_extract,run_id={run_id},week_id={week_id}")

@@ -1,5 +1,5 @@
-from ..utils.config_utils import get_config
-from ..utils.file_utils import init_dir
+from nbc_analysis.utils.config_utils import get_config
+from nbc_analysis.utils.file_utils import init_dir
 from pathlib import Path
 from toolz import concatv
 import pandas as pd

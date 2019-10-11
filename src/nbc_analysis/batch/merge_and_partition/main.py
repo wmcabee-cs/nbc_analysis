@@ -8,6 +8,10 @@ from itertools import starmap
 import re
 from nbc_analysis.utils.debug_utils import retval
 
+from ...utils.log_utils import get_logger
+
+log = get_logger(__name__)
+
 
 # TODO: Add day in input dataset when batch id is created
 # TODO: make sure days are contiguous
@@ -38,15 +42,15 @@ def list_batches(indir, merge_limit):
 
 
 def merge_files(indir, files):
-    print(f">> merging batches,batch_cnt={len(files)},indir={indir}")
+    log.info(f"start merge_batches,batch_cnt={len(files)},indir={indir}")
     reader = map(pd.read_parquet, files)
     df = pd.concat(reader)
-    print(f">> finished merging of batches,files={len(files)},records={len(df)}")
+    log.info(f"finish merge_batches,merged_cnt={len(df)}")
     return df
 
 
 def calc_day_range(df):
-    print(f">> checking date ranges")
+    log.debug(f"start check_date_ranges")
     days = df.day.drop_duplicates()
     start_day = days.min()
     end_day = days.max()
@@ -54,7 +58,7 @@ def calc_day_range(df):
 
 
 def add_calculated_fields(df, partition_num):
-    print(f">> add calculated fields")
+    log.debug(f"start add_calculated_fields")
     df['viewer_partition_id'] = calc_partition_id(df, partition_num=partition_num)
     df['day'] = df.batch_id.map(parse_batch_id)
     return df
@@ -74,14 +78,14 @@ def write_partitions(df, partition_num, outdir):
 
         # write partition to disk
         df.to_parquet(outfile, index=False)
-        print(f">> wrote viewer_partition {outfile},records={len(df)}")
+        log.info(f"wrote viewer_partition,partition={outfile.name},records={len(df)}")
 
+    log.debug(f"start write_partitions,partition_num={partition_num}")
     init_dir(outdir, exist_ok=True)
     start_day, end_day = calc_day_range(df)
     # initialize partition directories
-    print(f">> grouping by partitions")
+    log.debug(f"grouping by partitions")
     reader = df.groupby('viewer_partition_id')
-    print(f">> writing partitions,partition_num={partition_num}")
     reader = starmap(write_partition, reader)
     for x in reader: pass
 
@@ -89,7 +93,7 @@ def write_partitions(df, partition_num, outdir):
 def main(week_config, stop_after_merge=None):
     week_id = week_config['WEEK_ID']
     run_id = week_config['RUN_ID']
-    print(f">> start merge and partition,run_id={run_id},week_id={week_id}")
+    log.info(f"start merge_and_partition,run_id={run_id},week_id={week_id}")
 
     indir = Path(week_config['BATCHES_D'])
     outdir = Path(week_config['VIEWER_PARTITION_D'])
@@ -105,6 +109,6 @@ def main(week_config, stop_after_merge=None):
         return df
 
     write_partitions(df=df, partition_num=partition_num, outdir=outdir)
-    print(f">> end merge and partition,run_id={run_id},week_id={week_id}")
+    log.info(f"end merge_and_partition,run_id={run_id},week_id={week_id}")
 
     return df
