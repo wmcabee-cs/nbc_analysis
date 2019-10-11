@@ -15,7 +15,7 @@ def parse_batch_file(week_id, infile):
     reg = r"(?P<year>\d{4})(?P<month>\d\d)(?P<day>\d\d)$"
     m = re.match(reg, date_str)
     date_info = m.groupdict()
-    path = "video_end/clean/year={year}/week={week_id}/{name}.parquet".format(name=name, week_id=week_id, **date_info)
+    path = "clean/year={year}/week={week_id}/{name}.parquet".format(name=name, week_id=week_id, **date_info)
     return infile, path
 
 
