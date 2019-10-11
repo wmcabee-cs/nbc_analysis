@@ -22,7 +22,6 @@ def cli():
 @click.option('--outdir', default=".", help="directory to write example configuration")
 def example_config(outdir):
     config = write_example_config(outdir)
-    pprint.pprint(config)
 
 
 @cli.command(help="initialize calendar datasets")

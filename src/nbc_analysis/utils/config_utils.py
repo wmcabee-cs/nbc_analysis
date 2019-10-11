@@ -25,14 +25,14 @@ DEFAULT_CONFIG = {
     'WORK_D': '$NBC_DATA_TOP/work',
 
     'VIDEO_END_BUCKET': 'nbc-event',
-    'VIDEO_END_PARTITIONS_BUCKET': 'nbc-partitions-video-end',
+    'VIDEO_END_PARTITIONS_BUCKET': 'nbc-partitions-video-end-test',
     'BATCH_SIZE': 2 * 10 ** 8,  # start new batch when cummulative size gets to this limit
     'GEOLITE2_DB': '$NBC_DATA_TOP/datasets/GeoLite2-City_20191001/GeoLite2-City.mmdb',
     'VIEWER_PARTITION_NUM': 60,
     'VIEWER_PARTITION_D': '$NBC_DATA_TOP/viewer_partitions',
 
     # FOR DEVELOPMENT
-    'LIMIT_FILES_PER_DAY': 2000,  # 2000,  # FOR DEV. Max # of files in the file list each day
+    'LIMIT_FILES_PER_DAY': 20,  # 2000,  # FOR DEV. Max # of files in the file list each day
     'BATCH_LIMIT': 2,
     'BATCH_FILES_LIMIT': 2,
 
