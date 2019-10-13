@@ -25,7 +25,8 @@ DEFAULT_CONFIG = {
     'WORK_D': '$NBC_DATA_TOP/work',
 
     'VIDEO_END_BUCKET': 'nbc-event',
-    'VIDEO_END_PARTITIONS_BUCKET': 'nbc-partitions-video-end-test',
+    'VIDEO_END_PARTITIONS_BUCKET': 'nbc-partitions-video-end-protect',  # Added protect so don't accidentally  overwrite
+    'GEN_PROFILE_SOURCE': 'nbc-partitions-video-end',
     'BATCH_SIZE': 2 * 10 ** 8,  # start new batch when cummulative size gets to this limit
     'GEOLITE2_DB': '$NBC_DATA_TOP/datasets/GeoLite2-City_20191001/GeoLite2-City.mmdb',
     'VIEWER_PARTITION_NUM': 60,
@@ -35,6 +36,8 @@ DEFAULT_CONFIG = {
     'LIMIT_FILES_PER_DAY': 20,  # 2000,  # FOR DEV. Max # of files in the file list each day
     'BATCH_LIMIT': 2,
     'BATCH_FILES_LIMIT': 2,
+    'MERGE_LIMIT': 2,  # When generating profiles, limit downloaded files to this number
+    'PROFILE_PER_WEEK_LIMIT': 1000, # Limit profiles generated per week
 
     # 'LIMIT_FILE_LISTS': 10,  # FOR DEV. # of days that will be included in batch spec file
 }

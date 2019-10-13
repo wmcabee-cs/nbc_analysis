@@ -52,5 +52,11 @@ def proc_run(run_id):
     return nbc_analysis.run_batches(run_config=run_config)
 
 
+@cli.command(help="generate profiles")
+def gen_profiles():
+    config = get_config()
+    return nbc_analysis.generate_profiles(config=config)
+
+
 if __name__ == '__main__':
     cli()
