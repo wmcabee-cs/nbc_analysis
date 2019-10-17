@@ -12,7 +12,7 @@ import gzip
 
 from nbc_analysis.utils.log_utils import get_logger
 from nbc_analysis.utils.file_utils import init_dir
-from toolz import first, take
+from toolz import first, take, concat
 
 from cortex_common.types import EntityEvent, StringAttributeValue, ListAttributeValue
 
@@ -57,23 +57,26 @@ def download_files(bucket, keys, outdir, merge_limit=None):
         bucket.download_file(key, outfile)
         log.info(f"end download_clean_file,key={key}")
 
-    reader = take_if_limit(limit=merge_limit, reader=keys, msg="merge_limit set")
+    reader = take_if_limit(limit=merge_limit, reader=keys, msg="MERGE_LIMIT set")
     reader = (download_file(key) for key in reader)
     for x in reader: pass
 
 
 def load_files(indir):
-    reader = indir.glob('*.parquet')
-    reader = map(pd.read_parquet, reader)
-    df = pd.concat(reader)
-    return df
+    files = list(indir.glob('*.parquet'))
+    for idx, file in enumerate(files, start=1):
+        df = pd.read_parquet(file)
+        log.info(f"start file,file={file.name},records={len(df)},{idx}/{len(files)}")
+        yield file.name, df
+        log.info(f"deleting file,file={file.name}")
+        file.unlink()
 
 
 def log_status(reader, input_cnt, msg):
     for idx, rec in enumerate(reader):
-        if idx % 25000 == 0:
+        if idx % 10000 == 0:
             pct = round((idx / input_cnt) * 100, 1)
-            log.debug(f">> {msg}, running {idx}/{input_cnt}: {pct}%")
+            log.info(f"{msg},record={idx},records_in_file={input_cnt},pct={pct}%")
         yield rec
 
 
@@ -90,7 +93,6 @@ def mock_profile(mpid, mpid_ts, all_genres, all_shows):
                 genres=mock_scores(all_genres),
                 shows=mock_scores(all_shows),
                 event_start_unixtime_ms=mpid_ts,
-                # keywords=mock_scores(KEYWORDS),
                 )
 
 
@@ -114,16 +116,17 @@ def mock_po1(msg, attr, items):
         raise
 
 
-def gen_profiles(df, profile_per_week_limit):
+def gen_profiles(week_id, file_name, df, profile_per_week_limit):
+    log.info(f"start gen_profiles,file_name={file_name},records={len(df)}")
+
     all_genres = sorted(x for x in df.genre.unique() if x is not None)
     all_shows = sorted(x for x in df.show.unique() if x is not None)
     mpids = df.mpid
     mpids_ts = df.event_start_unixtime_ms.astype(np.int)
 
-    log.info(f"start gen_profiles,in_records={len(df)}")
     reader = zip(mpids, mpids_ts)
     reader = take_if_limit(reader, limit=profile_per_week_limit, msg="PROFILE_PER_WEEK_LIMIT set")
-    reader = log_status(reader, input_cnt=len(df), msg="mock_profile")
+    reader = log_status(reader, input_cnt=len(df), msg=f"week_id={week_id},file_name={file_name}")
     reader = (mock_profile(mpid=mpid,
                            mpid_ts=mpid_ts,
                            all_genres=all_genres,
@@ -149,15 +152,18 @@ def upload_profiles(bucket, infile):
     key = f"nbc_profiles/{name}"
     log.info(f'start upload_profile,key={key}')
     bucket.upload_file(Filename=str(infile), Key=key)
+    log.info(f'deleting profile file,infile={infile}')
+    infile.unlink()
     log.info(f'end upload_profile,key={key}')
 
 
-def clean_week(week_d):
-    log.info(f'start clean_week,week_d={week_d}')
-    init_dir(week_d, exist_ok=True, rmtree=True)
+SKIP_WEEKS = {'2019W40'}
 
 
 def proc_week(bucket, week_id, keys, work_d, config):
+    if week_id in SKIP_WEEKS:
+        return None
+
     merge_limit = config['MERGE_LIMIT']
     profile_per_week_limit = config['PROFILE_PER_WEEK_LIMIT']
     log.info(f"start proc_week,week_id={week_id},records={len(keys)}")
@@ -168,12 +174,12 @@ def proc_week(bucket, week_id, keys, work_d, config):
 
     # Processing
     download_files(bucket=bucket, keys=keys, outdir=week_d, merge_limit=merge_limit)
-    df = load_files(indir=week_d)
-
-    reader = gen_profiles(df=df, profile_per_week_limit=profile_per_week_limit)
+    reader = load_files(indir=week_d)
+    reader = (gen_profiles(week_id=week_id, file_name=file_name, df=df, profile_per_week_limit=profile_per_week_limit)
+              for file_name, df in reader)
+    reader = concat(reader)
     write_dicts2json(inputs=reader, outfile=profile_f)
     upload_profiles(bucket=bucket, infile=profile_f)
-    clean_week(week_d=week_d)
     log.info(f"end proc_week,week_id={week_id}")
     return 'ok'
 
@@ -197,7 +203,7 @@ def main(config):
                         work_d=work_d,
                         config=config)
               for week_id, keys in reader)
-    log.info(f"end gen_profiles")
 
-    #retval(first(reader))
+    # retval(first(reader))
     for x in reader: pass
+    log.info(f"end gen_profiles")

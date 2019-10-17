@@ -3,7 +3,7 @@ import click
 from pathlib import Path
 
 import nbc_analysis
-from nbc_analysis import (get_config, get_run_config, create_day_calendar)
+from nbc_analysis import (get_config, get_run_config, create_day_calendar, partition_by_viewer)
 
 # from nbc_analysis import get_config, extract_file_lists, size_batches, extract_events
 # from nbc_analysis.analysis import write_viewer_counts
@@ -56,6 +56,13 @@ def proc_run(run_id):
 def gen_profiles():
     config = get_config()
     return nbc_analysis.generate_profiles(config=config)
+
+
+@cli.command(help="partition clean data int partitions keyed by mpid")
+@click.option('--week_id', required=True, help="week_id for which to build partitions")
+def partition_by_viewer(week_id):
+    config = get_config()
+    return nbc_analysis.partition_by_viewer(config=config, week_id=week_id)
 
 
 if __name__ == '__main__':
