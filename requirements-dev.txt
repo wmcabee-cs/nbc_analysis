@@ -8,3 +8,4 @@ jupyterlab
 docutils
 seaborn
 matplotlib
+pandas-summary
