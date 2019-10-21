@@ -1,6 +1,5 @@
 import logging
 from pathlib import Path
-from ..file_utils import init_dir
 import os
 
 
@@ -21,7 +20,7 @@ def setup_logging():
         raise Exception("Must set environment variable NBC_DATA_TOP")
 
     log_d = Path(NBC_DATA_TOP) / 'logs'
-    init_dir(log_d, exist_ok=True, parents=True)
+    log_d.mkdir(exist_ok=True, parents=True)
     log_f = log_d / 'nbc_analysis.log'
 
     # Gets or creates a logger

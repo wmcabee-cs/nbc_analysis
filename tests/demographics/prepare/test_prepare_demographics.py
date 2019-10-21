@@ -13,8 +13,7 @@ zip2income_input_f = '{NBC_PROJ_TOP}/datasets/ACS_17_5YR_S2503_with_ann.csv'
 subnet2zip_input_f = '{NBC_PROJ_TOP}/datasets/GeoLite2-City-CSV_20191001.zip'
 
 # output files
-subnet2inc4_filename = 'subnet2inc4.parquet'
-subnet2inc6_filename = 'subnet2inc6.parquet'
+subnet2inc_filename = 'subnet2inc.parquet'
 
 
 ####################################
