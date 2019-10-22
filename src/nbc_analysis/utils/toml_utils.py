@@ -13,6 +13,7 @@ log = get_logger(__name__)
 
 TEST_CONFIG = '''
 
+
 [demographics] 
 demographics_d = '{NBC_DATA_TOP}/demographics'
 
@@ -23,11 +24,12 @@ subnet2zip_input_f = '{NBC_PROJ_TOP}/datasets/GeoLite2-City-CSV_20191001.zip'
 # output files
 subnet2inc_filename = 'subnet2inc'
 
-
 # For development 
 #record_limit=2000 # Load only first N records of zipcode dataset. For development
 
 [normalize]
+test_input_d = '{NBC_DATA_TOP}/work/query' 
+#input_file_limit = 2
 normalize_d = '{NBC_DATA_TOP}/normalize'
 '''
 

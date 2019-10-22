@@ -4,7 +4,7 @@ from toolz import partial
 from nbc_analysis.utils import dim_utils
 from nbc_analysis.utils.log_utils import get_logger
 from nbc_analysis.utils.debug_utils import retval
-from nbc_analysis.utils.file_utils import init_dir, write_parquet
+from nbc_analysis.utils.file_utils import init_dir, write_parquet, read_parquet_dir
 
 log = get_logger(__name__)
 
@@ -54,12 +54,16 @@ def clean_input(df):
     df['_batch_id'] = df.pop('batch_id')
     df['_viewer_partition'] = df.pop('viewer_partition')
 
+    log.info('event standardize null representations')
     df = df.mask(df.isin(treat_as_null))  # Replace all null representations with np.NaN
+    log.info('event filter video id')
     df = df[df.video_id.notnull()].copy()
+    log.info('event convert measures to float')
     df['resume_time'] = df.resume_time.astype(np.float)
     df['video_duration_watched'] = df.video_duration_watched.astype(np.float)
     df['video_duration'] = df.video_duration_watched.astype(np.float)
 
+    log.info('event fill string nulls')
     fillna_cols = ['resume', 'video_end_type', 'genre', 'episode_title', 'episode_number', 'season',
                    'show', 'video_type', 'data_connection_type', 'ip', 'platform', 'event_type', 'event_name',
                    'mvpd', 'nbc_profile']
@@ -70,16 +74,20 @@ def clean_input(df):
 
 
 def set_ts_fields(data):
-    log.info("deriving timestamp information")
+    log.info("start derive timestamp information")
+    log.info("event convert _last_upd_dt to date time")
     last_upd_dt = data['_last_upd_dt']
     ts = last_upd_dt / 1000
     ts = pd.to_datetime(ts, unit='s', origin='unix')
 
     # TODO: Add arrival date from timestamps in source files
+    log.info("event format event_start_dt")
     data['event_start_dt'] = ts.dt.strftime('%Y%m%dT%H%M%S.%fZ')
+    log.info("event format date_utc_key")
     data['day_utc_key'] = ts.dt.strftime('%Y%m%d').astype(np.int)
-    log.info("building date_utc_key set")
+    log.info("event dedup date keys")
     dim = data[['day_utc_key']].drop_duplicates()
+    log.info("end derive timestamp information")
     return dim
 
 
@@ -110,14 +118,20 @@ def get_fact(df):
     return df
 
 
-def main(cfg, data):
+def main(cfg):
     # !! SIDE EFFECT WARNING: DATA is modified in place throughout this function
 
     log.info(f'start normalize video end, {cfg}')
+    indir = init_dir(cfg['test_input_d'], exist_ok=True)
     outdir = init_dir(cfg['normalize_d'], exist_ok=True, rmtree=True)
+    file_limit = cfg.get('input_file_limit', None)
+
+    df = read_parquet_dir(indir=indir, limit=file_limit, msg='file limit set on normalize read')
+    log.info(f"start sort by event timestamp")
+    df = df.sort_values('event_start_unixtime_ms', ascending=False).reset_index(drop=True)
+    log.info(f"end sort by event timestamp")
 
     # preprocess fact and timestamp fields
-    df = data
     df = clean_input(df)
     assert df.video_id.isnull().sum() == 0, "Test case where video_id is null"
     days_dim = set_ts_fields(df)
@@ -128,8 +142,10 @@ def main(cfg, data):
     dim_funcs = get_dim_funcs()
     reader = dim_funcs.items()
     reader = ((dim_name, dim_func(df)) for dim_name, dim_func in reader)
+    log.info("start build dimensions")
     for dim, dim_df in reader:
         write_parquet(name=dim, df=dim_df, outdir=outdir)
+    log.info("end build dimensions")
 
     # write fact to outfile
     fact = get_fact(df)
