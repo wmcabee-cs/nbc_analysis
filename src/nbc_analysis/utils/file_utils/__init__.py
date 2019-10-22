@@ -25,7 +25,7 @@ def init_dir(adir: PathLike,
 
 def _standardize_name(name: str) -> str:
     if name.endswith('.parquet'):
-        name = name.replace(name, '.parquet', '')
+        name = name.replace('.parquet', '')
     return name
 
 

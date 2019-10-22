@@ -57,7 +57,6 @@ def main(config):
     cfg = config['demographics']
     log.info(f"start prepare zip demographics,config={cfg}")
     outdir = init_dir(cfg['demographics_d'], exist_ok=True, rmtree=True)
-    outname = cfg['subnet2inc_filename']
 
     ##################
     # start processing
@@ -71,7 +70,7 @@ def main(config):
 
     df = pd.concat([df4, df6])
     df = reorder_cols(df)
-    write_parquet(name=outname, df=df, outdir=outdir)
+    write_parquet(name='subnet2inc', df=df, outdir=outdir)
 
     log.info(f"end prepare zip demographics")
     return df

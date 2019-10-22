@@ -21,9 +21,6 @@ demographics_d = '{NBC_DATA_TOP}/demographics'
 zip2income_input_f = '{NBC_PROJ_TOP}/datasets/ACS_17_5YR_S2503_with_ann.csv'
 subnet2zip_input_f = '{NBC_PROJ_TOP}/datasets/GeoLite2-City-CSV_20191001.zip'
 
-# output files
-subnet2inc_filename = 'subnet2inc'
-
 # For development 
 #record_limit=2000 # Load only first N records of zipcode dataset. For development
 
