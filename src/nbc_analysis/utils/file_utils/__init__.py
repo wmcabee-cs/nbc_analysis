@@ -1,3 +1,4 @@
+from typing import Optional
 from pathlib import Path
 import shutil
 from os import PathLike
@@ -10,7 +11,10 @@ from nbc_analysis.utils.log_utils import get_logger
 log = get_logger(__name__)
 
 
-def init_dir(adir: PathLike, exist_ok=False, parents=False, rmtree=False):
+def init_dir(adir: PathLike,
+             exist_ok: Optional[bool] = False,
+             parents: Optional[bool] = False,
+             rmtree: Optional[bool] = False) -> PathLike:
     adir = Path(adir)
     if adir.is_dir():
         if rmtree:
@@ -19,7 +23,16 @@ def init_dir(adir: PathLike, exist_ok=False, parents=False, rmtree=False):
     return adir
 
 
-def write_parquet(name, df, outdir):
+def _standardize_name(name: str) -> str:
+    if name.endswith('.parquet'):
+        name = name.replace(name, '.parquet', '')
+    return name
+
+
+def write_parquet(name: str,
+                  df: pd.DataFrame,
+                  outdir: PathLike) -> pd.DataFrame:
+    name = _standardize_name(name)
     outfile = outdir / f'{name}.parquet'
     log.info(f"start write file,{outfile},record_cnt={len(df)}")
     df.to_parquet(outfile, index=False)
@@ -27,7 +40,10 @@ def write_parquet(name, df, outdir):
     return df
 
 
-def read_parquet(name, indir, **kwargs):
+def read_parquet(name: str,
+                 indir:
+                 PathLike, **kwargs) -> pd.DataFrame:
+    name = _standardize_name(name)
     infile = indir / f'{name}.parquet'
     log.info(f"start read file,{infile}")
     df = pd.read_parquet(str(infile), **kwargs)
@@ -35,10 +51,12 @@ def read_parquet(name, indir, **kwargs):
     return df
 
 
-def read_parquet_dir(indir, limit=None, msg="file limit set"):
+def read_parquet_dir(indir: PathLike,
+                     limit: Optional[int] = None,
+                     msg: Optional[str] = "file limit set") -> pd.DataFrame:
     reader = indir.glob('*')
     files = list(reader)
-    log.info(f"start read parquet dir,file_cnt={len(files)}")
+    log.info(f"start read parquet dir,file_cnt={len(files)},limit={limit}")
     reader = take_if_limit(files, limit=limit, msg=msg)
     df = pd.concat(map(pd.read_parquet, reader))
     log.info(f"end read parquet dir,record_cnt={len(df)}")

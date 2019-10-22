@@ -68,6 +68,7 @@ def clean_input(df):
                    'show', 'video_type', 'data_connection_type', 'ip', 'platform', 'event_type', 'event_name',
                    'mvpd', 'nbc_profile']
     df[fillna_cols] = df[fillna_cols].fillna('Not Set')
+    assert df.video_id.isnull().sum() == 0, "Null values in video ID"
     log.info('end clean input')
 
     return df
@@ -133,12 +134,16 @@ def main(cfg):
 
     # preprocess fact and timestamp fields
     df = clean_input(df)
-    assert df.video_id.isnull().sum() == 0, "Test case where video_id is null"
     days_dim = set_ts_fields(df)
-
     write_parquet(name='day_utc_keys', df=days_dim, outdir=outdir)
 
+    log.info("start collect ip addresses")
+    ips = dim_utils.build_unique_set(data=df, cols=['ip'])
+    write_parquet(name='ips', df=ips, outdir=outdir)
+    log.info("end collect ip addresses")
+
     # dim_funcs modifieds data in place
+    log.info("start build dimensions")
     dim_funcs = get_dim_funcs()
     reader = dim_funcs.items()
     reader = ((dim_name, dim_func(df)) for dim_name, dim_func in reader)
