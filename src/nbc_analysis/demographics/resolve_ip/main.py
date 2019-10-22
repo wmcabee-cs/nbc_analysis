@@ -17,21 +17,22 @@ def load_ips(normalize_cfg):
     return ips
 
 
-def load_subnet2inc(demographics_cfg):
+def load_network_lkup(demographics_cfg):
     indir = Path(demographics_cfg['demographics_d'])
-    subnet2inc = read_parquet('subnet2inc.parquet', indir=indir, columns=['network', 'network_key'])
-    return subnet2inc
+    network_lkup = read_parquet('network_dim.parquet', indir=indir, columns=['network', 'network_key', 'time_zone'])
+    return network_lkup
 
 
-def build_ptree(subnet2inc, limit=None):
+def build_ptree(network, limit=None):
     ptree = pytricia.PyTricia(128)
 
     def add_network(rec):
         ptree.insert(rec.network, rec.network_key)
 
-    log.info(f'start build ip ptree,record_cnt={len(subnet2inc)},limit={limit}')
-    reader = subnet2inc.itertuples()
+    log.info(f'start build ip ptree,record_cnt={len(network)},limit={limit}')
+    reader = network.itertuples()
     reader = take_if_limit(reader=reader, limit=limit, msg="limit set subnet read")
+    reader = (x for x in reader if x.network_key != 0)
     reader = map(add_network, reader)
     for x in reader: pass
     log.info('end build ip ptree')
@@ -56,7 +57,7 @@ def get_network_keys(ptree, ips, limit=None):
 
 def main(config, ips):
     demographics_cfg = config['demographics']
-    subnet2inc = load_subnet2inc(demographics_cfg)
-    ptree = build_ptree(subnet2inc)
+    network_lkup = load_network_lkup(demographics_cfg)
+    ptree = build_ptree(network_lkup)
     df = get_network_keys(ips=ips, ptree=ptree)
     return df

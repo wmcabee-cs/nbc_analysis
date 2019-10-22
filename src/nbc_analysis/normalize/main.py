@@ -5,6 +5,7 @@ from nbc_analysis.utils import dim_utils
 from nbc_analysis.utils.log_utils import get_logger
 from nbc_analysis.utils.debug_utils import retval
 from nbc_analysis.utils.file_utils import init_dir, write_parquet, read_parquet_dir
+from nbc_analysis.demographics import resolve_ip
 
 log = get_logger(__name__)
 
@@ -24,7 +25,7 @@ def get_dim_funcs():
                           cols=['video_type', 'show', 'season', 'episode_number', 'episode_title', 'genre',
                                 'video_duration']),
         event_type_dim=partial(dim_utils.build_hash_dim,
-                               hash_code='event_key',
+                               hash_code='event_type_key',
                                upd_ts=upd_ts,
                                cols=['event_name', 'event_type']),
         platform_dim=partial(dim_utils.build_hash_dim,
@@ -99,8 +100,8 @@ def get_fact(df):
         'platform_key',
         'profile_key',
         'end_type_key',
-        'event_key',
-        'ip',
+        'event_type_key',
+        'network_key',
         'mpid',
         'event_start_dt',
         'video_duration_watched',
@@ -119,14 +120,36 @@ def get_fact(df):
     return df
 
 
-def main(cfg):
+def add_network_info(config, df, outdir):
+    log.info("start add network info")
+    ips = dim_utils.build_unique_set(data=df, cols=['ip'])
+    ips = write_parquet(name='ips', df=ips, outdir=outdir)
+
+    log.info('event resolve_ip')
+    ip2network = resolve_ip(config=config, ips=ips)
+
+    log.info('event broadcast network_key to fact')
+    lkup = ip2network.set_index('ip')
+    df['network_key'] = df.ip.map(lkup.network_key)
+    log.info("end add network info")
+
+    df.drop(columns=['ip'], inplace=True)
+
+    return df
+
+
+def main(config):
     # !! SIDE EFFECT WARNING: DATA is modified in place throughout this function
 
+    cfg = config['normalize']
     log.info(f'start normalize video end, {cfg}')
+
+    # define io
     indir = init_dir(cfg['test_input_d'], exist_ok=True)
     outdir = init_dir(cfg['normalize_d'], exist_ok=True, rmtree=True)
     file_limit = cfg.get('input_file_limit', None)
 
+    # read input
     df = read_parquet_dir(indir=indir, limit=file_limit, msg='file limit set on normalize read')
     log.info(f"start sort by event timestamp")
     df = df.sort_values('event_start_unixtime_ms', ascending=False).reset_index(drop=True)
@@ -134,20 +157,19 @@ def main(cfg):
 
     # preprocess fact and timestamp fields
     df = clean_input(df)
+
+    # prepare day_key and timestamps
     days_dim = set_ts_fields(df)
     write_parquet(name='day_utc_keys', df=days_dim, outdir=outdir)
 
-    log.info("start collect ip addresses")
-    ips = dim_utils.build_unique_set(data=df, cols=['ip'])
-    write_parquet(name='ips', df=ips, outdir=outdir)
-    log.info("end collect ip addresses")
+    # prepare day_key and timestamps
+    df = add_network_info(config=config, df=df, outdir=outdir)
 
     # dim_funcs modifieds data in place
     log.info("start build dimensions")
     dim_funcs = get_dim_funcs()
     reader = dim_funcs.items()
     reader = ((dim_name, dim_func(df)) for dim_name, dim_func in reader)
-    log.info("start build dimensions")
     for dim, dim_df in reader:
         write_parquet(name=dim, df=dim_df, outdir=outdir)
     log.info("end build dimensions")

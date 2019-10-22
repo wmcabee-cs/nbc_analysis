@@ -60,3 +60,11 @@ def ds_dt2uts_ms(ds):
 
 def ds_uts_ms2dt(ds):
     return pd.to_datetime(ds / 1000, unit='s', origin='unix')
+
+
+def get_end_of_time_ms():
+    dt = pd.to_datetime('21111111')
+    return dt2uts_ms(dt)
+
+END_OF_TIME = get_end_of_time_ms()
+

@@ -1,12 +1,14 @@
 from nbc_analysis.utils.log_utils import get_logger
 from nbc_analysis.utils.file_utils import init_dir, write_parquet
-from nbc_analysis.utils.debug_utils import retval
+import numpy as np
 
 from .prep_zip2income.main import main as prep_zip2income
 from .prep_subnet2zip.main import main as prep_subnet2zip
 
 from pandas.util import hash_pandas_object
 import pandas as pd
+
+from nbc_analysis.utils.debug_utils import retval
 
 log = get_logger(__name__)
 
@@ -53,6 +55,31 @@ def reorder_cols(df):
     return df
 
 
+def add_empty_record(df):
+    missing_obj = 'Not Set'
+    missing_float = np.NaN
+    empty_record = pd.DataFrame.from_records([{'network_key': 0,
+                                               'ip_type': missing_obj,
+                                               'network': missing_obj,
+                                               'geoname_id': missing_float,
+                                               'postal_code': missing_obj,
+                                               'latitude': missing_float,
+                                               'longitude': missing_float,
+                                               'country_iso_code': missing_obj,
+                                               'country': missing_obj,
+                                               'state_iso_code': missing_obj,
+                                               'state': missing_obj,
+                                               'city': missing_obj,
+                                               'time_zone': missing_obj,
+                                               'geo_id': missing_obj,
+                                               'occup_housing_units': missing_float,
+                                               'median_household_income': missing_float,
+                                               'median_household_costs': missing_float}])
+    empty_record['network_key'] = empty_record.network_key.astype(np.uint64)
+    dx = pd.concat([df, empty_record])
+    return dx
+
+
 def main(config):
     cfg = config['demographics']
     log.info(f"start prepare zip demographics,config={cfg}")
@@ -70,7 +97,8 @@ def main(config):
 
     df = pd.concat([df4, df6])
     df = reorder_cols(df)
-    write_parquet(name='subnet2inc', df=df, outdir=outdir)
+    df = add_empty_record(df)
+    write_parquet(name='network_dim', df=df, outdir=outdir)
 
     log.info(f"end prepare zip demographics")
     return df

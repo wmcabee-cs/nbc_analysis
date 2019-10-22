@@ -57,7 +57,7 @@ def _proc_value(key, value):
     if isinstance(value, dict):
         return _proc_dict(value)
     if isinstance(value, str):
-        if key.endswith('_f') or value.endswith('_d'):
+        if (key.endswith('_f') or key.endswith('_d')):
             return Path(value)
         return value
     return value
