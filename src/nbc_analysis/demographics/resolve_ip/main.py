@@ -19,7 +19,7 @@ def load_ips(normalize_cfg):
 
 def load_network_lkup(demographics_cfg):
     indir = Path(demographics_cfg['demographics_d'])
-    network_lkup = read_parquet('network_dim.parquet', indir=indir, columns=['network', 'network_key', 'time_zone'])
+    network_lkup = read_parquet('dim_network.parquet', indir=indir, columns=['network', 'network_key', 'time_zone'])
     return network_lkup
 
 

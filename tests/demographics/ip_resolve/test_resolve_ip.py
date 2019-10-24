@@ -12,6 +12,6 @@ def _get_config():
 def test_resolve_ip():
     config = _get_config()
     normalize_d = Path(config['normalize']['normalize_d'])
-    ips = read_parquet(indir=normalize_d, name='ips.parquet')
+    ips = read_parquet(indir=normalize_d, name='_ips.parquet')
     ip2network = resolve_ip(config=config, ips=ips)
     return ip2network

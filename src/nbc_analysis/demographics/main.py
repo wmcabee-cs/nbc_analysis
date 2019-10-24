@@ -98,7 +98,7 @@ def main(config):
     df = pd.concat([df4, df6])
     df = reorder_cols(df)
     df = add_empty_record(df)
-    write_parquet(name='network_dim', df=df, outdir=outdir)
+    write_parquet(name='dim_network', df=df, outdir=outdir)
 
     log.info(f"end prepare zip demographics")
     return df

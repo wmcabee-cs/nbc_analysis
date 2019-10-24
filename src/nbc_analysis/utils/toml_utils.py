@@ -13,6 +13,15 @@ log = get_logger(__name__)
 
 TEST_CONFIG = '''
 
+[calendar]
+start_day_key = 20170101
+end_day_key = 20210101
+calendar_d = '{NBC_DATA_TOP}/calendar'
+
+[database]
+db_f = '{NBC_DATA_TOP}/test_db.sqlite'
+connect_str = 'sqlite:////%s'
+
 
 [demographics] 
 demographics_d = '{NBC_DATA_TOP}/demographics'

@@ -10,11 +10,11 @@ except DistributionNotFound:
 finally:
     del get_distribution, DistributionNotFound
 
-# import functions used by cli to top namespace
+# import external imports to top namespace
 from .utils.log_utils import get_logger, fmt_cfg
+
 from .utils.config_utils import get_config, get_run_config
 from .runs import init_run, run_batches
-from .calendar import create_day_calendar
 from .generate_po1_profiles import generate_profiles
 from .partition.partition_by_viewer.main import main as partition_by_viewer
 

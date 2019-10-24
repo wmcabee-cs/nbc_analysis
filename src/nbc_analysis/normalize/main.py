@@ -18,25 +18,25 @@ def get_dim_funcs():
     #   WARNING: data is potentially modified in place
 
     dim_funcs = dict(
-        video_dim=partial(dim_utils.build_nk_dim,
+        dim_video=partial(dim_utils.build_nk_dim,
                           nk='video_id',
                           pk='video_key',
                           upd_ts=upd_ts,
                           cols=['video_type', 'show', 'season', 'episode_number', 'episode_title', 'genre',
                                 'video_duration']),
-        event_type_dim=partial(dim_utils.build_hash_dim,
+        dim_event_type=partial(dim_utils.build_hash_dim,
                                hash_code='event_type_key',
                                upd_ts=upd_ts,
                                cols=['event_name', 'event_type']),
-        platform_dim=partial(dim_utils.build_hash_dim,
+        dim_platform=partial(dim_utils.build_hash_dim,
                              hash_code='platform_key',
                              upd_ts=upd_ts,
                              cols=['platform', 'data_connection_type']),
-        profile_dim=partial(dim_utils.build_hash_dim,
+        dim_profile=partial(dim_utils.build_hash_dim,
                             hash_code='profile_key',
                             upd_ts=upd_ts,
                             cols=['mvpd', 'nbc_profile']),
-        end_type_dim=partial(dim_utils.build_hash_dim,
+        dim_end_type=partial(dim_utils.build_hash_dim,
                              hash_code='end_type_key',
                              upd_ts=upd_ts,
                              cols=['video_end_type', 'resume']),
@@ -123,7 +123,7 @@ def get_fact(df):
 def add_network_info(config, df, outdir):
     log.info("start add network info")
     ips = dim_utils.build_unique_set(data=df, cols=['ip'])
-    ips = write_parquet(name='ips', df=ips, outdir=outdir)
+    ips = write_parquet(name='_ips', df=ips, outdir=outdir)
 
     log.info('event resolve_ip')
     ip2network = resolve_ip(config=config, ips=ips)
@@ -159,8 +159,8 @@ def main(config):
     df = clean_input(df)
 
     # prepare day_key and timestamps
-    days_dim = set_ts_fields(df)
-    write_parquet(name='day_utc_keys', df=days_dim, outdir=outdir)
+    day_utc_keys = set_ts_fields(df)
+    write_parquet(name='_day_utc_keys', df=day_utc_keys, outdir=outdir)
 
     # prepare day_key and timestamps
     df = add_network_info(config=config, df=df, outdir=outdir)
