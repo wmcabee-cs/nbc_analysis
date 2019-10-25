@@ -136,7 +136,7 @@ def get_metadata():
           Column('end_type_key', Integer, nullable=False),
           Column('event_type_key', Integer, nullable=False),
           Column('network_key', Integer, nullable=True),
-          Column('hour_of_week_key', Integer, nullable=True),
+          Column('hour_in_week_key', Integer, nullable=True),
           Column('mpid', Integer, nullable=False),
           Column('event_start_dt', String(LONG_STRING), nullable=False),
           Column('event_start_local_dt', String(LONGER_STRING), nullable=True),

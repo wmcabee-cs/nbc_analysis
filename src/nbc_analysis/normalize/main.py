@@ -105,7 +105,7 @@ def get_fact(df):
         'end_type_key',
         'event_type_key',
         'network_key',
-        'hour_of_week_key',
+        'hour_in_week_key',
         'mpid',
         'event_start_dt',
         'event_start_local_dt',
@@ -161,14 +161,14 @@ def add_timezone_info(config, df):
             df = pd.Series(pd.NaT, index=ds.index).to_frame('event_start_local_dt')
             df['hour'] = np.NaN
             df['day_of_week'] = np.NaN
-            df['hour_of_week'] = -1
+            df['hour_in_week'] = -1
             df['day_key_loc'] = END_OF_TIME_DAY_KEY
             return df
         ds = ds.map(lambda x: pd.to_datetime(x, utc=True))
         df = ds.dt.tz_convert(g).to_frame('event_start_local_dt')
         df['hour'] = df.event_start_local_dt.dt.hour
         df['day_of_week'] = df.event_start_local_dt.dt.dayofweek
-        df['hour_of_week'] = (df.day_of_week * 24) + df.hour
+        df['hour_in_week'] = (df.day_of_week * 24) + df.hour
         df['day_key_loc'] = df.event_start_local_dt.dt.strftime('%Y%m%d').astype(np.int)
         df['event_start_local_dt'] = df.event_start_local_dt.map(lambda x: x.isoformat())
         log.info("event format date_utc_key")
@@ -181,9 +181,9 @@ def add_timezone_info(config, df):
     dx = dx.reindex(index=df.index)
 
     log.info("event format hour of week and local even time")
-    dx['hour_of_week'] = dx['hour_of_week'].fillna(-1).astype(np.int)
-    fact[['event_start_local_dt', 'hour_of_week_key', 'day_key_loc']] = dx[
-        ['event_start_local_dt', 'hour_of_week', 'day_key_loc']]
+    dx['hour_in_week'] = dx['hour_in_week'].fillna(-1).astype(np.int)
+    fact[['event_start_local_dt', 'hour_in_week_key', 'day_key_loc']] = dx[
+        ['event_start_local_dt', 'hour_in_week', 'day_key_loc']]
     log.info("end timezone conversion")
     return fact
 

@@ -1,20 +1,15 @@
 import pytest
-from nbc_analysis.utils.config_utils import get_config
-from nbc_analysis.queries.main import main as query, download_test_files
+from nbc_analysis.utils.toml_utils import get_config
+from nbc_analysis.queries.main import main as query
 
-MPID = []
-PARTITION_ID = 'p0000'
+MPID = 594429747067128960
+TRAVELER_MPID = 2882228801219022660
 
 
 def _get_config():
-    return get_config(config='default')
-
-
-def test_download_files():
-    config = get_config(config='default')
-    download_test_files(config, partition=PARTITION_ID,limit=None)
+    return get_config(config='test')
 
 
 def test_queries():
     config = _get_config()
-    return query(config=config)
+    return query(config=config, mpid=TRAVELER_MPID)
