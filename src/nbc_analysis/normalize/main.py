@@ -1,11 +1,13 @@
 import pandas as pd
 import numpy as np
 from toolz import partial
+from itertools import starmap
 from nbc_analysis.utils import dim_utils
 from nbc_analysis.utils.log_utils import get_logger
-from nbc_analysis.utils.debug_utils import retval
-from nbc_analysis.utils.file_utils import init_dir, write_parquet, read_parquet_dir
+from nbc_analysis.utils.file_utils import init_dir, write_parquet, read_parquet_dir, read_parquet
 from nbc_analysis.demographics import resolve_ip
+from nbc_analysis.utils.date_utils import END_OF_TIME_DAY_KEY
+from nbc_analysis.utils.debug_utils import retval
 
 log = get_logger(__name__)
 
@@ -84,7 +86,7 @@ def set_ts_fields(data):
 
     # TODO: Add arrival date from timestamps in source files
     log.info("event format event_start_dt")
-    data['event_start_dt'] = ts.dt.strftime('%Y%m%dT%H%M%S.%fZ')
+    data['event_start_dt'] = ts.dt.strftime('%Y%m%dT%H:%M:%S.%fZ')
     log.info("event format date_utc_key")
     data['day_utc_key'] = ts.dt.strftime('%Y%m%d').astype(np.int)
     log.info("event dedup date keys")
@@ -96,14 +98,17 @@ def set_ts_fields(data):
 def get_fact(df):
     to_cols = [
         'day_utc_key',
+        'day_key_loc',
         'video_key',
         'platform_key',
         'profile_key',
         'end_type_key',
         'event_type_key',
         'network_key',
+        'hour_of_week_key',
         'mpid',
         'event_start_dt',
+        'event_start_local_dt',
         'video_duration_watched',
         'resume_time',
         '_file',
@@ -138,6 +143,51 @@ def add_network_info(config, df, outdir):
     return df
 
 
+# TODO: Eliminate serialization deserialization of datasets
+def add_timezone_info(config, df):
+    log.info("start timezone conversion")
+    indir = config['demographics']['demographics_d']
+    dim_network = read_parquet(name='dim_network', indir=indir)
+
+    fact = df
+
+    mapping = df[['network_key', 'event_start_dt']].copy()  # [:60000]
+    lkup = dim_network.set_index('network_key').time_zone
+    mapping['time_zone'] = df.network_key.map(lkup)
+
+    def convert2tz(g, ds):
+        log.info(f"event convert timezone {g}, {len(ds)}")
+        if g == 'Not Set':
+            df = pd.Series(pd.NaT, index=ds.index).to_frame('event_start_local_dt')
+            df['hour'] = np.NaN
+            df['day_of_week'] = np.NaN
+            df['hour_of_week'] = -1
+            df['day_key_loc'] = END_OF_TIME_DAY_KEY
+            return df
+        ds = ds.map(lambda x: pd.to_datetime(x, utc=True))
+        df = ds.dt.tz_convert(g).to_frame('event_start_local_dt')
+        df['hour'] = df.event_start_local_dt.dt.hour
+        df['day_of_week'] = df.event_start_local_dt.dt.dayofweek
+        df['hour_of_week'] = (df.day_of_week * 24) + df.hour
+        df['day_key_loc'] = df.event_start_local_dt.dt.strftime('%Y%m%d').astype(np.int)
+        df['event_start_local_dt'] = df.event_start_local_dt.map(lambda x: x.isoformat())
+        log.info("event format date_utc_key")
+        return df
+
+    reader = iter(mapping.groupby('time_zone').event_start_dt)
+    reader = starmap(convert2tz, reader)
+    reader = filter(lambda x: x is not None, reader)
+    dx = pd.concat(reader, sort=False)
+    dx = dx.reindex(index=df.index)
+
+    log.info("event format hour of week and local even time")
+    dx['hour_of_week'] = dx['hour_of_week'].fillna(-1).astype(np.int)
+    fact[['event_start_local_dt', 'hour_of_week_key', 'day_key_loc']] = dx[
+        ['event_start_local_dt', 'hour_of_week', 'day_key_loc']]
+    log.info("end timezone conversion")
+    return fact
+
+
 def main(config):
     # !! SIDE EFFECT WARNING: DATA is modified in place throughout this function
 
@@ -164,6 +214,7 @@ def main(config):
 
     # prepare day_key and timestamps
     df = add_network_info(config=config, df=df, outdir=outdir)
+    df = add_timezone_info(config=config, df=df)
 
     # dim_funcs modifieds data in place
     log.info("start build dimensions")

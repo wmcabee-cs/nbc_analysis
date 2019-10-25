@@ -22,6 +22,11 @@ calendar_d = '{NBC_DATA_TOP}/calendar'
 db_f = '{NBC_DATA_TOP}/test_db.sqlite'
 connect_str = 'sqlite:////%s'
 
+# development
+#fact_limit = 1000
+#dim_network_limit = 1000
+#only_tables = ['dim_platform','f_video_end']
+
 
 [demographics] 
 demographics_d = '{NBC_DATA_TOP}/demographics'

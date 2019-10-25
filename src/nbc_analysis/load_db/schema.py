@@ -139,6 +139,7 @@ def get_metadata():
           Column('hour_of_week_key', Integer, nullable=True),
           Column('mpid', Integer, nullable=False),
           Column('event_start_dt', String(LONG_STRING), nullable=False),
+          Column('event_start_local_dt', String(LONGER_STRING), nullable=True),
           Column('video_duration_watched', Float, nullable=True),
           Column('resume_time', Float, nullable=True),
           Column('_file', String(LONG_STRING), nullable=False),

@@ -5,7 +5,6 @@ import numpy as np
 
 from nbc_analysis.utils.log_utils import get_logger
 
-
 log = get_logger(__name__)
 
 
@@ -62,9 +61,12 @@ def ds_uts_ms2dt(ds):
     return pd.to_datetime(ds / 1000, unit='s', origin='unix')
 
 
+END_OF_TIME_DAY_KEY = 21111111
+
+
 def get_end_of_time_ms():
-    dt = pd.to_datetime('21111111')
+    dt = pd.to_datetime(str(END_OF_TIME_DAY_KEY))
     return dt2uts_ms(dt)
 
-END_OF_TIME = get_end_of_time_ms()
 
+END_OF_TIME = get_end_of_time_ms()

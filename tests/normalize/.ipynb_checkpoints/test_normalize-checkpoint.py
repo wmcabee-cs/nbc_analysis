@@ -7,7 +7,7 @@ from toolz import assoc_in
 
 def _get_config():
     config = get_config('test')
-    config = assoc_in(config, ['normalize', 'input_file_limit'], 1)
+    config = assoc_in(config, ['normalize', 'input_file_limit'], 2)
     return config
 
 
