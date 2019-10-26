@@ -18,19 +18,6 @@ def read_dims(indir, only=None):
     return dims
 
 
-def _get_int64_cols(df):
-    ds = (df.dtypes == 'uint64')
-    cols = ds[ds].index.tolist()
-    return cols
-
-
-# TODO: sqlite could not handle unsigned 64 bit ints. Removing sign and casting to signed int
-def _convert_uint64(df):
-    cols = _get_int64_cols(df)
-    for col in cols:
-        df[col] = (df[col].values >> 1).astype(np.int64)
-    return df
-
 
 def apply_network_limit(network_dims, dim_network_limit):
     if dim_network_limit is not None:
@@ -50,7 +37,6 @@ def load_dims(config, engine, only_tables=None, dim_network_limit=None):
     apply_network_limit(network_dims, dim_network_limit)
 
     dims = merge(network_dims, cal_dims, normalized_dims)
-    dims = {name: _convert_uint64(df) for name, df in dims.items()}
     expected_dims = {'dim_network', 'dim_video', 'dim_profile', 'dim_event_type', 'dim_end_type', 'dim_platform',
                      'dim_day', 'dim_day_loc', 'dim_hour_in_week'}
 
@@ -94,7 +80,6 @@ def load_fact(config, engine, limit, only_tables) -> None:
         df = df.iloc[:limit]
 
     log.info(f'start convert_uint64,name={name}')
-    df = _convert_uint64(df)
     log.info(f'start load fact table {table_name},record_cnt={len(df)}')
     df.to_sql(name=table_name, con=engine, if_exists='append', index=False)
 

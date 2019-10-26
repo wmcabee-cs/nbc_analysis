@@ -1,11 +1,10 @@
 from nbc_analysis.utils.log_utils import get_logger
 from nbc_analysis.utils.file_utils import init_dir, write_parquet
+from nbc_analysis.utils.dim_utils import mk_hash
 import numpy as np
 
 from .prep_zip2income.main import main as prep_zip2income
 from .prep_subnet2zip.main import main as prep_subnet2zip
-
-from pandas.util import hash_pandas_object
 import pandas as pd
 
 from nbc_analysis.utils.debug_utils import retval
@@ -16,7 +15,7 @@ log = get_logger(__name__)
 def merge_datasets(zip2inc, subnet2inc, name):
     log.info(f'start merge {name}')
     df = subnet2inc.merge(zip2inc, on='postal_code', how='left')
-    df['network_key'] = hash_pandas_object(df['network'], index=False).values
+    df['network_key'] = mk_hash(df=df, cols=['network'])
     log.info(f'end merge {name},record_cnt={len(df)}')
     df['ip_type'] = name
 

@@ -1,3 +1,4 @@
+import pytest
 from nbc_analysis.utils.toml_utils import get_config
 from nbc_analysis.load_db import load_db, initialize_db
 from nbc_analysis.utils.debug_utils import retval
@@ -13,7 +14,7 @@ def test_load_db():
     config = _get_config()
     return load_db(config=config)
 
-
+@pytest.mark.skip("don't initialze database")
 def test_initialize_db():
     config = _get_config()
     return initialize_db(config['database'])
