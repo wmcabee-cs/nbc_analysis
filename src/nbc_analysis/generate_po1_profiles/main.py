@@ -179,6 +179,7 @@ def proc_week(bucket, week_id, keys, work_d, config):
               for file_name, df in reader)
     reader = concat(reader)
     write_dicts2json(inputs=reader, outfile=profile_f)
+    retval(profile_f)
     upload_profiles(bucket=bucket, infile=profile_f)
     log.info(f"end proc_week,week_id={week_id}")
     return 'ok'

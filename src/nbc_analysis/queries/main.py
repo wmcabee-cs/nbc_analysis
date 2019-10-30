@@ -97,3 +97,44 @@ def main(config, mpid):
         genres_by_timeperiod=get_show_by_time_period(engine, category='genre', mpid=mpid),
     )
     return msg, engine
+
+
+def query_detail(config, mpid):
+    cfg = config['database']
+    engine = get_db(cfg=cfg)
+
+    sql = """
+    select 
+	mpid,
+		f.event_start_dt, 
+		evt.event_name,
+		endt.video_end_type, 
+		plat.platform, plat.data_connection_type,
+		prof.mvpd, prof.nbc_profile,
+	    f.video_duration_watched,
+		f.resume_time,
+		endt.resume,
+		f.day_utc_key,
+	    vid.video_id, vid.video_type, vid.show, vid.season, vid.episode_number, vid.episode_title, vid.genre,
+		net.network, postal_code, latitude, longitude, country, state, city, occup_housing_units, median_household_income, median_household_costs, time_zone, 
+		f.event_start_local_dt,
+	    how.hour, time_period, how.hour_in_week_key,
+		f.day_key_loc, day_loc.day_name_loc, day_loc.week_day_loc, day_loc.month_name_loc, day_loc.week_id_loc,
+	    f._file,
+		f._file_idx
+    from F_VIDEO_END f
+    join DIM_VIDEO vid on f.video_key = vid.video_key
+    join DIM_HOUR_IN_WEEK how on f.hour_in_week_key = how.hour_in_week_key
+	join DIM_DAY day_utc on f.day_utc_key = day_utc.day_key
+	join DIM_DAY_LOC day_loc on f.day_key_loc = day_loc.day_key_loc
+	join DIM_EVENT_TYPE evt on f.event_type_key = evt.event_type_key
+	join DIM_NETWORK net on f.network_key = net.network_key
+	join DIM_PLATFORM plat on  f.platform_key = plat.platform_key
+	join DIM_PROFILE prof on f.profile_key = prof.profile_key
+	join DIM_END_TYPE endt on f.end_type_key = endt.end_type_key
+    where 1=1
+    and f.mpid = :mpid
+	order by f._last_upd_dt desc
+    """
+    df = pd.read_sql(sql=sql, con=engine, params={'mpid': mpid})
+    return df, engine
