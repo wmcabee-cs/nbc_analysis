@@ -6,6 +6,6 @@
 pytest
 jupyterlab
 docutils
-seaborn
 matplotlib
+altair
 pandas-summary

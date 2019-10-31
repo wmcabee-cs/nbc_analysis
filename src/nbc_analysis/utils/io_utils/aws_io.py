@@ -14,7 +14,7 @@ from ..log_utils import get_logger
 log = get_logger(__name__)
 
 
-# TODO: Separate application code from usable component
+############ Remove below this line when possible
 
 def list_files_by_day(week_config, days):
     bucket_key = week_config['VIDEO_END_BUCKET']

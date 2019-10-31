@@ -15,8 +15,8 @@ from .utils.log_utils import get_logger, fmt_cfg
 
 from .utils.config_utils import get_config, get_run_config
 from .runs import init_run, run_batches
-from .generate_po1_profiles import generate_profiles
 from .partition.partition_by_viewer.main import main as partition_by_viewer
+# from .generate_po1_profiles import generate_profiles
 
 # TODO: Remove following from top namespace
 from nbc_analysis.batch.extract_file_lists import main as extract_file_lists

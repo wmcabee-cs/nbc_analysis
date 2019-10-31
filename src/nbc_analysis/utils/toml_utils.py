@@ -13,6 +13,14 @@ log = get_logger(__name__)
 
 TEST_CONFIG = '''
 
+[event_extract]
+bucket='nbc-digital-cloned'
+
+# debugging
+file_list_limit=200
+
+
+
 [calendar]
 start_day_key = 20170101
 end_day_key = 20210101

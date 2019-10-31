@@ -5,6 +5,7 @@ from nbc_analysis.utils.log_utils import get_logger
 from nbc_analysis.utils.func_utils import take_if_limit
 from nbc_analysis.utils.debug_utils import retval
 from toolz import first
+import s3fs
 
 log = get_logger(__name__)
 
