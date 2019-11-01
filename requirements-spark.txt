@@ -3,10 +3,5 @@
 #
 # Place application dependencies into setup.cfg
 # =============================================================================
-pytest
-jupyterlab
-docutils
-matplotlib
-altair
-pandas-summary
-pipdeptree
+findspark
+pyspark

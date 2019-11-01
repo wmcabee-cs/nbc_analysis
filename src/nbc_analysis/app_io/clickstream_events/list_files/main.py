@@ -29,7 +29,7 @@ def get_prefixes(days):
 
 
 def get_days_to_process(start_day_key, end_day_key):
-    return iter(['20190730', '20190731'])
+    return iter([start_day_key, end_day_key])
 
 
 def list_files(bucket, prefixes):
@@ -40,10 +40,7 @@ def list_files(bucket, prefixes):
         yield obj['Key'], obj['Size']
 
 
-def main(config):
-    start_day_key = config['start_day_key']
-    end_day_key = config['end_day_key']
-
+def main(config, start_day_key, end_day_key):
     cfg = config['event_extract']
     bucket = cfg['bucket']
     extract_file_limit = cfg.get('file_list_limit')
@@ -53,6 +50,5 @@ def main(config):
     reader = list_files(bucket=bucket, prefixes=prefixes)
     reader = take_if_limit(reader, limit=extract_file_limit, msg="extract_file_limit set")
     files = pd.DataFrame(reader, columns=['path', 'size'])
-    retval(files)
-    return files
     log.info(f"end extract_file_lists")
+    return files

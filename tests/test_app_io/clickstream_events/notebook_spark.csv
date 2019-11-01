@@ -1,0 +1,400 @@
+category,type,item,source
+environ,Apple_PubSub_Socket_Render,/private/tmp/com.apple.launchd.TE6ZHu6XL4/Render,notebook_spark
+environ,BASH_FUNC_generate_command_executed_sequence%%,"() {  printf '\e\7'
+}",notebook_spark
+environ,CLICOLOR,1,notebook_spark
+environ,CONDA_ENV,cortex-package-utils,notebook_spark
+environ,CORTEX_BASE_DOMAIN,cortex-dev.insights.ai,notebook_spark
+environ,DATA_TOP,/Users/wmcabee/DATA,notebook_spark
+environ,GIT_PAGER,cat,notebook_spark
+environ,HISTFILE,/Users/wmcabee/Library/Preferences/PyCharm2018.3/terminal/history/history-409,notebook_spark
+environ,HOME,/Users/wmcabee,notebook_spark
+environ,JAVA_HOME,/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home,notebook_spark
+environ,JAVA_MAIN_CLASS_43890,org.apache.spark.deploy.SparkSubmit,notebook_spark
+environ,JPY_PARENT_PID,41947,notebook_spark
+environ,KERNEL_LAUNCH_TIMEOUT,40,notebook_spark
+environ,LC_CTYPE,en_US.UTF-8,notebook_spark
+environ,LOGNAME,wmcabee,notebook_spark
+environ,MPLBACKEND,module://ipykernel.pylab.backend_inline,notebook_spark
+environ,NBC_DATA_TOP,/Users/wmcabee/DATA/NBC,notebook_spark
+environ,NBC_PROJ_TOP,/Users/wmcabee/_NBC,notebook_spark
+environ,NPM_TOKEN,eyJ2ZXIiOiIyIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYiLCJraWQiOiJhcEVCamdqUzRUek1LQWdISXdBdnhXU05qQTR1bl8yZ3Zvbk9CM2F3c004In0.eyJzdWIiOiJqZi1hcnRpZmFjdG9yeUBlYzVlOWIwYy0wMjRlLTQ2YjktOTIzYy02MTc5ZjFjYjY3OWZcL3VzZXJzXC9kYWxkcmlkZ2UiLCJzY3AiOiJtZW1iZXItb2YtZ3JvdXBzOiogYXBpOioiLCJhdWQiOiJqZi1hcnRpZmFjdG9yeUBlYzVlOWIwYy0wMjRlLTQ2YjktOTIzYy02MTc5ZjFjYjY3OWYiLCJpc3MiOiJqZi1hcnRpZmFjdG9yeUBlYzVlOWIwYy0wMjRlLTQ2YjktOTIzYy02MTc5ZjFjYjY3OWYiLCJpYXQiOjE1MzY2MTA3NDAsImp0aSI6ImFkZjY0YjQ4LTM5MWMtNDNmMy1iNTAyLTI1NTlmMWY1NzBiNCJ9.R6SsX-31BXsO-hl7F6z5mobq5gW6d3wGT9dHVbwnovrd2EfTeWz_qzeolNoGwC1xjGuy7s3ife82-7NGP3kkb3tPGd6f8kMDmxBcisRuOGZggVeouwzjMRZQp4pVNa3HFU2DYuaMwKP4U_xfdq9jSW5j-dg4rkIcwifq7eSzljn9c_wntO0ghvL0YHkzM32bC40v25TfNZr76avZfclz63OxkKo-pxKRdMkp66cm9mtXMk9EBBWk2L4RwELjVCQg-NRMjtqLZwWDA6EG3jKd_TEUKAXwzy-upzRwzmluVBDeAhi6lpPFNUg9UYkM6qSlTjEFqLRyQDcNpXJhxPjfyw,notebook_spark
+environ,NVM_BIN,/Users/wmcabee/.nvm/versions/node/v8.15.0/bin,notebook_spark
+environ,NVM_CD_FLAGS,,notebook_spark
+environ,NVM_DIR,/Users/wmcabee/.nvm,notebook_spark
+environ,PAGER,cat,notebook_spark
+environ,PATH,/Users/wmcabee/_NBC/nbc_analysis/venv/bin:/Users/wmcabee/.pyenv/plugins/pyenv-virtualenv/shims:/Users/wmcabee/.pyenv/shims:/Users/wmcabee/.pyenv/bin:/Users/wmcabee/.pyenv/shims:/Users/wmcabee/.nvm/versions/node/v8.15.0/bin:/usr/local/bin/pyton/3.7.4/bin:/Users/wmcabee/opt/spark/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin,notebook_spark
+environ,PWD,/Users/wmcabee/_NBC/nbc_analysis/tests/test_app_io/clickstream_events,notebook_spark
+environ,PYENV_SHELL,bash,notebook_spark
+environ,PYENV_VIRTUALENV_INIT,1,notebook_spark
+environ,PYSPARK_DRIVER_PYTHON,/Users/wmcabee/_NBC/nbc_analysis/venv/bin/python3,notebook_spark
+environ,PYSPARK_PYTHON,/Users/wmcabee/_NBC/nbc_analysis/venv/bin/python3,notebook_spark
+environ,PYTHONHASHSEED,0,notebook_spark
+environ,PYTHONPATH,/Users/wmcabee/opt/spark/python/lib/pyspark.zip:/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip:/Users/wmcabee/opt/spark-2.4.4/jars/spark-core_2.11-2.4.4.jar,notebook_spark
+environ,PYTHONUNBUFFERED,YES,notebook_spark
+environ,PYTHON_WORKER_FACTORY_SECRET,03fb92af6b80ca46de4cfafbcddbac627d9279c7307c983e83878f6ac45a4d22,notebook_spark
+environ,SHELL,/bin/bash,notebook_spark
+environ,SHLVL,1,notebook_spark
+environ,SKILL_LAB_D,/tmp/skill-lab,notebook_spark
+environ,SPARK_CONF_DIR,/Users/wmcabee/opt/spark/conf,notebook_spark
+environ,SPARK_ENV_LOADED,1,notebook_spark
+environ,SPARK_HOME,/Users/wmcabee/opt/spark,notebook_spark
+environ,SPARK_LOCAL_DIRS,/private/var/folders/zg/vyq842cx20s66ytjhf0bl43dxzgtx0/T/blockmgr-647a5721-defe-4e35-93fa-33020974721f,notebook_spark
+environ,SPARK_LOCAL_IP,127.0.0.1,notebook_spark
+environ,SPARK_REUSE_WORKER,1,notebook_spark
+environ,SPARK_SCALA_VERSION,2.12,notebook_spark
+environ,SSH_AUTH_SOCK,/private/tmp/com.apple.launchd.968fdqmk3w/Listeners,notebook_spark
+environ,TERM,xterm-color,notebook_spark
+environ,TERMINAL_EMULATOR,JetBrains-JediTerm,notebook_spark
+environ,TMPDIR,/var/folders/zg/vyq842cx20s66ytjhf0bl43dxzgtx0/T/,notebook_spark
+environ,USER,wmcabee,notebook_spark
+environ,VIRTUAL_ENV,/Users/wmcabee/_NBC/nbc_analysis/venv,notebook_spark
+environ,XPC_FLAGS,0x0,notebook_spark
+environ,XPC_SERVICE_NAME,0,notebook_spark
+environ,_PYSPARK_DRIVER_CONN_INFO_PATH,/var/folders/zg/vyq842cx20s66ytjhf0bl43dxzgtx0/T/tmpvxuc1xe7/tmpjazrlsfm,notebook_spark
+environ,__CF_USER_TEXT_ENCODING,0x7BF7EBA0:0x0:0x0,notebook_spark
+environ,__INTELLIJ_COMMAND_HISTFILE__,/Users/wmcabee/Library/Preferences/PyCharm2018.3/terminal/history/history-409,notebook_spark
+module,__future__,<module '__future__' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/__future__.py'>,notebook_spark
+module,__main__,<module 'pyspark.daemon' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/daemon.py'>,notebook_spark
+module,_abc,<module '_abc' (built-in)>,notebook_spark
+module,_ast,<module '_ast' (built-in)>,notebook_spark
+module,_bisect,<module '_bisect' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/_bisect.cpython-37m-darwin.so'>,notebook_spark
+module,_blake2,<module '_blake2' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/_blake2.cpython-37m-darwin.so'>,notebook_spark
+module,_bootlocale,<module '_bootlocale' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/_bootlocale.py'>,notebook_spark
+module,_bz2,<module '_bz2' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/_bz2.cpython-37m-darwin.so'>,notebook_spark
+module,_codecs,<module '_codecs' (built-in)>,notebook_spark
+module,_collections,<module '_collections' (built-in)>,notebook_spark
+module,_collections_abc,<module '_collections_abc' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/_collections_abc.py'>,notebook_spark
+module,_compat_pickle,<module '_compat_pickle' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/_compat_pickle.py'>,notebook_spark
+module,_compression,<module '_compression' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/_compression.py'>,notebook_spark
+module,_csv,<module '_csv' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/_csv.cpython-37m-darwin.so'>,notebook_spark
+module,_ctypes,<module '_ctypes' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/_ctypes.cpython-37m-darwin.so'>,notebook_spark
+module,_cython_0_29_13,<module '_cython_0_29_13'>,notebook_spark
+module,_datetime,<module '_datetime' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/_datetime.cpython-37m-darwin.so'>,notebook_spark
+module,_decimal,<module '_decimal' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/_decimal.cpython-37m-darwin.so'>,notebook_spark
+module,_frozen_importlib,<module 'importlib._bootstrap' (frozen)>,notebook_spark
+module,_frozen_importlib_external,<module 'importlib._bootstrap_external' (frozen)>,notebook_spark
+module,_functools,<module '_functools' (built-in)>,notebook_spark
+module,_hashlib,<module '_hashlib' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/_hashlib.cpython-37m-darwin.so'>,notebook_spark
+module,_heapq,<module '_heapq' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/_heapq.cpython-37m-darwin.so'>,notebook_spark
+module,_imp,<module '_imp' (built-in)>,notebook_spark
+module,_io,<module 'io' (built-in)>,notebook_spark
+module,_json,<module '_json' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/_json.cpython-37m-darwin.so'>,notebook_spark
+module,_locale,<module '_locale' (built-in)>,notebook_spark
+module,_lsprof,<module '_lsprof' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/_lsprof.cpython-37m-darwin.so'>,notebook_spark
+module,_lzma,<module '_lzma' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/_lzma.cpython-37m-darwin.so'>,notebook_spark
+module,_opcode,<module '_opcode' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/_opcode.cpython-37m-darwin.so'>,notebook_spark
+module,_operator,<module '_operator' (built-in)>,notebook_spark
+module,_pickle,<module '_pickle' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/_pickle.cpython-37m-darwin.so'>,notebook_spark
+module,_posixsubprocess,<module '_posixsubprocess' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/_posixsubprocess.cpython-37m-darwin.so'>,notebook_spark
+module,_queue,<module '_queue' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/_queue.cpython-37m-darwin.so'>,notebook_spark
+module,_random,<module '_random' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/_random.cpython-37m-darwin.so'>,notebook_spark
+module,_sha3,<module '_sha3' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/_sha3.cpython-37m-darwin.so'>,notebook_spark
+module,_signal,<module '_signal' (built-in)>,notebook_spark
+module,_sitebuiltins,<module '_sitebuiltins' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/_sitebuiltins.py'>,notebook_spark
+module,_socket,<module '_socket' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/_socket.cpython-37m-darwin.so'>,notebook_spark
+module,_sre,<module '_sre' (built-in)>,notebook_spark
+module,_stat,<module '_stat' (built-in)>,notebook_spark
+module,_string,<module '_string' (built-in)>,notebook_spark
+module,_struct,<module '_struct' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/_struct.cpython-37m-darwin.so'>,notebook_spark
+module,_thread,<module '_thread' (built-in)>,notebook_spark
+module,_warnings,<module '_warnings' (built-in)>,notebook_spark
+module,_weakref,<module '_weakref' (built-in)>,notebook_spark
+module,_weakrefset,<module '_weakrefset' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/_weakrefset.py'>,notebook_spark
+module,abc,<module 'abc' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/abc.py'>,notebook_spark
+module,argparse,<module 'argparse' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/argparse.py'>,notebook_spark
+module,array,<module 'array' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/array.cpython-37m-darwin.so'>,notebook_spark
+module,ast,<module 'ast' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/ast.py'>,notebook_spark
+module,atexit,<module 'atexit' (built-in)>,notebook_spark
+module,base64,<module 'base64' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/base64.py'>,notebook_spark
+module,binascii,<module 'binascii' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/binascii.cpython-37m-darwin.so'>,notebook_spark
+module,bisect,<module 'bisect' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/bisect.py'>,notebook_spark
+module,builtins,<module 'builtins' (built-in)>,notebook_spark
+module,bz2,<module 'bz2' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/bz2.py'>,notebook_spark
+module,cProfile,<module 'cProfile' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/cProfile.py'>,notebook_spark
+module,calendar,<module 'calendar' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/calendar.py'>,notebook_spark
+module,codecs,<module 'codecs' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/codecs.py'>,notebook_spark
+module,collections,<module 'collections' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/collections/__init__.py'>,notebook_spark
+module,collections.abc,<module 'collections.abc' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/collections/abc.py'>,notebook_spark
+module,contextlib,<module 'contextlib' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/contextlib.py'>,notebook_spark
+module,copy,<module 'copy' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/copy.py'>,notebook_spark
+module,copyreg,<module 'copyreg' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/copyreg.py'>,notebook_spark
+module,csv,<module 'csv' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/csv.py'>,notebook_spark
+module,ctypes,<module 'ctypes' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/ctypes/__init__.py'>,notebook_spark
+module,ctypes._endian,<module 'ctypes._endian' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/ctypes/_endian.py'>,notebook_spark
+module,cython_runtime,<module 'cython_runtime'>,notebook_spark
+module,datetime,<module 'datetime' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/datetime.py'>,notebook_spark
+module,decimal,<module 'decimal' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/decimal.py'>,notebook_spark
+module,difflib,<module 'difflib' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/difflib.py'>,notebook_spark
+module,dis,<module 'dis' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/dis.py'>,notebook_spark
+module,encodings,<module 'encodings' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/encodings/__init__.py'>,notebook_spark
+module,encodings.aliases,<module 'encodings.aliases' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/encodings/aliases.py'>,notebook_spark
+module,encodings.cp437,<module 'encodings.cp437' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/encodings/cp437.py'>,notebook_spark
+module,encodings.latin_1,<module 'encodings.latin_1' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/encodings/latin_1.py'>,notebook_spark
+module,encodings.utf_8,<module 'encodings.utf_8' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/encodings/utf_8.py'>,notebook_spark
+module,enum,<module 'enum' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/enum.py'>,notebook_spark
+module,errno,<module 'errno' (built-in)>,notebook_spark
+module,fnmatch,<module 'fnmatch' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/fnmatch.py'>,notebook_spark
+module,functools,<module 'functools' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/functools.py'>,notebook_spark
+module,gc,<module 'gc' (built-in)>,notebook_spark
+module,genericpath,<module 'genericpath' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/genericpath.py'>,notebook_spark
+module,gettext,<module 'gettext' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/gettext.py'>,notebook_spark
+module,grp,<module 'grp' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/grp.cpython-37m-darwin.so'>,notebook_spark
+module,hashlib,<module 'hashlib' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/hashlib.py'>,notebook_spark
+module,heapq,<module 'heapq' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/heapq.py'>,notebook_spark
+module,hmac,<module 'hmac' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/hmac.py'>,notebook_spark
+module,html,<module 'html' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/html/__init__.py'>,notebook_spark
+module,html.entities,<module 'html.entities' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/html/entities.py'>,notebook_spark
+module,imp,<module 'imp' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/imp.py'>,notebook_spark
+module,importlib,<module 'importlib' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/importlib/__init__.py'>,notebook_spark
+module,importlib._bootstrap,<module 'importlib._bootstrap' (frozen)>,notebook_spark
+module,importlib._bootstrap_external,<module 'importlib._bootstrap_external' (frozen)>,notebook_spark
+module,importlib.abc,<module 'importlib.abc' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/importlib/abc.py'>,notebook_spark
+module,importlib.machinery,<module 'importlib.machinery' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/importlib/machinery.py'>,notebook_spark
+module,importlib.util,<module 'importlib.util' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/importlib/util.py'>,notebook_spark
+module,inspect,<module 'inspect' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/inspect.py'>,notebook_spark
+module,io,<module 'io' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/io.py'>,notebook_spark
+module,itertools,<module 'itertools' (built-in)>,notebook_spark
+module,json,<module 'json' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/json/__init__.py'>,notebook_spark
+module,json.decoder,<module 'json.decoder' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/json/decoder.py'>,notebook_spark
+module,json.encoder,<module 'json.encoder' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/json/encoder.py'>,notebook_spark
+module,json.scanner,<module 'json.scanner' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/json/scanner.py'>,notebook_spark
+module,keyword,<module 'keyword' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/keyword.py'>,notebook_spark
+module,linecache,<module 'linecache' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/linecache.py'>,notebook_spark
+module,locale,<module 'locale' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/locale.py'>,notebook_spark
+module,logging,<module 'logging' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/logging/__init__.py'>,notebook_spark
+module,lzma,<module 'lzma' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lzma.py'>,notebook_spark
+module,marshal,<module 'marshal' (built-in)>,notebook_spark
+module,math,<module 'math' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/math.cpython-37m-darwin.so'>,notebook_spark
+module,mpl_toolkits,<module 'mpl_toolkits' (namespace)>,notebook_spark
+module,ntpath,<module 'ntpath' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/ntpath.py'>,notebook_spark
+module,numbers,<module 'numbers' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/numbers.py'>,notebook_spark
+module,numpy,<module 'numpy' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/__init__.py'>,notebook_spark
+module,numpy.__config__,<module 'numpy.__config__' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/__config__.py'>,notebook_spark
+module,numpy._distributor_init,<module 'numpy._distributor_init' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/_distributor_init.py'>,notebook_spark
+module,numpy._globals,<module 'numpy._globals' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/_globals.py'>,notebook_spark
+module,numpy._pytesttester,<module 'numpy._pytesttester' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/_pytesttester.py'>,notebook_spark
+module,numpy.compat,<module 'numpy.compat' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/compat/__init__.py'>,notebook_spark
+module,numpy.compat._inspect,<module 'numpy.compat._inspect' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/compat/_inspect.py'>,notebook_spark
+module,numpy.compat.py3k,<module 'numpy.compat.py3k' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/compat/py3k.py'>,notebook_spark
+module,numpy.core,<module 'numpy.core' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/__init__.py'>,notebook_spark
+module,numpy.core._add_newdocs,<module 'numpy.core._add_newdocs' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_add_newdocs.py'>,notebook_spark
+module,numpy.core._asarray,<module 'numpy.core._asarray' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_asarray.py'>,notebook_spark
+module,numpy.core._dtype,<module 'numpy.core._dtype' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_dtype.py'>,notebook_spark
+module,numpy.core._dtype_ctypes,<module 'numpy.core._dtype_ctypes' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py'>,notebook_spark
+module,numpy.core._exceptions,<module 'numpy.core._exceptions' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_exceptions.py'>,notebook_spark
+module,numpy.core._internal,<module 'numpy.core._internal' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_internal.py'>,notebook_spark
+module,numpy.core._methods,<module 'numpy.core._methods' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_methods.py'>,notebook_spark
+module,numpy.core._multiarray_tests,<module 'numpy.core._multiarray_tests' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_multiarray_tests.cpython-37m-darwin.so'>,notebook_spark
+module,numpy.core._multiarray_umath,<module 'numpy.core._multiarray_umath' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_multiarray_umath.cpython-37m-darwin.so'>,notebook_spark
+module,numpy.core._string_helpers,<module 'numpy.core._string_helpers' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_string_helpers.py'>,notebook_spark
+module,numpy.core._type_aliases,<module 'numpy.core._type_aliases' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_type_aliases.py'>,notebook_spark
+module,numpy.core._ufunc_config,<module 'numpy.core._ufunc_config' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_ufunc_config.py'>,notebook_spark
+module,numpy.core.arrayprint,<module 'numpy.core.arrayprint' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/arrayprint.py'>,notebook_spark
+module,numpy.core.defchararray,<module 'numpy.core.defchararray' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/defchararray.py'>,notebook_spark
+module,numpy.core.einsumfunc,<module 'numpy.core.einsumfunc' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/einsumfunc.py'>,notebook_spark
+module,numpy.core.fromnumeric,<module 'numpy.core.fromnumeric' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/fromnumeric.py'>,notebook_spark
+module,numpy.core.function_base,<module 'numpy.core.function_base' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/function_base.py'>,notebook_spark
+module,numpy.core.getlimits,<module 'numpy.core.getlimits' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/getlimits.py'>,notebook_spark
+module,numpy.core.info,<module 'numpy.core.info' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/info.py'>,notebook_spark
+module,numpy.core.machar,<module 'numpy.core.machar' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/machar.py'>,notebook_spark
+module,numpy.core.memmap,<module 'numpy.core.memmap' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/memmap.py'>,notebook_spark
+module,numpy.core.multiarray,<module 'numpy.core.multiarray' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/multiarray.py'>,notebook_spark
+module,numpy.core.numeric,<module 'numpy.core.numeric' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/numeric.py'>,notebook_spark
+module,numpy.core.numerictypes,<module 'numpy.core.numerictypes' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/numerictypes.py'>,notebook_spark
+module,numpy.core.overrides,<module 'numpy.core.overrides' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/overrides.py'>,notebook_spark
+module,numpy.core.records,<module 'numpy.core.records' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/records.py'>,notebook_spark
+module,numpy.core.shape_base,<module 'numpy.core.shape_base' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/shape_base.py'>,notebook_spark
+module,numpy.core.umath,<module 'numpy.core.umath' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/umath.py'>,notebook_spark
+module,numpy.ctypeslib,<module 'numpy.ctypeslib' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/ctypeslib.py'>,notebook_spark
+module,numpy.fft,<module 'numpy.fft' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/fft/__init__.py'>,notebook_spark
+module,numpy.fft._pocketfft,<module 'numpy.fft._pocketfft' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/fft/_pocketfft.py'>,notebook_spark
+module,numpy.fft._pocketfft_internal,<module 'numpy.fft._pocketfft_internal' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/fft/_pocketfft_internal.cpython-37m-darwin.so'>,notebook_spark
+module,numpy.fft.helper,<module 'numpy.fft.helper' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/fft/helper.py'>,notebook_spark
+module,numpy.lib,<module 'numpy.lib' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/__init__.py'>,notebook_spark
+module,numpy.lib._datasource,<module 'numpy.lib._datasource' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/_datasource.py'>,notebook_spark
+module,numpy.lib._iotools,<module 'numpy.lib._iotools' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/_iotools.py'>,notebook_spark
+module,numpy.lib._version,<module 'numpy.lib._version' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/_version.py'>,notebook_spark
+module,numpy.lib.arraypad,<module 'numpy.lib.arraypad' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/arraypad.py'>,notebook_spark
+module,numpy.lib.arraysetops,<module 'numpy.lib.arraysetops' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/arraysetops.py'>,notebook_spark
+module,numpy.lib.arrayterator,<module 'numpy.lib.arrayterator' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/arrayterator.py'>,notebook_spark
+module,numpy.lib.financial,<module 'numpy.lib.financial' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/financial.py'>,notebook_spark
+module,numpy.lib.format,<module 'numpy.lib.format' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/format.py'>,notebook_spark
+module,numpy.lib.function_base,<module 'numpy.lib.function_base' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/function_base.py'>,notebook_spark
+module,numpy.lib.histograms,<module 'numpy.lib.histograms' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/histograms.py'>,notebook_spark
+module,numpy.lib.index_tricks,<module 'numpy.lib.index_tricks' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/index_tricks.py'>,notebook_spark
+module,numpy.lib.info,<module 'numpy.lib.info' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/info.py'>,notebook_spark
+module,numpy.lib.mixins,<module 'numpy.lib.mixins' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/mixins.py'>,notebook_spark
+module,numpy.lib.nanfunctions,<module 'numpy.lib.nanfunctions' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/nanfunctions.py'>,notebook_spark
+module,numpy.lib.npyio,<module 'numpy.lib.npyio' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/npyio.py'>,notebook_spark
+module,numpy.lib.polynomial,<module 'numpy.lib.polynomial' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/polynomial.py'>,notebook_spark
+module,numpy.lib.scimath,<module 'numpy.lib.scimath' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/scimath.py'>,notebook_spark
+module,numpy.lib.shape_base,<module 'numpy.lib.shape_base' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/shape_base.py'>,notebook_spark
+module,numpy.lib.stride_tricks,<module 'numpy.lib.stride_tricks' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/stride_tricks.py'>,notebook_spark
+module,numpy.lib.twodim_base,<module 'numpy.lib.twodim_base' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/twodim_base.py'>,notebook_spark
+module,numpy.lib.type_check,<module 'numpy.lib.type_check' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/type_check.py'>,notebook_spark
+module,numpy.lib.ufunclike,<module 'numpy.lib.ufunclike' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/ufunclike.py'>,notebook_spark
+module,numpy.lib.utils,<module 'numpy.lib.utils' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/utils.py'>,notebook_spark
+module,numpy.linalg,<module 'numpy.linalg' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/linalg/__init__.py'>,notebook_spark
+module,numpy.linalg._umath_linalg,<module 'numpy.linalg._umath_linalg' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/linalg/_umath_linalg.cpython-37m-darwin.so'>,notebook_spark
+module,numpy.linalg.info,<module 'numpy.linalg.info' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/linalg/info.py'>,notebook_spark
+module,numpy.linalg.lapack_lite,<module 'numpy.linalg.lapack_lite' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/linalg/lapack_lite.cpython-37m-darwin.so'>,notebook_spark
+module,numpy.linalg.linalg,<module 'numpy.linalg.linalg' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/linalg/linalg.py'>,notebook_spark
+module,numpy.ma,<module 'numpy.ma' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/ma/__init__.py'>,notebook_spark
+module,numpy.ma.core,<module 'numpy.ma.core' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/ma/core.py'>,notebook_spark
+module,numpy.ma.extras,<module 'numpy.ma.extras' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/ma/extras.py'>,notebook_spark
+module,numpy.matrixlib,<module 'numpy.matrixlib' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/matrixlib/__init__.py'>,notebook_spark
+module,numpy.matrixlib.defmatrix,<module 'numpy.matrixlib.defmatrix' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py'>,notebook_spark
+module,numpy.polynomial,<module 'numpy.polynomial' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/__init__.py'>,notebook_spark
+module,numpy.polynomial._polybase,<module 'numpy.polynomial._polybase' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/_polybase.py'>,notebook_spark
+module,numpy.polynomial.chebyshev,<module 'numpy.polynomial.chebyshev' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/chebyshev.py'>,notebook_spark
+module,numpy.polynomial.hermite,<module 'numpy.polynomial.hermite' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/hermite.py'>,notebook_spark
+module,numpy.polynomial.hermite_e,<module 'numpy.polynomial.hermite_e' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/hermite_e.py'>,notebook_spark
+module,numpy.polynomial.laguerre,<module 'numpy.polynomial.laguerre' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/laguerre.py'>,notebook_spark
+module,numpy.polynomial.legendre,<module 'numpy.polynomial.legendre' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/legendre.py'>,notebook_spark
+module,numpy.polynomial.polynomial,<module 'numpy.polynomial.polynomial' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/polynomial.py'>,notebook_spark
+module,numpy.polynomial.polyutils,<module 'numpy.polynomial.polyutils' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/polyutils.py'>,notebook_spark
+module,numpy.random,<module 'numpy.random' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/__init__.py'>,notebook_spark
+module,numpy.random._pickle,<module 'numpy.random._pickle' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/_pickle.py'>,notebook_spark
+module,numpy.random.bit_generator,<module 'numpy.random.bit_generator' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/bit_generator.cpython-37m-darwin.so'>,notebook_spark
+module,numpy.random.bounded_integers,<module 'numpy.random.bounded_integers' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/bounded_integers.cpython-37m-darwin.so'>,notebook_spark
+module,numpy.random.common,<module 'numpy.random.common' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/common.cpython-37m-darwin.so'>,notebook_spark
+module,numpy.random.generator,<module 'numpy.random.generator' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/generator.cpython-37m-darwin.so'>,notebook_spark
+module,numpy.random.mt19937,<module 'numpy.random.mt19937' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/mt19937.cpython-37m-darwin.so'>,notebook_spark
+module,numpy.random.mtrand,<module 'numpy.random.mtrand' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/mtrand.cpython-37m-darwin.so'>,notebook_spark
+module,numpy.random.pcg64,<module 'numpy.random.pcg64' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/pcg64.cpython-37m-darwin.so'>,notebook_spark
+module,numpy.random.philox,<module 'numpy.random.philox' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/philox.cpython-37m-darwin.so'>,notebook_spark
+module,numpy.random.sfc64,<module 'numpy.random.sfc64' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/sfc64.cpython-37m-darwin.so'>,notebook_spark
+module,numpy.testing,<module 'numpy.testing' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/testing/__init__.py'>,notebook_spark
+module,numpy.testing._private,<module 'numpy.testing._private' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/testing/_private/__init__.py'>,notebook_spark
+module,numpy.testing._private.decorators,<module 'numpy.testing._private.decorators' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/testing/_private/decorators.py'>,notebook_spark
+module,numpy.testing._private.nosetester,<module 'numpy.testing._private.nosetester' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/testing/_private/nosetester.py'>,notebook_spark
+module,numpy.testing._private.utils,<module 'numpy.testing._private.utils' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/testing/_private/utils.py'>,notebook_spark
+module,numpy.version,<module 'numpy.version' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/version.py'>,notebook_spark
+module,opcode,<module 'opcode' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/opcode.py'>,notebook_spark
+module,operator,<module 'operator' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/operator.py'>,notebook_spark
+module,org,<module 'org' (namespace)>,notebook_spark
+module,os,<module 'os' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/os.py'>,notebook_spark
+module,os.path,<module 'posixpath' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/posixpath.py'>,notebook_spark
+module,pathlib,<module 'pathlib' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/pathlib.py'>,notebook_spark
+module,pickle,<module 'pickle' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/pickle.py'>,notebook_spark
+module,pkgutil,<module 'pkgutil' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/pkgutil.py'>,notebook_spark
+module,platform,<module 'platform' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/platform.py'>,notebook_spark
+module,posix,<module 'posix' (built-in)>,notebook_spark
+module,posixpath,<module 'posixpath' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/posixpath.py'>,notebook_spark
+module,pprint,<module 'pprint' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/pprint.py'>,notebook_spark
+module,profile,<module 'profile' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/profile.py'>,notebook_spark
+module,pstats,<module 'pstats' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/pstats.py'>,notebook_spark
+module,pwd,<module 'pwd' (built-in)>,notebook_spark
+module,py4j,<module 'py4j' from '/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip/py4j/__init__.py'>,notebook_spark
+module,py4j.compat,<module 'py4j.compat' from '/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip/py4j/compat.py'>,notebook_spark
+module,py4j.finalizer,<module 'py4j.finalizer' from '/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip/py4j/finalizer.py'>,notebook_spark
+module,py4j.java_collections,<module 'py4j.java_collections' from '/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip/py4j/java_collections.py'>,notebook_spark
+module,py4j.java_gateway,<module 'py4j.java_gateway' from '/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py'>,notebook_spark
+module,py4j.protocol,<module 'py4j.protocol' from '/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip/py4j/protocol.py'>,notebook_spark
+module,py4j.signals,<module 'py4j.signals' from '/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip/py4j/signals.py'>,notebook_spark
+module,py4j.version,<module 'py4j.version' from '/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip/py4j/version.py'>,notebook_spark
+module,pydoc,<module 'pydoc' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/pydoc.py'>,notebook_spark
+module,pyspark,<module 'pyspark' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/__init__.py'>,notebook_spark
+module,pyspark._globals,<module 'pyspark._globals' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/_globals.py'>,notebook_spark
+module,pyspark.accumulators,<module 'pyspark.accumulators' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/accumulators.py'>,notebook_spark
+module,pyspark.broadcast,<module 'pyspark.broadcast' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/broadcast.py'>,notebook_spark
+module,pyspark.cloudpickle,<module 'pyspark.cloudpickle' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/cloudpickle.py'>,notebook_spark
+module,pyspark.conf,<module 'pyspark.conf' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/conf.py'>,notebook_spark
+module,pyspark.context,<module 'pyspark.context' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/context.py'>,notebook_spark
+module,pyspark.files,<module 'pyspark.files' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/files.py'>,notebook_spark
+module,pyspark.find_spark_home,<module 'pyspark.find_spark_home' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/find_spark_home.py'>,notebook_spark
+module,pyspark.heapq3,<module 'pyspark.heapq3' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/heapq3.py'>,notebook_spark
+module,pyspark.java_gateway,<module 'pyspark.java_gateway' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/java_gateway.py'>,notebook_spark
+module,pyspark.join,<module 'pyspark.join' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/join.py'>,notebook_spark
+module,pyspark.profiler,<module 'pyspark.profiler' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/profiler.py'>,notebook_spark
+module,pyspark.rdd,<module 'pyspark.rdd' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/rdd.py'>,notebook_spark
+module,pyspark.rddsampler,<module 'pyspark.rddsampler' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/rddsampler.py'>,notebook_spark
+module,pyspark.resultiterable,<module 'pyspark.resultiterable' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/resultiterable.py'>,notebook_spark
+module,pyspark.serializers,<module 'pyspark.serializers' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/serializers.py'>,notebook_spark
+module,pyspark.shuffle,<module 'pyspark.shuffle' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/shuffle.py'>,notebook_spark
+module,pyspark.sql,<module 'pyspark.sql' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/__init__.py'>,notebook_spark
+module,pyspark.sql.catalog,<module 'pyspark.sql.catalog' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/catalog.py'>,notebook_spark
+module,pyspark.sql.column,<module 'pyspark.sql.column' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/column.py'>,notebook_spark
+module,pyspark.sql.conf,<module 'pyspark.sql.conf' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/conf.py'>,notebook_spark
+module,pyspark.sql.context,<module 'pyspark.sql.context' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/context.py'>,notebook_spark
+module,pyspark.sql.dataframe,<module 'pyspark.sql.dataframe' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/dataframe.py'>,notebook_spark
+module,pyspark.sql.group,<module 'pyspark.sql.group' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/group.py'>,notebook_spark
+module,pyspark.sql.readwriter,<module 'pyspark.sql.readwriter' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/readwriter.py'>,notebook_spark
+module,pyspark.sql.session,<module 'pyspark.sql.session' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/session.py'>,notebook_spark
+module,pyspark.sql.streaming,<module 'pyspark.sql.streaming' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/streaming.py'>,notebook_spark
+module,pyspark.sql.types,<module 'pyspark.sql.types' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/types.py'>,notebook_spark
+module,pyspark.sql.udf,<module 'pyspark.sql.udf' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/udf.py'>,notebook_spark
+module,pyspark.sql.utils,<module 'pyspark.sql.utils' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py'>,notebook_spark
+module,pyspark.sql.window,<module 'pyspark.sql.window' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/window.py'>,notebook_spark
+module,pyspark.statcounter,<module 'pyspark.statcounter' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/statcounter.py'>,notebook_spark
+module,pyspark.status,<module 'pyspark.status' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/status.py'>,notebook_spark
+module,pyspark.storagelevel,<module 'pyspark.storagelevel' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/storagelevel.py'>,notebook_spark
+module,pyspark.taskcontext,<module 'pyspark.taskcontext' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/taskcontext.py'>,notebook_spark
+module,pyspark.traceback_utils,<module 'pyspark.traceback_utils' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/traceback_utils.py'>,notebook_spark
+module,pyspark.util,<module 'pyspark.util' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/util.py'>,notebook_spark
+module,pyspark.version,<module 'pyspark.version' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/version.py'>,notebook_spark
+module,pyspark.worker,<module 'pyspark.worker' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/worker.py'>,notebook_spark
+module,queue,<module 'queue' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/queue.py'>,notebook_spark
+module,random,<module 'random' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/random.py'>,notebook_spark
+module,re,<module 're' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/re.py'>,notebook_spark
+module,reprlib,<module 'reprlib' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/reprlib.py'>,notebook_spark
+module,resource,<module 'resource' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/resource.cpython-37m-darwin.so'>,notebook_spark
+module,runpy,<module 'runpy' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/runpy.py'>,notebook_spark
+module,secrets,<module 'secrets' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/secrets.py'>,notebook_spark
+module,select,<module 'select' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/select.cpython-37m-darwin.so'>,notebook_spark
+module,selectors,<module 'selectors' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/selectors.py'>,notebook_spark
+module,shlex,<module 'shlex' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/shlex.py'>,notebook_spark
+module,shutil,<module 'shutil' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/shutil.py'>,notebook_spark
+module,signal,<module 'signal' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/signal.py'>,notebook_spark
+module,site,<module 'site' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/site.py'>,notebook_spark
+module,socket,<module 'socket' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/socket.py'>,notebook_spark
+module,socketserver,<module 'socketserver' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/socketserver.py'>,notebook_spark
+module,sre_compile,<module 'sre_compile' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/sre_compile.py'>,notebook_spark
+module,sre_constants,<module 'sre_constants' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/sre_constants.py'>,notebook_spark
+module,sre_parse,<module 'sre_parse' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/sre_parse.py'>,notebook_spark
+module,stat,<module 'stat' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/stat.py'>,notebook_spark
+module,string,<module 'string' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/string.py'>,notebook_spark
+module,struct,<module 'struct' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/struct.py'>,notebook_spark
+module,subprocess,<module 'subprocess' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/subprocess.py'>,notebook_spark
+module,sys,<module 'sys' (built-in)>,notebook_spark
+module,tempfile,<module 'tempfile' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/tempfile.py'>,notebook_spark
+module,textwrap,<module 'textwrap' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/textwrap.py'>,notebook_spark
+module,threading,<module 'threading' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/threading.py'>,notebook_spark
+module,time,<module 'time' (built-in)>,notebook_spark
+module,token,<module 'token' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/token.py'>,notebook_spark
+module,tokenize,<module 'tokenize' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/tokenize.py'>,notebook_spark
+module,toolz,<module 'toolz' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/__init__.py'>,notebook_spark
+module,toolz._signatures,<module 'toolz._signatures' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/_signatures.py'>,notebook_spark
+module,toolz.compatibility,<module 'toolz.compatibility' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/compatibility.py'>,notebook_spark
+module,toolz.curried,<module 'toolz.curried' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/curried/__init__.py'>,notebook_spark
+module,toolz.curried.exceptions,<module 'toolz.curried.exceptions' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/curried/exceptions.py'>,notebook_spark
+module,toolz.curried.operator,<module 'toolz.curried.operator' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/curried/operator.py'>,notebook_spark
+module,toolz.dicttoolz,<module 'toolz.dicttoolz' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/dicttoolz.py'>,notebook_spark
+module,toolz.functoolz,<module 'toolz.functoolz' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/functoolz.py'>,notebook_spark
+module,toolz.itertoolz,<module 'toolz.itertoolz' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/itertoolz.py'>,notebook_spark
+module,toolz.recipes,<module 'toolz.recipes' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/recipes.py'>,notebook_spark
+module,toolz.sandbox,<module 'toolz.sandbox' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/sandbox/__init__.py'>,notebook_spark
+module,toolz.sandbox.core,<module 'toolz.sandbox.core' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/sandbox/core.py'>,notebook_spark
+module,toolz.sandbox.parallel,<module 'toolz.sandbox.parallel' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/sandbox/parallel.py'>,notebook_spark
+module,toolz.utils,<module 'toolz.utils' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/utils.py'>,notebook_spark
+module,traceback,<module 'traceback' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/traceback.py'>,notebook_spark
+module,types,<module 'types' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/types.py'>,notebook_spark
+module,unittest,<module 'unittest' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/unittest/__init__.py'>,notebook_spark
+module,unittest.case,<module 'unittest.case' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/unittest/case.py'>,notebook_spark
+module,unittest.loader,<module 'unittest.loader' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/unittest/loader.py'>,notebook_spark
+module,unittest.main,<module 'unittest.main' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/unittest/main.py'>,notebook_spark
+module,unittest.result,<module 'unittest.result' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/unittest/result.py'>,notebook_spark
+module,unittest.runner,<module 'unittest.runner' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/unittest/runner.py'>,notebook_spark
+module,unittest.signals,<module 'unittest.signals' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/unittest/signals.py'>,notebook_spark
+module,unittest.suite,<module 'unittest.suite' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/unittest/suite.py'>,notebook_spark
+module,unittest.util,<module 'unittest.util' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/unittest/util.py'>,notebook_spark
+module,urllib,<module 'urllib' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/urllib/__init__.py'>,notebook_spark
+module,urllib.parse,<module 'urllib.parse' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/urllib/parse.py'>,notebook_spark
+module,warnings,<module 'warnings' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/warnings.py'>,notebook_spark
+module,weakref,<module 'weakref' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/weakref.py'>,notebook_spark
+module,zipimport,<module 'zipimport' (built-in)>,notebook_spark
+module,zlib,<module 'zlib' from '/Users/wmcabee/.pyenv/versions/3.7.4/lib/python3.7/lib-dynload/zlib.cpython-37m-darwin.so'>,notebook_spark
+path,cwd,/Users/wmcabee/_NBC/nbc_analysis/tests/test_app_io/clickstream_events,notebook_spark
+sys,executable,/Users/wmcabee/_NBC/nbc_analysis/venv/bin/python3,notebook_spark
+sys,script,/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/daemon.py,notebook_spark
