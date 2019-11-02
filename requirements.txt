@@ -1,0 +1,5 @@
+-r requirements/aws.txt
+-r requirements/ip.txt
+-r requirements/spark.txt
+-r requirements/obsolete.txt
+#-r requirements/p01.txt

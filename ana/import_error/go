@@ -1,0 +1,4 @@
+#!/bin/bash
+
+../../venv/bin/python ./import_test.py &> log.log  
+grep NotImplementedError log.log

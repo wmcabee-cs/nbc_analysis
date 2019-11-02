@@ -1,0 +1,395 @@
+category,type,item,source
+environ,Apple_PubSub_Socket_Render,/private/tmp/com.apple.launchd.TE6ZHu6XL4/Render,cmd_spark
+environ,BASH_FUNC_generate_command_executed_sequence%%,"() {  printf '\e\7'
+}",cmd_spark
+environ,CONDA_ENV,cortex-package-utils,cmd_spark
+environ,CORTEX_BASE_DOMAIN,cortex-dev.insights.ai,cmd_spark
+environ,DATA_TOP,/Users/wmcabee/DATA,cmd_spark
+environ,HISTFILE,/Users/wmcabee/Library/Preferences/PyCharm2018.3/terminal/history/history-3306,cmd_spark
+environ,HOME,/Users/wmcabee,cmd_spark
+environ,JAVA_HOME,/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home,cmd_spark
+environ,JAVA_MAIN_CLASS_15250,org.apache.spark.deploy.SparkSubmit,cmd_spark
+environ,LC_CTYPE,en_US.UTF-8,cmd_spark
+environ,LOGNAME,wmcabee,cmd_spark
+environ,NBC_DATA_TOP,/Users/wmcabee/DATA/NBC,cmd_spark
+environ,NBC_PROJ_TOP,/Users/wmcabee/_NBC,cmd_spark
+environ,NPM_TOKEN,eyJ2ZXIiOiIyIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYiLCJraWQiOiJhcEVCamdqUzRUek1LQWdISXdBdnhXU05qQTR1bl8yZ3Zvbk9CM2F3c004In0.eyJzdWIiOiJqZi1hcnRpZmFjdG9yeUBlYzVlOWIwYy0wMjRlLTQ2YjktOTIzYy02MTc5ZjFjYjY3OWZcL3VzZXJzXC9kYWxkcmlkZ2UiLCJzY3AiOiJtZW1iZXItb2YtZ3JvdXBzOiogYXBpOioiLCJhdWQiOiJqZi1hcnRpZmFjdG9yeUBlYzVlOWIwYy0wMjRlLTQ2YjktOTIzYy02MTc5ZjFjYjY3OWYiLCJpc3MiOiJqZi1hcnRpZmFjdG9yeUBlYzVlOWIwYy0wMjRlLTQ2YjktOTIzYy02MTc5ZjFjYjY3OWYiLCJpYXQiOjE1MzY2MTA3NDAsImp0aSI6ImFkZjY0YjQ4LTM5MWMtNDNmMy1iNTAyLTI1NTlmMWY1NzBiNCJ9.R6SsX-31BXsO-hl7F6z5mobq5gW6d3wGT9dHVbwnovrd2EfTeWz_qzeolNoGwC1xjGuy7s3ife82-7NGP3kkb3tPGd6f8kMDmxBcisRuOGZggVeouwzjMRZQp4pVNa3HFU2DYuaMwKP4U_xfdq9jSW5j-dg4rkIcwifq7eSzljn9c_wntO0ghvL0YHkzM32bC40v25TfNZr76avZfclz63OxkKo-pxKRdMkp66cm9mtXMk9EBBWk2L4RwELjVCQg-NRMjtqLZwWDA6EG3jKd_TEUKAXwzy-upzRwzmluVBDeAhi6lpPFNUg9UYkM6qSlTjEFqLRyQDcNpXJhxPjfyw,cmd_spark
+environ,NVM_BIN,/Users/wmcabee/.nvm/versions/node/v8.15.0/bin,cmd_spark
+environ,NVM_CD_FLAGS,,cmd_spark
+environ,NVM_DIR,/Users/wmcabee/.nvm,cmd_spark
+environ,PATH,/Users/wmcabee/_NBC/nbc_analysis/venv/bin:/Users/wmcabee/.pyenv/plugins/pyenv-virtualenv/shims:/Users/wmcabee/.pyenv/shims:/Users/wmcabee/.pyenv/bin:/Users/wmcabee/.pyenv/shims:/Users/wmcabee/.nvm/versions/node/v8.15.0/bin:/usr/local/bin/pyton/3.7.4/bin:/Users/wmcabee/opt/spark/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin,cmd_spark
+environ,PWD,/Users/wmcabee/_NBC/nbc_analysis/ana/import_error,cmd_spark
+environ,PYENV_SHELL,bash,cmd_spark
+environ,PYENV_VIRTUALENV_INIT,1,cmd_spark
+environ,PYSPARK_DRIVER_PYTHON,/Users/wmcabee/_NBC/nbc_analysis/venv/bin/python3,cmd_spark
+environ,PYSPARK_PYTHON,/Users/wmcabee/_NBC/nbc_analysis/venv/bin/python3,cmd_spark
+environ,PYTHONHASHSEED,0,cmd_spark
+environ,PYTHONPATH,/Users/wmcabee/opt/spark/python/lib/pyspark.zip:/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip:/Users/wmcabee/opt/spark-2.4.4/jars/spark-core_2.11-2.4.4.jar,cmd_spark
+environ,PYTHONUNBUFFERED,YES,cmd_spark
+environ,PYTHON_WORKER_FACTORY_SECRET,73d5b29d094bcbde48e5d7afb4aa814911fde0e61dfb58edd2153bcfbc5968f2,cmd_spark
+environ,SHELL,/bin/bash,cmd_spark
+environ,SHLVL,2,cmd_spark
+environ,SKILL_LAB_D,/tmp/skill-lab,cmd_spark
+environ,SPARK_CONF_DIR,/Users/wmcabee/opt/spark/conf,cmd_spark
+environ,SPARK_ENV_LOADED,1,cmd_spark
+environ,SPARK_HOME,/Users/wmcabee/opt/spark,cmd_spark
+environ,SPARK_LOCAL_DIRS,/private/var/folders/zg/vyq842cx20s66ytjhf0bl43dxzgtx0/T/blockmgr-b97a36b3-08d8-4142-8914-a5b2ef3f4c1b,cmd_spark
+environ,SPARK_LOCAL_IP,127.0.0.1,cmd_spark
+environ,SPARK_REUSE_WORKER,1,cmd_spark
+environ,SPARK_SCALA_VERSION,2.12,cmd_spark
+environ,SSH_AUTH_SOCK,/private/tmp/com.apple.launchd.968fdqmk3w/Listeners,cmd_spark
+environ,TERM,xterm-256color,cmd_spark
+environ,TERMINAL_EMULATOR,JetBrains-JediTerm,cmd_spark
+environ,TMPDIR,/var/folders/zg/vyq842cx20s66ytjhf0bl43dxzgtx0/T/,cmd_spark
+environ,USER,wmcabee,cmd_spark
+environ,VIRTUAL_ENV,/Users/wmcabee/_NBC/nbc_analysis/venv,cmd_spark
+environ,XPC_FLAGS,0x0,cmd_spark
+environ,XPC_SERVICE_NAME,0,cmd_spark
+environ,_PYSPARK_DRIVER_CONN_INFO_PATH,/var/folders/zg/vyq842cx20s66ytjhf0bl43dxzgtx0/T/tmp6zcynjkb/tmpqb1v2r4d,cmd_spark
+environ,__CF_USER_TEXT_ENCODING,0x7BF7EBA0:0x0:0x0,cmd_spark
+environ,__INTELLIJ_COMMAND_HISTFILE__,/Users/wmcabee/Library/Preferences/PyCharm2018.3/terminal/history/history-3306,cmd_spark
+environ,__PYVENV_LAUNCHER__,/Users/wmcabee/_NBC/nbc_analysis/venv/bin/python3,cmd_spark
+module,__future__,<module '__future__' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/__future__.py'>,cmd_spark
+module,__main__,<module 'pyspark.daemon' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/daemon.py'>,cmd_spark
+module,_abc,<module '_abc' (built-in)>,cmd_spark
+module,_ast,<module '_ast' (built-in)>,cmd_spark
+module,_bisect,<module '_bisect' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_bisect.cpython-37m-darwin.so'>,cmd_spark
+module,_blake2,<module '_blake2' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_blake2.cpython-37m-darwin.so'>,cmd_spark
+module,_bootlocale,<module '_bootlocale' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_bootlocale.py'>,cmd_spark
+module,_bz2,<module '_bz2' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_bz2.cpython-37m-darwin.so'>,cmd_spark
+module,_codecs,<module '_codecs' (built-in)>,cmd_spark
+module,_collections,<module '_collections' (built-in)>,cmd_spark
+module,_collections_abc,<module '_collections_abc' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_collections_abc.py'>,cmd_spark
+module,_compat_pickle,<module '_compat_pickle' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_compat_pickle.py'>,cmd_spark
+module,_compression,<module '_compression' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_compression.py'>,cmd_spark
+module,_csv,<module '_csv' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_csv.cpython-37m-darwin.so'>,cmd_spark
+module,_ctypes,<module '_ctypes' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_ctypes.cpython-37m-darwin.so'>,cmd_spark
+module,_cython_0_29_13,<module '_cython_0_29_13'>,cmd_spark
+module,_datetime,<module '_datetime' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_datetime.cpython-37m-darwin.so'>,cmd_spark
+module,_decimal,<module '_decimal' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_decimal.cpython-37m-darwin.so'>,cmd_spark
+module,_frozen_importlib,<module 'importlib._bootstrap' (frozen)>,cmd_spark
+module,_frozen_importlib_external,<module 'importlib._bootstrap_external' (frozen)>,cmd_spark
+module,_functools,<module '_functools' (built-in)>,cmd_spark
+module,_hashlib,<module '_hashlib' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_hashlib.cpython-37m-darwin.so'>,cmd_spark
+module,_heapq,<module '_heapq' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_heapq.cpython-37m-darwin.so'>,cmd_spark
+module,_imp,<module '_imp' (built-in)>,cmd_spark
+module,_io,<module 'io' (built-in)>,cmd_spark
+module,_json,<module '_json' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_json.cpython-37m-darwin.so'>,cmd_spark
+module,_locale,<module '_locale' (built-in)>,cmd_spark
+module,_lsprof,<module '_lsprof' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_lsprof.cpython-37m-darwin.so'>,cmd_spark
+module,_lzma,<module '_lzma' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_lzma.cpython-37m-darwin.so'>,cmd_spark
+module,_opcode,<module '_opcode' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_opcode.cpython-37m-darwin.so'>,cmd_spark
+module,_operator,<module '_operator' (built-in)>,cmd_spark
+module,_pickle,<module '_pickle' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_pickle.cpython-37m-darwin.so'>,cmd_spark
+module,_posixsubprocess,<module '_posixsubprocess' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_posixsubprocess.cpython-37m-darwin.so'>,cmd_spark
+module,_queue,<module '_queue' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_queue.cpython-37m-darwin.so'>,cmd_spark
+module,_random,<module '_random' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_random.cpython-37m-darwin.so'>,cmd_spark
+module,_sha3,<module '_sha3' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_sha3.cpython-37m-darwin.so'>,cmd_spark
+module,_signal,<module '_signal' (built-in)>,cmd_spark
+module,_sitebuiltins,<module '_sitebuiltins' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_sitebuiltins.py'>,cmd_spark
+module,_socket,<module '_socket' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_socket.cpython-37m-darwin.so'>,cmd_spark
+module,_sre,<module '_sre' (built-in)>,cmd_spark
+module,_stat,<module '_stat' (built-in)>,cmd_spark
+module,_string,<module '_string' (built-in)>,cmd_spark
+module,_struct,<module '_struct' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_struct.cpython-37m-darwin.so'>,cmd_spark
+module,_thread,<module '_thread' (built-in)>,cmd_spark
+module,_warnings,<module '_warnings' (built-in)>,cmd_spark
+module,_weakref,<module '_weakref' (built-in)>,cmd_spark
+module,_weakrefset,<module '_weakrefset' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_weakrefset.py'>,cmd_spark
+module,abc,<module 'abc' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/abc.py'>,cmd_spark
+module,argparse,<module 'argparse' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/argparse.py'>,cmd_spark
+module,array,<module 'array' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/array.cpython-37m-darwin.so'>,cmd_spark
+module,ast,<module 'ast' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ast.py'>,cmd_spark
+module,atexit,<module 'atexit' (built-in)>,cmd_spark
+module,base64,<module 'base64' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/base64.py'>,cmd_spark
+module,binascii,<module 'binascii' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/binascii.cpython-37m-darwin.so'>,cmd_spark
+module,bisect,<module 'bisect' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/bisect.py'>,cmd_spark
+module,builtins,<module 'builtins' (built-in)>,cmd_spark
+module,bz2,<module 'bz2' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/bz2.py'>,cmd_spark
+module,cProfile,<module 'cProfile' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/cProfile.py'>,cmd_spark
+module,calendar,<module 'calendar' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/calendar.py'>,cmd_spark
+module,codecs,<module 'codecs' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/codecs.py'>,cmd_spark
+module,collections,<module 'collections' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/collections/__init__.py'>,cmd_spark
+module,collections.abc,<module 'collections.abc' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/collections/abc.py'>,cmd_spark
+module,contextlib,<module 'contextlib' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/contextlib.py'>,cmd_spark
+module,copy,<module 'copy' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py'>,cmd_spark
+module,copyreg,<module 'copyreg' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copyreg.py'>,cmd_spark
+module,csv,<module 'csv' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/csv.py'>,cmd_spark
+module,ctypes,<module 'ctypes' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ctypes/__init__.py'>,cmd_spark
+module,ctypes._endian,<module 'ctypes._endian' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ctypes/_endian.py'>,cmd_spark
+module,cython_runtime,<module 'cython_runtime'>,cmd_spark
+module,datetime,<module 'datetime' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/datetime.py'>,cmd_spark
+module,decimal,<module 'decimal' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/decimal.py'>,cmd_spark
+module,difflib,<module 'difflib' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/difflib.py'>,cmd_spark
+module,dis,<module 'dis' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/dis.py'>,cmd_spark
+module,encodings,<module 'encodings' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/__init__.py'>,cmd_spark
+module,encodings.aliases,<module 'encodings.aliases' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/aliases.py'>,cmd_spark
+module,encodings.cp437,<module 'encodings.cp437' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp437.py'>,cmd_spark
+module,encodings.latin_1,<module 'encodings.latin_1' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/latin_1.py'>,cmd_spark
+module,encodings.utf_8,<module 'encodings.utf_8' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/utf_8.py'>,cmd_spark
+module,enum,<module 'enum' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/enum.py'>,cmd_spark
+module,errno,<module 'errno' (built-in)>,cmd_spark
+module,fnmatch,<module 'fnmatch' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/fnmatch.py'>,cmd_spark
+module,functools,<module 'functools' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/functools.py'>,cmd_spark
+module,gc,<module 'gc' (built-in)>,cmd_spark
+module,genericpath,<module 'genericpath' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/genericpath.py'>,cmd_spark
+module,gettext,<module 'gettext' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/gettext.py'>,cmd_spark
+module,grp,<module 'grp' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/grp.cpython-37m-darwin.so'>,cmd_spark
+module,hashlib,<module 'hashlib' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/hashlib.py'>,cmd_spark
+module,heapq,<module 'heapq' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/heapq.py'>,cmd_spark
+module,hmac,<module 'hmac' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/hmac.py'>,cmd_spark
+module,html,<module 'html' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/html/__init__.py'>,cmd_spark
+module,html.entities,<module 'html.entities' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/html/entities.py'>,cmd_spark
+module,imp,<module 'imp' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/imp.py'>,cmd_spark
+module,importlib,<module 'importlib' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/importlib/__init__.py'>,cmd_spark
+module,importlib._bootstrap,<module 'importlib._bootstrap' (frozen)>,cmd_spark
+module,importlib._bootstrap_external,<module 'importlib._bootstrap_external' (frozen)>,cmd_spark
+module,importlib.abc,<module 'importlib.abc' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/importlib/abc.py'>,cmd_spark
+module,importlib.machinery,<module 'importlib.machinery' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/importlib/machinery.py'>,cmd_spark
+module,importlib.util,<module 'importlib.util' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/importlib/util.py'>,cmd_spark
+module,inspect,<module 'inspect' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/inspect.py'>,cmd_spark
+module,io,<module 'io' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/io.py'>,cmd_spark
+module,itertools,<module 'itertools' (built-in)>,cmd_spark
+module,json,<module 'json' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py'>,cmd_spark
+module,json.decoder,<module 'json.decoder' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py'>,cmd_spark
+module,json.encoder,<module 'json.encoder' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py'>,cmd_spark
+module,json.scanner,<module 'json.scanner' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/scanner.py'>,cmd_spark
+module,keyword,<module 'keyword' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/keyword.py'>,cmd_spark
+module,linecache,<module 'linecache' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/linecache.py'>,cmd_spark
+module,locale,<module 'locale' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/locale.py'>,cmd_spark
+module,logging,<module 'logging' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py'>,cmd_spark
+module,lzma,<module 'lzma' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lzma.py'>,cmd_spark
+module,marshal,<module 'marshal' (built-in)>,cmd_spark
+module,math,<module 'math' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/math.cpython-37m-darwin.so'>,cmd_spark
+module,mpl_toolkits,<module 'mpl_toolkits' (namespace)>,cmd_spark
+module,ntpath,<module 'ntpath' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ntpath.py'>,cmd_spark
+module,numbers,<module 'numbers' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/numbers.py'>,cmd_spark
+module,numpy,<module 'numpy' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/__init__.py'>,cmd_spark
+module,numpy.__config__,<module 'numpy.__config__' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/__config__.py'>,cmd_spark
+module,numpy._distributor_init,<module 'numpy._distributor_init' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/_distributor_init.py'>,cmd_spark
+module,numpy._globals,<module 'numpy._globals' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/_globals.py'>,cmd_spark
+module,numpy._pytesttester,<module 'numpy._pytesttester' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/_pytesttester.py'>,cmd_spark
+module,numpy.compat,<module 'numpy.compat' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/compat/__init__.py'>,cmd_spark
+module,numpy.compat._inspect,<module 'numpy.compat._inspect' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/compat/_inspect.py'>,cmd_spark
+module,numpy.compat.py3k,<module 'numpy.compat.py3k' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/compat/py3k.py'>,cmd_spark
+module,numpy.core,<module 'numpy.core' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/__init__.py'>,cmd_spark
+module,numpy.core._add_newdocs,<module 'numpy.core._add_newdocs' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_add_newdocs.py'>,cmd_spark
+module,numpy.core._asarray,<module 'numpy.core._asarray' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_asarray.py'>,cmd_spark
+module,numpy.core._dtype,<module 'numpy.core._dtype' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_dtype.py'>,cmd_spark
+module,numpy.core._dtype_ctypes,<module 'numpy.core._dtype_ctypes' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py'>,cmd_spark
+module,numpy.core._exceptions,<module 'numpy.core._exceptions' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_exceptions.py'>,cmd_spark
+module,numpy.core._internal,<module 'numpy.core._internal' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_internal.py'>,cmd_spark
+module,numpy.core._methods,<module 'numpy.core._methods' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_methods.py'>,cmd_spark
+module,numpy.core._multiarray_tests,<module 'numpy.core._multiarray_tests' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_multiarray_tests.cpython-37m-darwin.so'>,cmd_spark
+module,numpy.core._multiarray_umath,<module 'numpy.core._multiarray_umath' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_multiarray_umath.cpython-37m-darwin.so'>,cmd_spark
+module,numpy.core._string_helpers,<module 'numpy.core._string_helpers' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_string_helpers.py'>,cmd_spark
+module,numpy.core._type_aliases,<module 'numpy.core._type_aliases' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_type_aliases.py'>,cmd_spark
+module,numpy.core._ufunc_config,<module 'numpy.core._ufunc_config' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_ufunc_config.py'>,cmd_spark
+module,numpy.core.arrayprint,<module 'numpy.core.arrayprint' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/arrayprint.py'>,cmd_spark
+module,numpy.core.defchararray,<module 'numpy.core.defchararray' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/defchararray.py'>,cmd_spark
+module,numpy.core.einsumfunc,<module 'numpy.core.einsumfunc' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/einsumfunc.py'>,cmd_spark
+module,numpy.core.fromnumeric,<module 'numpy.core.fromnumeric' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/fromnumeric.py'>,cmd_spark
+module,numpy.core.function_base,<module 'numpy.core.function_base' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/function_base.py'>,cmd_spark
+module,numpy.core.getlimits,<module 'numpy.core.getlimits' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/getlimits.py'>,cmd_spark
+module,numpy.core.info,<module 'numpy.core.info' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/info.py'>,cmd_spark
+module,numpy.core.machar,<module 'numpy.core.machar' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/machar.py'>,cmd_spark
+module,numpy.core.memmap,<module 'numpy.core.memmap' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/memmap.py'>,cmd_spark
+module,numpy.core.multiarray,<module 'numpy.core.multiarray' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/multiarray.py'>,cmd_spark
+module,numpy.core.numeric,<module 'numpy.core.numeric' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/numeric.py'>,cmd_spark
+module,numpy.core.numerictypes,<module 'numpy.core.numerictypes' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/numerictypes.py'>,cmd_spark
+module,numpy.core.overrides,<module 'numpy.core.overrides' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/overrides.py'>,cmd_spark
+module,numpy.core.records,<module 'numpy.core.records' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/records.py'>,cmd_spark
+module,numpy.core.shape_base,<module 'numpy.core.shape_base' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/shape_base.py'>,cmd_spark
+module,numpy.core.umath,<module 'numpy.core.umath' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/umath.py'>,cmd_spark
+module,numpy.ctypeslib,<module 'numpy.ctypeslib' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/ctypeslib.py'>,cmd_spark
+module,numpy.fft,<module 'numpy.fft' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/fft/__init__.py'>,cmd_spark
+module,numpy.fft._pocketfft,<module 'numpy.fft._pocketfft' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/fft/_pocketfft.py'>,cmd_spark
+module,numpy.fft._pocketfft_internal,<module 'numpy.fft._pocketfft_internal' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/fft/_pocketfft_internal.cpython-37m-darwin.so'>,cmd_spark
+module,numpy.fft.helper,<module 'numpy.fft.helper' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/fft/helper.py'>,cmd_spark
+module,numpy.lib,<module 'numpy.lib' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/__init__.py'>,cmd_spark
+module,numpy.lib._datasource,<module 'numpy.lib._datasource' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/_datasource.py'>,cmd_spark
+module,numpy.lib._iotools,<module 'numpy.lib._iotools' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/_iotools.py'>,cmd_spark
+module,numpy.lib._version,<module 'numpy.lib._version' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/_version.py'>,cmd_spark
+module,numpy.lib.arraypad,<module 'numpy.lib.arraypad' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/arraypad.py'>,cmd_spark
+module,numpy.lib.arraysetops,<module 'numpy.lib.arraysetops' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/arraysetops.py'>,cmd_spark
+module,numpy.lib.arrayterator,<module 'numpy.lib.arrayterator' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/arrayterator.py'>,cmd_spark
+module,numpy.lib.financial,<module 'numpy.lib.financial' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/financial.py'>,cmd_spark
+module,numpy.lib.format,<module 'numpy.lib.format' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/format.py'>,cmd_spark
+module,numpy.lib.function_base,<module 'numpy.lib.function_base' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/function_base.py'>,cmd_spark
+module,numpy.lib.histograms,<module 'numpy.lib.histograms' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/histograms.py'>,cmd_spark
+module,numpy.lib.index_tricks,<module 'numpy.lib.index_tricks' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/index_tricks.py'>,cmd_spark
+module,numpy.lib.info,<module 'numpy.lib.info' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/info.py'>,cmd_spark
+module,numpy.lib.mixins,<module 'numpy.lib.mixins' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/mixins.py'>,cmd_spark
+module,numpy.lib.nanfunctions,<module 'numpy.lib.nanfunctions' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/nanfunctions.py'>,cmd_spark
+module,numpy.lib.npyio,<module 'numpy.lib.npyio' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/npyio.py'>,cmd_spark
+module,numpy.lib.polynomial,<module 'numpy.lib.polynomial' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/polynomial.py'>,cmd_spark
+module,numpy.lib.scimath,<module 'numpy.lib.scimath' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/scimath.py'>,cmd_spark
+module,numpy.lib.shape_base,<module 'numpy.lib.shape_base' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/shape_base.py'>,cmd_spark
+module,numpy.lib.stride_tricks,<module 'numpy.lib.stride_tricks' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/stride_tricks.py'>,cmd_spark
+module,numpy.lib.twodim_base,<module 'numpy.lib.twodim_base' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/twodim_base.py'>,cmd_spark
+module,numpy.lib.type_check,<module 'numpy.lib.type_check' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/type_check.py'>,cmd_spark
+module,numpy.lib.ufunclike,<module 'numpy.lib.ufunclike' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/ufunclike.py'>,cmd_spark
+module,numpy.lib.utils,<module 'numpy.lib.utils' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/utils.py'>,cmd_spark
+module,numpy.linalg,<module 'numpy.linalg' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/linalg/__init__.py'>,cmd_spark
+module,numpy.linalg._umath_linalg,<module 'numpy.linalg._umath_linalg' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/linalg/_umath_linalg.cpython-37m-darwin.so'>,cmd_spark
+module,numpy.linalg.info,<module 'numpy.linalg.info' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/linalg/info.py'>,cmd_spark
+module,numpy.linalg.lapack_lite,<module 'numpy.linalg.lapack_lite' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/linalg/lapack_lite.cpython-37m-darwin.so'>,cmd_spark
+module,numpy.linalg.linalg,<module 'numpy.linalg.linalg' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/linalg/linalg.py'>,cmd_spark
+module,numpy.ma,<module 'numpy.ma' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/ma/__init__.py'>,cmd_spark
+module,numpy.ma.core,<module 'numpy.ma.core' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/ma/core.py'>,cmd_spark
+module,numpy.ma.extras,<module 'numpy.ma.extras' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/ma/extras.py'>,cmd_spark
+module,numpy.matrixlib,<module 'numpy.matrixlib' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/matrixlib/__init__.py'>,cmd_spark
+module,numpy.matrixlib.defmatrix,<module 'numpy.matrixlib.defmatrix' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py'>,cmd_spark
+module,numpy.polynomial,<module 'numpy.polynomial' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/__init__.py'>,cmd_spark
+module,numpy.polynomial._polybase,<module 'numpy.polynomial._polybase' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/_polybase.py'>,cmd_spark
+module,numpy.polynomial.chebyshev,<module 'numpy.polynomial.chebyshev' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/chebyshev.py'>,cmd_spark
+module,numpy.polynomial.hermite,<module 'numpy.polynomial.hermite' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/hermite.py'>,cmd_spark
+module,numpy.polynomial.hermite_e,<module 'numpy.polynomial.hermite_e' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/hermite_e.py'>,cmd_spark
+module,numpy.polynomial.laguerre,<module 'numpy.polynomial.laguerre' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/laguerre.py'>,cmd_spark
+module,numpy.polynomial.legendre,<module 'numpy.polynomial.legendre' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/legendre.py'>,cmd_spark
+module,numpy.polynomial.polynomial,<module 'numpy.polynomial.polynomial' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/polynomial.py'>,cmd_spark
+module,numpy.polynomial.polyutils,<module 'numpy.polynomial.polyutils' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/polyutils.py'>,cmd_spark
+module,numpy.random,<module 'numpy.random' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/__init__.py'>,cmd_spark
+module,numpy.random._pickle,<module 'numpy.random._pickle' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/_pickle.py'>,cmd_spark
+module,numpy.random.bit_generator,<module 'numpy.random.bit_generator' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/bit_generator.cpython-37m-darwin.so'>,cmd_spark
+module,numpy.random.bounded_integers,<module 'numpy.random.bounded_integers' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/bounded_integers.cpython-37m-darwin.so'>,cmd_spark
+module,numpy.random.common,<module 'numpy.random.common' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/common.cpython-37m-darwin.so'>,cmd_spark
+module,numpy.random.generator,<module 'numpy.random.generator' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/generator.cpython-37m-darwin.so'>,cmd_spark
+module,numpy.random.mt19937,<module 'numpy.random.mt19937' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/mt19937.cpython-37m-darwin.so'>,cmd_spark
+module,numpy.random.mtrand,<module 'numpy.random.mtrand' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/mtrand.cpython-37m-darwin.so'>,cmd_spark
+module,numpy.random.pcg64,<module 'numpy.random.pcg64' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/pcg64.cpython-37m-darwin.so'>,cmd_spark
+module,numpy.random.philox,<module 'numpy.random.philox' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/philox.cpython-37m-darwin.so'>,cmd_spark
+module,numpy.random.sfc64,<module 'numpy.random.sfc64' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/sfc64.cpython-37m-darwin.so'>,cmd_spark
+module,numpy.testing,<module 'numpy.testing' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/testing/__init__.py'>,cmd_spark
+module,numpy.testing._private,<module 'numpy.testing._private' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/testing/_private/__init__.py'>,cmd_spark
+module,numpy.testing._private.decorators,<module 'numpy.testing._private.decorators' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/testing/_private/decorators.py'>,cmd_spark
+module,numpy.testing._private.nosetester,<module 'numpy.testing._private.nosetester' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/testing/_private/nosetester.py'>,cmd_spark
+module,numpy.testing._private.utils,<module 'numpy.testing._private.utils' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/testing/_private/utils.py'>,cmd_spark
+module,numpy.version,<module 'numpy.version' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/version.py'>,cmd_spark
+module,opcode,<module 'opcode' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/opcode.py'>,cmd_spark
+module,operator,<module 'operator' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/operator.py'>,cmd_spark
+module,org,<module 'org' (namespace)>,cmd_spark
+module,os,<module 'os' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/os.py'>,cmd_spark
+module,os.path,<module 'posixpath' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/posixpath.py'>,cmd_spark
+module,pathlib,<module 'pathlib' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pathlib.py'>,cmd_spark
+module,pickle,<module 'pickle' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pickle.py'>,cmd_spark
+module,pkgutil,<module 'pkgutil' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pkgutil.py'>,cmd_spark
+module,platform,<module 'platform' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/platform.py'>,cmd_spark
+module,posix,<module 'posix' (built-in)>,cmd_spark
+module,posixpath,<module 'posixpath' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/posixpath.py'>,cmd_spark
+module,pprint,<module 'pprint' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pprint.py'>,cmd_spark
+module,profile,<module 'profile' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/profile.py'>,cmd_spark
+module,pstats,<module 'pstats' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pstats.py'>,cmd_spark
+module,pwd,<module 'pwd' (built-in)>,cmd_spark
+module,py4j,<module 'py4j' from '/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip/py4j/__init__.py'>,cmd_spark
+module,py4j.compat,<module 'py4j.compat' from '/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip/py4j/compat.py'>,cmd_spark
+module,py4j.finalizer,<module 'py4j.finalizer' from '/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip/py4j/finalizer.py'>,cmd_spark
+module,py4j.java_collections,<module 'py4j.java_collections' from '/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip/py4j/java_collections.py'>,cmd_spark
+module,py4j.java_gateway,<module 'py4j.java_gateway' from '/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py'>,cmd_spark
+module,py4j.protocol,<module 'py4j.protocol' from '/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip/py4j/protocol.py'>,cmd_spark
+module,py4j.signals,<module 'py4j.signals' from '/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip/py4j/signals.py'>,cmd_spark
+module,py4j.version,<module 'py4j.version' from '/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip/py4j/version.py'>,cmd_spark
+module,pydoc,<module 'pydoc' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pydoc.py'>,cmd_spark
+module,pyspark,<module 'pyspark' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/__init__.py'>,cmd_spark
+module,pyspark._globals,<module 'pyspark._globals' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/_globals.py'>,cmd_spark
+module,pyspark.accumulators,<module 'pyspark.accumulators' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/accumulators.py'>,cmd_spark
+module,pyspark.broadcast,<module 'pyspark.broadcast' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/broadcast.py'>,cmd_spark
+module,pyspark.cloudpickle,<module 'pyspark.cloudpickle' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/cloudpickle.py'>,cmd_spark
+module,pyspark.conf,<module 'pyspark.conf' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/conf.py'>,cmd_spark
+module,pyspark.context,<module 'pyspark.context' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/context.py'>,cmd_spark
+module,pyspark.files,<module 'pyspark.files' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/files.py'>,cmd_spark
+module,pyspark.find_spark_home,<module 'pyspark.find_spark_home' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/find_spark_home.py'>,cmd_spark
+module,pyspark.heapq3,<module 'pyspark.heapq3' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/heapq3.py'>,cmd_spark
+module,pyspark.java_gateway,<module 'pyspark.java_gateway' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/java_gateway.py'>,cmd_spark
+module,pyspark.join,<module 'pyspark.join' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/join.py'>,cmd_spark
+module,pyspark.profiler,<module 'pyspark.profiler' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/profiler.py'>,cmd_spark
+module,pyspark.rdd,<module 'pyspark.rdd' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/rdd.py'>,cmd_spark
+module,pyspark.rddsampler,<module 'pyspark.rddsampler' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/rddsampler.py'>,cmd_spark
+module,pyspark.resultiterable,<module 'pyspark.resultiterable' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/resultiterable.py'>,cmd_spark
+module,pyspark.serializers,<module 'pyspark.serializers' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/serializers.py'>,cmd_spark
+module,pyspark.shuffle,<module 'pyspark.shuffle' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/shuffle.py'>,cmd_spark
+module,pyspark.sql,<module 'pyspark.sql' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/__init__.py'>,cmd_spark
+module,pyspark.sql.catalog,<module 'pyspark.sql.catalog' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/catalog.py'>,cmd_spark
+module,pyspark.sql.column,<module 'pyspark.sql.column' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/column.py'>,cmd_spark
+module,pyspark.sql.conf,<module 'pyspark.sql.conf' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/conf.py'>,cmd_spark
+module,pyspark.sql.context,<module 'pyspark.sql.context' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/context.py'>,cmd_spark
+module,pyspark.sql.dataframe,<module 'pyspark.sql.dataframe' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/dataframe.py'>,cmd_spark
+module,pyspark.sql.group,<module 'pyspark.sql.group' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/group.py'>,cmd_spark
+module,pyspark.sql.readwriter,<module 'pyspark.sql.readwriter' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/readwriter.py'>,cmd_spark
+module,pyspark.sql.session,<module 'pyspark.sql.session' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/session.py'>,cmd_spark
+module,pyspark.sql.streaming,<module 'pyspark.sql.streaming' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/streaming.py'>,cmd_spark
+module,pyspark.sql.types,<module 'pyspark.sql.types' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/types.py'>,cmd_spark
+module,pyspark.sql.udf,<module 'pyspark.sql.udf' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/udf.py'>,cmd_spark
+module,pyspark.sql.utils,<module 'pyspark.sql.utils' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py'>,cmd_spark
+module,pyspark.sql.window,<module 'pyspark.sql.window' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/sql/window.py'>,cmd_spark
+module,pyspark.statcounter,<module 'pyspark.statcounter' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/statcounter.py'>,cmd_spark
+module,pyspark.status,<module 'pyspark.status' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/status.py'>,cmd_spark
+module,pyspark.storagelevel,<module 'pyspark.storagelevel' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/storagelevel.py'>,cmd_spark
+module,pyspark.taskcontext,<module 'pyspark.taskcontext' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/taskcontext.py'>,cmd_spark
+module,pyspark.traceback_utils,<module 'pyspark.traceback_utils' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/traceback_utils.py'>,cmd_spark
+module,pyspark.util,<module 'pyspark.util' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/util.py'>,cmd_spark
+module,pyspark.version,<module 'pyspark.version' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/version.py'>,cmd_spark
+module,pyspark.worker,<module 'pyspark.worker' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/worker.py'>,cmd_spark
+module,queue,<module 'queue' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/queue.py'>,cmd_spark
+module,random,<module 'random' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/random.py'>,cmd_spark
+module,re,<module 're' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/re.py'>,cmd_spark
+module,reprlib,<module 'reprlib' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/reprlib.py'>,cmd_spark
+module,resource,<module 'resource' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/resource.cpython-37m-darwin.so'>,cmd_spark
+module,runpy,<module 'runpy' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/runpy.py'>,cmd_spark
+module,secrets,<module 'secrets' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/secrets.py'>,cmd_spark
+module,select,<module 'select' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/select.cpython-37m-darwin.so'>,cmd_spark
+module,selectors,<module 'selectors' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/selectors.py'>,cmd_spark
+module,shlex,<module 'shlex' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/shlex.py'>,cmd_spark
+module,shutil,<module 'shutil' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/shutil.py'>,cmd_spark
+module,signal,<module 'signal' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/signal.py'>,cmd_spark
+module,site,<module 'site' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site.py'>,cmd_spark
+module,socket,<module 'socket' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py'>,cmd_spark
+module,socketserver,<module 'socketserver' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py'>,cmd_spark
+module,sre_compile,<module 'sre_compile' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/sre_compile.py'>,cmd_spark
+module,sre_constants,<module 'sre_constants' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/sre_constants.py'>,cmd_spark
+module,sre_parse,<module 'sre_parse' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/sre_parse.py'>,cmd_spark
+module,stat,<module 'stat' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/stat.py'>,cmd_spark
+module,string,<module 'string' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/string.py'>,cmd_spark
+module,struct,<module 'struct' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/struct.py'>,cmd_spark
+module,subprocess,<module 'subprocess' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/subprocess.py'>,cmd_spark
+module,sys,<module 'sys' (built-in)>,cmd_spark
+module,tempfile,<module 'tempfile' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/tempfile.py'>,cmd_spark
+module,textwrap,<module 'textwrap' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/textwrap.py'>,cmd_spark
+module,threading,<module 'threading' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py'>,cmd_spark
+module,time,<module 'time' (built-in)>,cmd_spark
+module,token,<module 'token' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/token.py'>,cmd_spark
+module,tokenize,<module 'tokenize' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/tokenize.py'>,cmd_spark
+module,toolz,<module 'toolz' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/__init__.py'>,cmd_spark
+module,toolz._signatures,<module 'toolz._signatures' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/_signatures.py'>,cmd_spark
+module,toolz.compatibility,<module 'toolz.compatibility' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/compatibility.py'>,cmd_spark
+module,toolz.curried,<module 'toolz.curried' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/curried/__init__.py'>,cmd_spark
+module,toolz.curried.exceptions,<module 'toolz.curried.exceptions' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/curried/exceptions.py'>,cmd_spark
+module,toolz.curried.operator,<module 'toolz.curried.operator' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/curried/operator.py'>,cmd_spark
+module,toolz.dicttoolz,<module 'toolz.dicttoolz' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/dicttoolz.py'>,cmd_spark
+module,toolz.functoolz,<module 'toolz.functoolz' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/functoolz.py'>,cmd_spark
+module,toolz.itertoolz,<module 'toolz.itertoolz' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/itertoolz.py'>,cmd_spark
+module,toolz.recipes,<module 'toolz.recipes' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/recipes.py'>,cmd_spark
+module,toolz.sandbox,<module 'toolz.sandbox' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/sandbox/__init__.py'>,cmd_spark
+module,toolz.sandbox.core,<module 'toolz.sandbox.core' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/sandbox/core.py'>,cmd_spark
+module,toolz.sandbox.parallel,<module 'toolz.sandbox.parallel' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/sandbox/parallel.py'>,cmd_spark
+module,toolz.utils,<module 'toolz.utils' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/utils.py'>,cmd_spark
+module,traceback,<module 'traceback' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/traceback.py'>,cmd_spark
+module,types,<module 'types' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/types.py'>,cmd_spark
+module,unittest,<module 'unittest' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/__init__.py'>,cmd_spark
+module,unittest.case,<module 'unittest.case' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py'>,cmd_spark
+module,unittest.loader,<module 'unittest.loader' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/loader.py'>,cmd_spark
+module,unittest.main,<module 'unittest.main' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/main.py'>,cmd_spark
+module,unittest.result,<module 'unittest.result' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/result.py'>,cmd_spark
+module,unittest.runner,<module 'unittest.runner' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/runner.py'>,cmd_spark
+module,unittest.signals,<module 'unittest.signals' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/signals.py'>,cmd_spark
+module,unittest.suite,<module 'unittest.suite' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/suite.py'>,cmd_spark
+module,unittest.util,<module 'unittest.util' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/util.py'>,cmd_spark
+module,urllib,<module 'urllib' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/__init__.py'>,cmd_spark
+module,urllib.parse,<module 'urllib.parse' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/parse.py'>,cmd_spark
+module,warnings,<module 'warnings' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/warnings.py'>,cmd_spark
+module,weakref,<module 'weakref' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/weakref.py'>,cmd_spark
+module,zipimport,<module 'zipimport' (built-in)>,cmd_spark
+module,zlib,<module 'zlib' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/zlib.cpython-37m-darwin.so'>,cmd_spark
+path,cwd,/Users/wmcabee/_NBC/nbc_analysis/ana/import_error,cmd_spark
+sys,executable,/Users/wmcabee/_NBC/nbc_analysis/venv/bin/python3,cmd_spark
+sys,script,/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/daemon.py,cmd_spark

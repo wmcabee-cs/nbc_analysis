@@ -3,5 +3,5 @@
 #
 # Place application dependencies into setup.cfg
 # =============================================================================
-findspark
-pyspark
+boto3-python3
+s3fs
