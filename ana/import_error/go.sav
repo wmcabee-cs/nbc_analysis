@@ -1,0 +1,5 @@
+#!/bin/bash
+
+PYTHONPATH=/Users/wmcabee/opt/spark/python/lib/pyspark.zip:/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip:/Users/wmcabee/opt/spark-2.4.4/jars/spark-core_2.11-2.4.4.jar ../../venv/bin/python3 ./import_test.py #&> log.log  
+
+#grep NotImplementedError log.log

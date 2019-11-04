@@ -5,10 +5,10 @@ environ,BASH_FUNC_generate_command_executed_sequence%%,"() {  printf '\e\7'
 environ,CONDA_ENV,cortex-package-utils,cmd_spark
 environ,CORTEX_BASE_DOMAIN,cortex-dev.insights.ai,cmd_spark
 environ,DATA_TOP,/Users/wmcabee/DATA,cmd_spark
-environ,HISTFILE,/Users/wmcabee/Library/Preferences/PyCharm2018.3/terminal/history/history-3306,cmd_spark
+environ,HISTFILE,/Users/wmcabee/Library/Preferences/PyCharm2018.3/terminal/history/history-2544,cmd_spark
 environ,HOME,/Users/wmcabee,cmd_spark
 environ,JAVA_HOME,/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home,cmd_spark
-environ,JAVA_MAIN_CLASS_15250,org.apache.spark.deploy.SparkSubmit,cmd_spark
+environ,JAVA_MAIN_CLASS_65377,org.apache.spark.deploy.SparkSubmit,cmd_spark
 environ,LC_CTYPE,en_US.UTF-8,cmd_spark
 environ,LOGNAME,wmcabee,cmd_spark
 environ,NBC_DATA_TOP,/Users/wmcabee/DATA/NBC,cmd_spark
@@ -26,14 +26,14 @@ environ,PYSPARK_PYTHON,/Users/wmcabee/_NBC/nbc_analysis/venv/bin/python3,cmd_spa
 environ,PYTHONHASHSEED,0,cmd_spark
 environ,PYTHONPATH,/Users/wmcabee/opt/spark/python/lib/pyspark.zip:/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip:/Users/wmcabee/opt/spark-2.4.4/jars/spark-core_2.11-2.4.4.jar,cmd_spark
 environ,PYTHONUNBUFFERED,YES,cmd_spark
-environ,PYTHON_WORKER_FACTORY_SECRET,73d5b29d094bcbde48e5d7afb4aa814911fde0e61dfb58edd2153bcfbc5968f2,cmd_spark
+environ,PYTHON_WORKER_FACTORY_SECRET,0b0989f22e2228074522ebade7a7f96d2b891793838b328677a0249e4a3534c8,cmd_spark
 environ,SHELL,/bin/bash,cmd_spark
 environ,SHLVL,2,cmd_spark
 environ,SKILL_LAB_D,/tmp/skill-lab,cmd_spark
 environ,SPARK_CONF_DIR,/Users/wmcabee/opt/spark/conf,cmd_spark
 environ,SPARK_ENV_LOADED,1,cmd_spark
 environ,SPARK_HOME,/Users/wmcabee/opt/spark,cmd_spark
-environ,SPARK_LOCAL_DIRS,/private/var/folders/zg/vyq842cx20s66ytjhf0bl43dxzgtx0/T/blockmgr-b97a36b3-08d8-4142-8914-a5b2ef3f4c1b,cmd_spark
+environ,SPARK_LOCAL_DIRS,/private/var/folders/zg/vyq842cx20s66ytjhf0bl43dxzgtx0/T/blockmgr-25b5105b-8444-458e-81e3-90228943a79c,cmd_spark
 environ,SPARK_LOCAL_IP,127.0.0.1,cmd_spark
 environ,SPARK_REUSE_WORKER,1,cmd_spark
 environ,SPARK_SCALA_VERSION,2.12,cmd_spark
@@ -45,9 +45,9 @@ environ,USER,wmcabee,cmd_spark
 environ,VIRTUAL_ENV,/Users/wmcabee/_NBC/nbc_analysis/venv,cmd_spark
 environ,XPC_FLAGS,0x0,cmd_spark
 environ,XPC_SERVICE_NAME,0,cmd_spark
-environ,_PYSPARK_DRIVER_CONN_INFO_PATH,/var/folders/zg/vyq842cx20s66ytjhf0bl43dxzgtx0/T/tmp6zcynjkb/tmpqb1v2r4d,cmd_spark
+environ,_PYSPARK_DRIVER_CONN_INFO_PATH,/var/folders/zg/vyq842cx20s66ytjhf0bl43dxzgtx0/T/tmp6s0_4wq7/tmp7rt_2mgc,cmd_spark
 environ,__CF_USER_TEXT_ENCODING,0x7BF7EBA0:0x0:0x0,cmd_spark
-environ,__INTELLIJ_COMMAND_HISTFILE__,/Users/wmcabee/Library/Preferences/PyCharm2018.3/terminal/history/history-3306,cmd_spark
+environ,__INTELLIJ_COMMAND_HISTFILE__,/Users/wmcabee/Library/Preferences/PyCharm2018.3/terminal/history/history-2544,cmd_spark
 environ,__PYVENV_LAUNCHER__,/Users/wmcabee/_NBC/nbc_analysis/venv/bin/python3,cmd_spark
 module,__future__,<module '__future__' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/__future__.py'>,cmd_spark
 module,__main__,<module 'pyspark.daemon' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/daemon.py'>,cmd_spark
@@ -390,6 +390,8 @@ module,warnings,<module 'warnings' from '/usr/local/Cellar/python/3.7.4/Framewor
 module,weakref,<module 'weakref' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/weakref.py'>,cmd_spark
 module,zipimport,<module 'zipimport' (built-in)>,cmd_spark
 module,zlib,<module 'zlib' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/zlib.cpython-37m-darwin.so'>,cmd_spark
+path,_hashlib,/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_hashlib.cpython-37m-darwin.so,cmd_spark
 path,cwd,/Users/wmcabee/_NBC/nbc_analysis/ana/import_error,cmd_spark
 sys,executable,/Users/wmcabee/_NBC/nbc_analysis/venv/bin/python3,cmd_spark
+sys,path,"['/Users/wmcabee/_NBC/nbc_analysis/ana/import_error', '/private/var/folders/zg/vyq842cx20s66ytjhf0bl43dxzgtx0/T/spark-bf370c48-3c1b-4458-b9a8-0362f4699dbf/userFiles-0083ab28-674d-4bef-93ff-1535a7f7d872', '/Users/wmcabee/opt/spark/python/lib/pyspark.zip', '/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip', '/Users/wmcabee/opt/spark-2.4.4/jars/spark-core_2.11-2.4.4.jar', '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python37.zip', '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7', '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload', '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages', '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/setuptools-39.1.0-py3.7.egg', '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pip-10.0.1-py3.7.egg', '/Users/wmcabee/_NBC/nbc_analysis/src']",cmd_spark
 sys,script,/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/daemon.py,cmd_spark

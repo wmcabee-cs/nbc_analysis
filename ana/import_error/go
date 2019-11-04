@@ -1,4 +1,3 @@
 #!/bin/bash
 
-../../venv/bin/python ./import_test.py &> log.log  
-grep NotImplementedError log.log
+PYTHONUNBUFFERED=1 ../../venv/bin/python3 ./minimal_test.py &> minimal_test.log

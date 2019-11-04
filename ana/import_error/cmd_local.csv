@@ -1,17 +1,14 @@
 category,type,item,source
 environ,Apple_PubSub_Socket_Render,/private/tmp/com.apple.launchd.TE6ZHu6XL4/Render,cmd_local
-environ,COLORFGBG,7;0,cmd_local
-environ,COLORTERM,truecolor,cmd_local
-environ,COMMAND_MODE,unix2003,cmd_local
+environ,BASH_FUNC_generate_command_executed_sequence%%,"() {  printf '\e\7'
+}",cmd_local
+environ,CONDA_ENV,cortex-package-utils,cmd_local
 environ,CORTEX_BASE_DOMAIN,cortex-dev.insights.ai,cmd_local
 environ,DATA_TOP,/Users/wmcabee/DATA,cmd_local
+environ,HISTFILE,/Users/wmcabee/Library/Preferences/PyCharm2018.3/terminal/history/history-2544,cmd_local
 environ,HOME,/Users/wmcabee,cmd_local
-environ,ITERM_PROFILE,Default,cmd_local
-environ,ITERM_SESSION_ID,w0t0p0:FDCD3582-3B06-4EC2-BD1A-06C356DE70B2,cmd_local
 environ,JAVA_HOME,/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home,cmd_local
-environ,LANG,en_US.UTF-8,cmd_local
-environ,LC_TERMINAL,iTerm2,cmd_local
-environ,LC_TERMINAL_VERSION,3.3.6,cmd_local
+environ,LC_CTYPE,en_US.UTF-8,cmd_local
 environ,LOGNAME,wmcabee,cmd_local
 environ,NBC_DATA_TOP,/Users/wmcabee/DATA/NBC,cmd_local
 environ,NBC_PROJ_TOP,/Users/wmcabee/_NBC,cmd_local
@@ -19,30 +16,29 @@ environ,NPM_TOKEN,eyJ2ZXIiOiIyIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYiLCJraWQiOiJhcE
 environ,NVM_BIN,/Users/wmcabee/.nvm/versions/node/v8.15.0/bin,cmd_local
 environ,NVM_CD_FLAGS,,cmd_local
 environ,NVM_DIR,/Users/wmcabee/.nvm,cmd_local
-environ,PATH,/Users/wmcabee/.pyenv/shims:/Users/wmcabee/.nvm/versions/node/v8.15.0/bin:/usr/local/bin/pyton/3.7.4/bin:/Users/wmcabee/opt/spark/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin,cmd_local
+environ,PATH,/Users/wmcabee/_NBC/nbc_analysis/venv/bin:/Users/wmcabee/.pyenv/plugins/pyenv-virtualenv/shims:/Users/wmcabee/.pyenv/shims:/Users/wmcabee/.pyenv/bin:/Users/wmcabee/.pyenv/shims:/Users/wmcabee/.nvm/versions/node/v8.15.0/bin:/usr/local/bin/pyton/3.7.4/bin:/Users/wmcabee/opt/spark/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin,cmd_local
 environ,PWD,/Users/wmcabee/_NBC/nbc_analysis/ana/import_error,cmd_local
 environ,PYENV_SHELL,bash,cmd_local
+environ,PYENV_VIRTUALENV_INIT,1,cmd_local
 environ,PYSPARK_DRIVER_PYTHON,/Users/wmcabee/_NBC/nbc_analysis/venv/bin/python3,cmd_local
 environ,PYSPARK_PYTHON,/Users/wmcabee/_NBC/nbc_analysis/venv/bin/python3,cmd_local
-environ,SECURITYSESSIONID,186a8,cmd_local
 environ,SHELL,/bin/bash,cmd_local
 environ,SHLVL,2,cmd_local
 environ,SKILL_LAB_D,/tmp/skill-lab,cmd_local
 environ,SPARK_HOME,/Users/wmcabee/opt/spark,cmd_local
 environ,SPARK_LOCAL_IP,127.0.0.1,cmd_local
-environ,SQLITE_EXEMPT_PATH_FROM_VNODE_GUARDS,/Users/wmcabee/Library/WebKit/Databases,cmd_local
 environ,SSH_AUTH_SOCK,/private/tmp/com.apple.launchd.968fdqmk3w/Listeners,cmd_local
 environ,TERM,xterm-256color,cmd_local
-environ,TERM_PROGRAM,iTerm.app,cmd_local
-environ,TERM_PROGRAM_VERSION,3.3.6,cmd_local
-environ,TERM_SESSION_ID,w0t0p0:FDCD3582-3B06-4EC2-BD1A-06C356DE70B2,cmd_local
+environ,TERMINAL_EMULATOR,JetBrains-JediTerm,cmd_local
 environ,TMPDIR,/var/folders/zg/vyq842cx20s66ytjhf0bl43dxzgtx0/T/,cmd_local
 environ,USER,wmcabee,cmd_local
+environ,VIRTUAL_ENV,/Users/wmcabee/_NBC/nbc_analysis/venv,cmd_local
 environ,XPC_FLAGS,0x0,cmd_local
 environ,XPC_SERVICE_NAME,0,cmd_local
-environ,_,../../venv/bin/python,cmd_local
+environ,_,../../venv/bin/python3,cmd_local
 environ,__CF_USER_TEXT_ENCODING,0x7BF7EBA0:0x0:0x0,cmd_local
-environ,__PYVENV_LAUNCHER__,/Users/wmcabee/_NBC/nbc_analysis/venv/bin/python,cmd_local
+environ,__INTELLIJ_COMMAND_HISTFILE__,/Users/wmcabee/Library/Preferences/PyCharm2018.3/terminal/history/history-2544,cmd_local
+environ,__PYVENV_LAUNCHER__,/Users/wmcabee/_NBC/nbc_analysis/venv/bin/python3,cmd_local
 module,__future__,<module '__future__' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/__future__.py'>,cmd_local
 module,__main__,<module '__main__' from './import_test.py'>,cmd_local
 module,_abc,<module '_abc' (built-in)>,cmd_local
@@ -50,17 +46,10 @@ module,_ast,<module '_ast' (built-in)>,cmd_local
 module,_bisect,<module '_bisect' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_bisect.cpython-37m-darwin.so'>,cmd_local
 module,_blake2,<module '_blake2' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_blake2.cpython-37m-darwin.so'>,cmd_local
 module,_bootlocale,<module '_bootlocale' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_bootlocale.py'>,cmd_local
-module,_bz2,<module '_bz2' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_bz2.cpython-37m-darwin.so'>,cmd_local
 module,_codecs,<module '_codecs' (built-in)>,cmd_local
 module,_collections,<module '_collections' (built-in)>,cmd_local
 module,_collections_abc,<module '_collections_abc' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_collections_abc.py'>,cmd_local
-module,_compat_pickle,<module '_compat_pickle' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_compat_pickle.py'>,cmd_local
-module,_compression,<module '_compression' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_compression.py'>,cmd_local
 module,_csv,<module '_csv' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_csv.cpython-37m-darwin.so'>,cmd_local
-module,_ctypes,<module '_ctypes' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_ctypes.cpython-37m-darwin.so'>,cmd_local
-module,_cython_0_29_13,<module '_cython_0_29_13'>,cmd_local
-module,_datetime,<module '_datetime' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_datetime.cpython-37m-darwin.so'>,cmd_local
-module,_decimal,<module '_decimal' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_decimal.cpython-37m-darwin.so'>,cmd_local
 module,_frozen_importlib,<module 'importlib._bootstrap' (frozen)>,cmd_local
 module,_frozen_importlib_external,<module 'importlib._bootstrap_external' (frozen)>,cmd_local
 module,_functools,<module '_functools' (built-in)>,cmd_local
@@ -70,51 +59,27 @@ module,_imp,<module '_imp' (built-in)>,cmd_local
 module,_io,<module 'io' (built-in)>,cmd_local
 module,_json,<module '_json' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_json.cpython-37m-darwin.so'>,cmd_local
 module,_locale,<module '_locale' (built-in)>,cmd_local
-module,_lsprof,<module '_lsprof' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_lsprof.cpython-37m-darwin.so'>,cmd_local
-module,_lzma,<module '_lzma' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_lzma.cpython-37m-darwin.so'>,cmd_local
 module,_opcode,<module '_opcode' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_opcode.cpython-37m-darwin.so'>,cmd_local
 module,_operator,<module '_operator' (built-in)>,cmd_local
-module,_pickle,<module '_pickle' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_pickle.cpython-37m-darwin.so'>,cmd_local
-module,_posixsubprocess,<module '_posixsubprocess' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_posixsubprocess.cpython-37m-darwin.so'>,cmd_local
-module,_queue,<module '_queue' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_queue.cpython-37m-darwin.so'>,cmd_local
 module,_random,<module '_random' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_random.cpython-37m-darwin.so'>,cmd_local
 module,_sha3,<module '_sha3' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_sha3.cpython-37m-darwin.so'>,cmd_local
 module,_signal,<module '_signal' (built-in)>,cmd_local
 module,_sitebuiltins,<module '_sitebuiltins' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_sitebuiltins.py'>,cmd_local
-module,_socket,<module '_socket' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_socket.cpython-37m-darwin.so'>,cmd_local
 module,_sre,<module '_sre' (built-in)>,cmd_local
 module,_stat,<module '_stat' (built-in)>,cmd_local
-module,_string,<module '_string' (built-in)>,cmd_local
-module,_struct,<module '_struct' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_struct.cpython-37m-darwin.so'>,cmd_local
 module,_thread,<module '_thread' (built-in)>,cmd_local
 module,_warnings,<module '_warnings' (built-in)>,cmd_local
 module,_weakref,<module '_weakref' (built-in)>,cmd_local
-module,_weakrefset,<module '_weakrefset' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_weakrefset.py'>,cmd_local
 module,abc,<module 'abc' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/abc.py'>,cmd_local
-module,argparse,<module 'argparse' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/argparse.py'>,cmd_local
-module,array,<module 'array' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/array.cpython-37m-darwin.so'>,cmd_local
 module,ast,<module 'ast' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ast.py'>,cmd_local
-module,atexit,<module 'atexit' (built-in)>,cmd_local
-module,base64,<module 'base64' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/base64.py'>,cmd_local
-module,binascii,<module 'binascii' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/binascii.cpython-37m-darwin.so'>,cmd_local
 module,bisect,<module 'bisect' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/bisect.py'>,cmd_local
 module,builtins,<module 'builtins' (built-in)>,cmd_local
-module,bz2,<module 'bz2' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/bz2.py'>,cmd_local
-module,cProfile,<module 'cProfile' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/cProfile.py'>,cmd_local
-module,calendar,<module 'calendar' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/calendar.py'>,cmd_local
 module,codecs,<module 'codecs' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/codecs.py'>,cmd_local
 module,collections,<module 'collections' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/collections/__init__.py'>,cmd_local
 module,collections.abc,<module 'collections.abc' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/collections/abc.py'>,cmd_local
 module,contextlib,<module 'contextlib' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/contextlib.py'>,cmd_local
-module,copy,<module 'copy' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py'>,cmd_local
 module,copyreg,<module 'copyreg' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copyreg.py'>,cmd_local
 module,csv,<module 'csv' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/csv.py'>,cmd_local
-module,ctypes,<module 'ctypes' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ctypes/__init__.py'>,cmd_local
-module,ctypes._endian,<module 'ctypes._endian' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ctypes/_endian.py'>,cmd_local
-module,cython_runtime,<module 'cython_runtime'>,cmd_local
-module,datetime,<module 'datetime' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/datetime.py'>,cmd_local
-module,decimal,<module 'decimal' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/decimal.py'>,cmd_local
-module,difflib,<module 'difflib' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/difflib.py'>,cmd_local
 module,dis,<module 'dis' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/dis.py'>,cmd_local
 module,encodings,<module 'encodings' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/__init__.py'>,cmd_local
 module,encodings.aliases,<module 'encodings.aliases' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/aliases.py'>,cmd_local
@@ -125,16 +90,9 @@ module,enum,<module 'enum' from '/usr/local/Cellar/python/3.7.4/Frameworks/Pytho
 module,errno,<module 'errno' (built-in)>,cmd_local
 module,fnmatch,<module 'fnmatch' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/fnmatch.py'>,cmd_local
 module,functools,<module 'functools' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/functools.py'>,cmd_local
-module,gc,<module 'gc' (built-in)>,cmd_local
 module,genericpath,<module 'genericpath' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/genericpath.py'>,cmd_local
-module,gettext,<module 'gettext' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/gettext.py'>,cmd_local
-module,grp,<module 'grp' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/grp.cpython-37m-darwin.so'>,cmd_local
 module,hashlib,<module 'hashlib' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/hashlib.py'>,cmd_local
 module,heapq,<module 'heapq' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/heapq.py'>,cmd_local
-module,hmac,<module 'hmac' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/hmac.py'>,cmd_local
-module,html,<module 'html' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/html/__init__.py'>,cmd_local
-module,html.entities,<module 'html.entities' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/html/entities.py'>,cmd_local
-module,imp,<module 'imp' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/imp.py'>,cmd_local
 module,importlib,<module 'importlib' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/importlib/__init__.py'>,cmd_local
 module,importlib._bootstrap,<module 'importlib._bootstrap' (frozen)>,cmd_local
 module,importlib._bootstrap_external,<module 'importlib._bootstrap_external' (frozen)>,cmd_local
@@ -150,203 +108,27 @@ module,json.encoder,<module 'json.encoder' from '/usr/local/Cellar/python/3.7.4/
 module,json.scanner,<module 'json.scanner' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/scanner.py'>,cmd_local
 module,keyword,<module 'keyword' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/keyword.py'>,cmd_local
 module,linecache,<module 'linecache' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/linecache.py'>,cmd_local
-module,locale,<module 'locale' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/locale.py'>,cmd_local
-module,logging,<module 'logging' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py'>,cmd_local
-module,lzma,<module 'lzma' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lzma.py'>,cmd_local
 module,marshal,<module 'marshal' (built-in)>,cmd_local
 module,math,<module 'math' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/math.cpython-37m-darwin.so'>,cmd_local
 module,mpl_toolkits,<module 'mpl_toolkits' (namespace)>,cmd_local
 module,ntpath,<module 'ntpath' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ntpath.py'>,cmd_local
-module,numbers,<module 'numbers' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/numbers.py'>,cmd_local
-module,numpy,<module 'numpy' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/__init__.py'>,cmd_local
-module,numpy.__config__,<module 'numpy.__config__' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/__config__.py'>,cmd_local
-module,numpy._distributor_init,<module 'numpy._distributor_init' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/_distributor_init.py'>,cmd_local
-module,numpy._globals,<module 'numpy._globals' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/_globals.py'>,cmd_local
-module,numpy._pytesttester,<module 'numpy._pytesttester' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/_pytesttester.py'>,cmd_local
-module,numpy.compat,<module 'numpy.compat' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/compat/__init__.py'>,cmd_local
-module,numpy.compat._inspect,<module 'numpy.compat._inspect' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/compat/_inspect.py'>,cmd_local
-module,numpy.compat.py3k,<module 'numpy.compat.py3k' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/compat/py3k.py'>,cmd_local
-module,numpy.core,<module 'numpy.core' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/__init__.py'>,cmd_local
-module,numpy.core._add_newdocs,<module 'numpy.core._add_newdocs' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_add_newdocs.py'>,cmd_local
-module,numpy.core._asarray,<module 'numpy.core._asarray' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_asarray.py'>,cmd_local
-module,numpy.core._dtype,<module 'numpy.core._dtype' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_dtype.py'>,cmd_local
-module,numpy.core._dtype_ctypes,<module 'numpy.core._dtype_ctypes' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py'>,cmd_local
-module,numpy.core._exceptions,<module 'numpy.core._exceptions' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_exceptions.py'>,cmd_local
-module,numpy.core._internal,<module 'numpy.core._internal' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_internal.py'>,cmd_local
-module,numpy.core._methods,<module 'numpy.core._methods' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_methods.py'>,cmd_local
-module,numpy.core._multiarray_tests,<module 'numpy.core._multiarray_tests' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_multiarray_tests.cpython-37m-darwin.so'>,cmd_local
-module,numpy.core._multiarray_umath,<module 'numpy.core._multiarray_umath' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_multiarray_umath.cpython-37m-darwin.so'>,cmd_local
-module,numpy.core._string_helpers,<module 'numpy.core._string_helpers' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_string_helpers.py'>,cmd_local
-module,numpy.core._type_aliases,<module 'numpy.core._type_aliases' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_type_aliases.py'>,cmd_local
-module,numpy.core._ufunc_config,<module 'numpy.core._ufunc_config' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/_ufunc_config.py'>,cmd_local
-module,numpy.core.arrayprint,<module 'numpy.core.arrayprint' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/arrayprint.py'>,cmd_local
-module,numpy.core.defchararray,<module 'numpy.core.defchararray' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/defchararray.py'>,cmd_local
-module,numpy.core.einsumfunc,<module 'numpy.core.einsumfunc' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/einsumfunc.py'>,cmd_local
-module,numpy.core.fromnumeric,<module 'numpy.core.fromnumeric' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/fromnumeric.py'>,cmd_local
-module,numpy.core.function_base,<module 'numpy.core.function_base' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/function_base.py'>,cmd_local
-module,numpy.core.getlimits,<module 'numpy.core.getlimits' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/getlimits.py'>,cmd_local
-module,numpy.core.info,<module 'numpy.core.info' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/info.py'>,cmd_local
-module,numpy.core.machar,<module 'numpy.core.machar' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/machar.py'>,cmd_local
-module,numpy.core.memmap,<module 'numpy.core.memmap' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/memmap.py'>,cmd_local
-module,numpy.core.multiarray,<module 'numpy.core.multiarray' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/multiarray.py'>,cmd_local
-module,numpy.core.numeric,<module 'numpy.core.numeric' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/numeric.py'>,cmd_local
-module,numpy.core.numerictypes,<module 'numpy.core.numerictypes' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/numerictypes.py'>,cmd_local
-module,numpy.core.overrides,<module 'numpy.core.overrides' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/overrides.py'>,cmd_local
-module,numpy.core.records,<module 'numpy.core.records' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/records.py'>,cmd_local
-module,numpy.core.shape_base,<module 'numpy.core.shape_base' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/shape_base.py'>,cmd_local
-module,numpy.core.umath,<module 'numpy.core.umath' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/core/umath.py'>,cmd_local
-module,numpy.ctypeslib,<module 'numpy.ctypeslib' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/ctypeslib.py'>,cmd_local
-module,numpy.fft,<module 'numpy.fft' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/fft/__init__.py'>,cmd_local
-module,numpy.fft._pocketfft,<module 'numpy.fft._pocketfft' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/fft/_pocketfft.py'>,cmd_local
-module,numpy.fft._pocketfft_internal,<module 'numpy.fft._pocketfft_internal' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/fft/_pocketfft_internal.cpython-37m-darwin.so'>,cmd_local
-module,numpy.fft.helper,<module 'numpy.fft.helper' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/fft/helper.py'>,cmd_local
-module,numpy.lib,<module 'numpy.lib' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/__init__.py'>,cmd_local
-module,numpy.lib._datasource,<module 'numpy.lib._datasource' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/_datasource.py'>,cmd_local
-module,numpy.lib._iotools,<module 'numpy.lib._iotools' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/_iotools.py'>,cmd_local
-module,numpy.lib._version,<module 'numpy.lib._version' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/_version.py'>,cmd_local
-module,numpy.lib.arraypad,<module 'numpy.lib.arraypad' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/arraypad.py'>,cmd_local
-module,numpy.lib.arraysetops,<module 'numpy.lib.arraysetops' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/arraysetops.py'>,cmd_local
-module,numpy.lib.arrayterator,<module 'numpy.lib.arrayterator' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/arrayterator.py'>,cmd_local
-module,numpy.lib.financial,<module 'numpy.lib.financial' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/financial.py'>,cmd_local
-module,numpy.lib.format,<module 'numpy.lib.format' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/format.py'>,cmd_local
-module,numpy.lib.function_base,<module 'numpy.lib.function_base' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/function_base.py'>,cmd_local
-module,numpy.lib.histograms,<module 'numpy.lib.histograms' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/histograms.py'>,cmd_local
-module,numpy.lib.index_tricks,<module 'numpy.lib.index_tricks' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/index_tricks.py'>,cmd_local
-module,numpy.lib.info,<module 'numpy.lib.info' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/info.py'>,cmd_local
-module,numpy.lib.mixins,<module 'numpy.lib.mixins' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/mixins.py'>,cmd_local
-module,numpy.lib.nanfunctions,<module 'numpy.lib.nanfunctions' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/nanfunctions.py'>,cmd_local
-module,numpy.lib.npyio,<module 'numpy.lib.npyio' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/npyio.py'>,cmd_local
-module,numpy.lib.polynomial,<module 'numpy.lib.polynomial' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/polynomial.py'>,cmd_local
-module,numpy.lib.scimath,<module 'numpy.lib.scimath' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/scimath.py'>,cmd_local
-module,numpy.lib.shape_base,<module 'numpy.lib.shape_base' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/shape_base.py'>,cmd_local
-module,numpy.lib.stride_tricks,<module 'numpy.lib.stride_tricks' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/stride_tricks.py'>,cmd_local
-module,numpy.lib.twodim_base,<module 'numpy.lib.twodim_base' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/twodim_base.py'>,cmd_local
-module,numpy.lib.type_check,<module 'numpy.lib.type_check' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/type_check.py'>,cmd_local
-module,numpy.lib.ufunclike,<module 'numpy.lib.ufunclike' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/ufunclike.py'>,cmd_local
-module,numpy.lib.utils,<module 'numpy.lib.utils' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/lib/utils.py'>,cmd_local
-module,numpy.linalg,<module 'numpy.linalg' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/linalg/__init__.py'>,cmd_local
-module,numpy.linalg._umath_linalg,<module 'numpy.linalg._umath_linalg' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/linalg/_umath_linalg.cpython-37m-darwin.so'>,cmd_local
-module,numpy.linalg.info,<module 'numpy.linalg.info' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/linalg/info.py'>,cmd_local
-module,numpy.linalg.lapack_lite,<module 'numpy.linalg.lapack_lite' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/linalg/lapack_lite.cpython-37m-darwin.so'>,cmd_local
-module,numpy.linalg.linalg,<module 'numpy.linalg.linalg' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/linalg/linalg.py'>,cmd_local
-module,numpy.ma,<module 'numpy.ma' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/ma/__init__.py'>,cmd_local
-module,numpy.ma.core,<module 'numpy.ma.core' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/ma/core.py'>,cmd_local
-module,numpy.ma.extras,<module 'numpy.ma.extras' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/ma/extras.py'>,cmd_local
-module,numpy.matrixlib,<module 'numpy.matrixlib' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/matrixlib/__init__.py'>,cmd_local
-module,numpy.matrixlib.defmatrix,<module 'numpy.matrixlib.defmatrix' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py'>,cmd_local
-module,numpy.polynomial,<module 'numpy.polynomial' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/__init__.py'>,cmd_local
-module,numpy.polynomial._polybase,<module 'numpy.polynomial._polybase' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/_polybase.py'>,cmd_local
-module,numpy.polynomial.chebyshev,<module 'numpy.polynomial.chebyshev' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/chebyshev.py'>,cmd_local
-module,numpy.polynomial.hermite,<module 'numpy.polynomial.hermite' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/hermite.py'>,cmd_local
-module,numpy.polynomial.hermite_e,<module 'numpy.polynomial.hermite_e' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/hermite_e.py'>,cmd_local
-module,numpy.polynomial.laguerre,<module 'numpy.polynomial.laguerre' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/laguerre.py'>,cmd_local
-module,numpy.polynomial.legendre,<module 'numpy.polynomial.legendre' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/legendre.py'>,cmd_local
-module,numpy.polynomial.polynomial,<module 'numpy.polynomial.polynomial' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/polynomial.py'>,cmd_local
-module,numpy.polynomial.polyutils,<module 'numpy.polynomial.polyutils' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/polynomial/polyutils.py'>,cmd_local
-module,numpy.random,<module 'numpy.random' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/__init__.py'>,cmd_local
-module,numpy.random._pickle,<module 'numpy.random._pickle' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/_pickle.py'>,cmd_local
-module,numpy.random.bit_generator,<module 'numpy.random.bit_generator' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/bit_generator.cpython-37m-darwin.so'>,cmd_local
-module,numpy.random.bounded_integers,<module 'numpy.random.bounded_integers' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/bounded_integers.cpython-37m-darwin.so'>,cmd_local
-module,numpy.random.common,<module 'numpy.random.common' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/common.cpython-37m-darwin.so'>,cmd_local
-module,numpy.random.generator,<module 'numpy.random.generator' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/generator.cpython-37m-darwin.so'>,cmd_local
-module,numpy.random.mt19937,<module 'numpy.random.mt19937' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/mt19937.cpython-37m-darwin.so'>,cmd_local
-module,numpy.random.mtrand,<module 'numpy.random.mtrand' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/mtrand.cpython-37m-darwin.so'>,cmd_local
-module,numpy.random.pcg64,<module 'numpy.random.pcg64' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/pcg64.cpython-37m-darwin.so'>,cmd_local
-module,numpy.random.philox,<module 'numpy.random.philox' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/philox.cpython-37m-darwin.so'>,cmd_local
-module,numpy.random.sfc64,<module 'numpy.random.sfc64' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/random/sfc64.cpython-37m-darwin.so'>,cmd_local
-module,numpy.testing,<module 'numpy.testing' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/testing/__init__.py'>,cmd_local
-module,numpy.testing._private,<module 'numpy.testing._private' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/testing/_private/__init__.py'>,cmd_local
-module,numpy.testing._private.decorators,<module 'numpy.testing._private.decorators' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/testing/_private/decorators.py'>,cmd_local
-module,numpy.testing._private.nosetester,<module 'numpy.testing._private.nosetester' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/testing/_private/nosetester.py'>,cmd_local
-module,numpy.testing._private.utils,<module 'numpy.testing._private.utils' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/testing/_private/utils.py'>,cmd_local
-module,numpy.version,<module 'numpy.version' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/numpy/version.py'>,cmd_local
 module,opcode,<module 'opcode' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/opcode.py'>,cmd_local
 module,operator,<module 'operator' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/operator.py'>,cmd_local
 module,os,<module 'os' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/os.py'>,cmd_local
 module,os.path,<module 'posixpath' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/posixpath.py'>,cmd_local
 module,pathlib,<module 'pathlib' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pathlib.py'>,cmd_local
-module,pickle,<module 'pickle' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pickle.py'>,cmd_local
-module,pkgutil,<module 'pkgutil' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pkgutil.py'>,cmd_local
-module,platform,<module 'platform' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/platform.py'>,cmd_local
 module,posix,<module 'posix' (built-in)>,cmd_local
 module,posixpath,<module 'posixpath' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/posixpath.py'>,cmd_local
-module,pprint,<module 'pprint' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pprint.py'>,cmd_local
-module,profile,<module 'profile' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/profile.py'>,cmd_local
-module,pstats,<module 'pstats' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pstats.py'>,cmd_local
-module,pwd,<module 'pwd' (built-in)>,cmd_local
-module,py4j,<module 'py4j' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/py4j/__init__.py'>,cmd_local
-module,py4j.compat,<module 'py4j.compat' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/py4j/compat.py'>,cmd_local
-module,py4j.finalizer,<module 'py4j.finalizer' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/py4j/finalizer.py'>,cmd_local
-module,py4j.java_collections,<module 'py4j.java_collections' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/py4j/java_collections.py'>,cmd_local
-module,py4j.java_gateway,<module 'py4j.java_gateway' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/py4j/java_gateway.py'>,cmd_local
-module,py4j.protocol,<module 'py4j.protocol' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/py4j/protocol.py'>,cmd_local
-module,py4j.signals,<module 'py4j.signals' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/py4j/signals.py'>,cmd_local
-module,py4j.version,<module 'py4j.version' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/py4j/version.py'>,cmd_local
-module,pydoc,<module 'pydoc' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pydoc.py'>,cmd_local
-module,pyspark,<module 'pyspark' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/__init__.py'>,cmd_local
-module,pyspark._globals,<module 'pyspark._globals' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/_globals.py'>,cmd_local
-module,pyspark.accumulators,<module 'pyspark.accumulators' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/accumulators.py'>,cmd_local
-module,pyspark.broadcast,<module 'pyspark.broadcast' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/broadcast.py'>,cmd_local
-module,pyspark.cloudpickle,<module 'pyspark.cloudpickle' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/cloudpickle.py'>,cmd_local
-module,pyspark.conf,<module 'pyspark.conf' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/conf.py'>,cmd_local
-module,pyspark.context,<module 'pyspark.context' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/context.py'>,cmd_local
-module,pyspark.files,<module 'pyspark.files' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/files.py'>,cmd_local
-module,pyspark.find_spark_home,<module 'pyspark.find_spark_home' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/find_spark_home.py'>,cmd_local
-module,pyspark.heapq3,<module 'pyspark.heapq3' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/heapq3.py'>,cmd_local
-module,pyspark.java_gateway,<module 'pyspark.java_gateway' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/java_gateway.py'>,cmd_local
-module,pyspark.join,<module 'pyspark.join' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/join.py'>,cmd_local
-module,pyspark.profiler,<module 'pyspark.profiler' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/profiler.py'>,cmd_local
-module,pyspark.rdd,<module 'pyspark.rdd' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/rdd.py'>,cmd_local
-module,pyspark.rddsampler,<module 'pyspark.rddsampler' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/rddsampler.py'>,cmd_local
-module,pyspark.resultiterable,<module 'pyspark.resultiterable' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/resultiterable.py'>,cmd_local
-module,pyspark.serializers,<module 'pyspark.serializers' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/serializers.py'>,cmd_local
-module,pyspark.shuffle,<module 'pyspark.shuffle' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/shuffle.py'>,cmd_local
-module,pyspark.sql,<module 'pyspark.sql' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/sql/__init__.py'>,cmd_local
-module,pyspark.sql.catalog,<module 'pyspark.sql.catalog' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/sql/catalog.py'>,cmd_local
-module,pyspark.sql.column,<module 'pyspark.sql.column' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/sql/column.py'>,cmd_local
-module,pyspark.sql.conf,<module 'pyspark.sql.conf' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/sql/conf.py'>,cmd_local
-module,pyspark.sql.context,<module 'pyspark.sql.context' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/sql/context.py'>,cmd_local
-module,pyspark.sql.dataframe,<module 'pyspark.sql.dataframe' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/sql/dataframe.py'>,cmd_local
-module,pyspark.sql.group,<module 'pyspark.sql.group' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/sql/group.py'>,cmd_local
-module,pyspark.sql.readwriter,<module 'pyspark.sql.readwriter' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/sql/readwriter.py'>,cmd_local
-module,pyspark.sql.session,<module 'pyspark.sql.session' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/sql/session.py'>,cmd_local
-module,pyspark.sql.streaming,<module 'pyspark.sql.streaming' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/sql/streaming.py'>,cmd_local
-module,pyspark.sql.types,<module 'pyspark.sql.types' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/sql/types.py'>,cmd_local
-module,pyspark.sql.udf,<module 'pyspark.sql.udf' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/sql/udf.py'>,cmd_local
-module,pyspark.sql.utils,<module 'pyspark.sql.utils' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/sql/utils.py'>,cmd_local
-module,pyspark.sql.window,<module 'pyspark.sql.window' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/sql/window.py'>,cmd_local
-module,pyspark.statcounter,<module 'pyspark.statcounter' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/statcounter.py'>,cmd_local
-module,pyspark.status,<module 'pyspark.status' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/status.py'>,cmd_local
-module,pyspark.storagelevel,<module 'pyspark.storagelevel' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/storagelevel.py'>,cmd_local
-module,pyspark.taskcontext,<module 'pyspark.taskcontext' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/taskcontext.py'>,cmd_local
-module,pyspark.traceback_utils,<module 'pyspark.traceback_utils' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/traceback_utils.py'>,cmd_local
-module,pyspark.util,<module 'pyspark.util' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/util.py'>,cmd_local
-module,pyspark.version,<module 'pyspark.version' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pyspark/version.py'>,cmd_local
-module,queue,<module 'queue' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/queue.py'>,cmd_local
 module,random,<module 'random' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/random.py'>,cmd_local
 module,re,<module 're' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/re.py'>,cmd_local
 module,reprlib,<module 'reprlib' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/reprlib.py'>,cmd_local
-module,secrets,<module 'secrets' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/secrets.py'>,cmd_local
-module,select,<module 'select' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/select.cpython-37m-darwin.so'>,cmd_local
-module,selectors,<module 'selectors' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/selectors.py'>,cmd_local
-module,shlex,<module 'shlex' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/shlex.py'>,cmd_local
-module,shutil,<module 'shutil' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/shutil.py'>,cmd_local
-module,signal,<module 'signal' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/signal.py'>,cmd_local
 module,site,<module 'site' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site.py'>,cmd_local
-module,socket,<module 'socket' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py'>,cmd_local
-module,socketserver,<module 'socketserver' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py'>,cmd_local
 module,sre_compile,<module 'sre_compile' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/sre_compile.py'>,cmd_local
 module,sre_constants,<module 'sre_constants' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/sre_constants.py'>,cmd_local
 module,sre_parse,<module 'sre_parse' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/sre_parse.py'>,cmd_local
 module,stat,<module 'stat' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/stat.py'>,cmd_local
-module,string,<module 'string' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/string.py'>,cmd_local
-module,struct,<module 'struct' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/struct.py'>,cmd_local
-module,subprocess,<module 'subprocess' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/subprocess.py'>,cmd_local
 module,sys,<module 'sys' (built-in)>,cmd_local
-module,tempfile,<module 'tempfile' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/tempfile.py'>,cmd_local
 module,textwrap,<module 'textwrap' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/textwrap.py'>,cmd_local
-module,threading,<module 'threading' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py'>,cmd_local
-module,time,<module 'time' (built-in)>,cmd_local
 module,token,<module 'token' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/token.py'>,cmd_local
 module,tokenize,<module 'tokenize' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/tokenize.py'>,cmd_local
 module,toolz,<module 'toolz' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/__init__.py'>,cmd_local
@@ -363,23 +145,13 @@ module,toolz.sandbox,<module 'toolz.sandbox' from '/Users/wmcabee/_NBC/nbc_analy
 module,toolz.sandbox.core,<module 'toolz.sandbox.core' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/sandbox/core.py'>,cmd_local
 module,toolz.sandbox.parallel,<module 'toolz.sandbox.parallel' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/sandbox/parallel.py'>,cmd_local
 module,toolz.utils,<module 'toolz.utils' from '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/toolz/utils.py'>,cmd_local
-module,traceback,<module 'traceback' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/traceback.py'>,cmd_local
 module,types,<module 'types' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/types.py'>,cmd_local
-module,unittest,<module 'unittest' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/__init__.py'>,cmd_local
-module,unittest.case,<module 'unittest.case' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py'>,cmd_local
-module,unittest.loader,<module 'unittest.loader' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/loader.py'>,cmd_local
-module,unittest.main,<module 'unittest.main' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/main.py'>,cmd_local
-module,unittest.result,<module 'unittest.result' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/result.py'>,cmd_local
-module,unittest.runner,<module 'unittest.runner' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/runner.py'>,cmd_local
-module,unittest.signals,<module 'unittest.signals' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/signals.py'>,cmd_local
-module,unittest.suite,<module 'unittest.suite' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/suite.py'>,cmd_local
-module,unittest.util,<module 'unittest.util' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/util.py'>,cmd_local
 module,urllib,<module 'urllib' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/__init__.py'>,cmd_local
 module,urllib.parse,<module 'urllib.parse' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/parse.py'>,cmd_local
 module,warnings,<module 'warnings' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/warnings.py'>,cmd_local
-module,weakref,<module 'weakref' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/weakref.py'>,cmd_local
 module,zipimport,<module 'zipimport' (built-in)>,cmd_local
-module,zlib,<module 'zlib' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/zlib.cpython-37m-darwin.so'>,cmd_local
+path,_hashlib,/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_hashlib.cpython-37m-darwin.so,cmd_local
 path,cwd,/Users/wmcabee/_NBC/nbc_analysis/ana/import_error,cmd_local
-sys,executable,/Users/wmcabee/_NBC/nbc_analysis/venv/bin/python,cmd_local
+sys,executable,/Users/wmcabee/_NBC/nbc_analysis/venv/bin/python3,cmd_local
+sys,path,"['/Users/wmcabee/_NBC/nbc_analysis/ana/import_error', '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python37.zip', '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7', '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload', '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages', '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/setuptools-39.1.0-py3.7.egg', '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pip-10.0.1-py3.7.egg', '/Users/wmcabee/_NBC/nbc_analysis/src']",cmd_local
 sys,script,./import_test.py,cmd_local

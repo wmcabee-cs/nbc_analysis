@@ -7,11 +7,11 @@ environ,CONDA_ENV,cortex-package-utils,notebook_spark
 environ,CORTEX_BASE_DOMAIN,cortex-dev.insights.ai,notebook_spark
 environ,DATA_TOP,/Users/wmcabee/DATA,notebook_spark
 environ,GIT_PAGER,cat,notebook_spark
-environ,HISTFILE,/Users/wmcabee/Library/Preferences/PyCharm2018.3/terminal/history/history-1266,notebook_spark
+environ,HISTFILE,/Users/wmcabee/Library/Preferences/PyCharm2018.3/terminal/history/history-1375,notebook_spark
 environ,HOME,/Users/wmcabee,notebook_spark
 environ,JAVA_HOME,/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home,notebook_spark
-environ,JAVA_MAIN_CLASS_10919,org.apache.spark.deploy.SparkSubmit,notebook_spark
-environ,JPY_PARENT_PID,10876,notebook_spark
+environ,JAVA_MAIN_CLASS_64139,org.apache.spark.deploy.SparkSubmit,notebook_spark
+environ,JPY_PARENT_PID,20567,notebook_spark
 environ,KERNEL_LAUNCH_TIMEOUT,40,notebook_spark
 environ,LC_CTYPE,en_US.UTF-8,notebook_spark
 environ,LOGNAME,wmcabee,notebook_spark
@@ -23,27 +23,23 @@ environ,NVM_BIN,/Users/wmcabee/.nvm/versions/node/v8.15.0/bin,notebook_spark
 environ,NVM_CD_FLAGS,,notebook_spark
 environ,NVM_DIR,/Users/wmcabee/.nvm,notebook_spark
 environ,PAGER,cat,notebook_spark
-environ,PATH,/Users/wmcabee/_NBC/nbc_analysis/venv/bin:/usr/local/Cellar/pyenv/1.2.13/libexec:/Users/wmcabee/.pyenv/plugins/python-build/bin:/Users/wmcabee/.pyenv/plugins/pyenv-virtualenv/bin:/Users/wmcabee/.pyenv/plugins/pyenv-update/bin:/Users/wmcabee/.pyenv/plugins/pyenv-installer/bin:/Users/wmcabee/.pyenv/plugins/pyenv-doctor/bin:/Users/wmcabee/_NBC/nbc_analysis/venv/bin:/Users/wmcabee/.pyenv/plugins/pyenv-virtualenv/shims:/Users/wmcabee/.pyenv/shims:/Users/wmcabee/.pyenv/bin:/Users/wmcabee/.pyenv/shims:/Users/wmcabee/.nvm/versions/node/v8.15.0/bin:/usr/local/bin/pyton/3.7.4/bin:/Users/wmcabee/opt/spark/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin,notebook_spark
+environ,PATH,/Users/wmcabee/_NBC/nbc_analysis/venv/bin:/Users/wmcabee/.pyenv/plugins/pyenv-virtualenv/shims:/Users/wmcabee/.pyenv/shims:/Users/wmcabee/.pyenv/bin:/Users/wmcabee/.pyenv/shims:/Users/wmcabee/.nvm/versions/node/v8.15.0/bin:/usr/local/bin/pyton/3.7.4/bin:/Users/wmcabee/opt/spark/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin,notebook_spark
 environ,PWD,/Users/wmcabee/_NBC/nbc_analysis/tests/test_app_io/clickstream_events,notebook_spark
-environ,PYENV_DIR,/Users/wmcabee/_NBC/nbc_analysis,notebook_spark
-environ,PYENV_HOOK_PATH,/Users/wmcabee/.pyenv/pyenv.d:/usr/local/Cellar/pyenv/1.2.13/pyenv.d:/usr/local/etc/pyenv.d:/etc/pyenv.d:/usr/lib/pyenv/hooks:/Users/wmcabee/.pyenv/plugins/pyenv-virtualenv/etc/pyenv.d:/Users/wmcabee/.pyenv/plugins/pyenv-which-ext/etc/pyenv.d,notebook_spark
-environ,PYENV_ROOT,/Users/wmcabee/.pyenv,notebook_spark
 environ,PYENV_SHELL,bash,notebook_spark
-environ,PYENV_VERSION,system,notebook_spark
 environ,PYENV_VIRTUALENV_INIT,1,notebook_spark
 environ,PYSPARK_DRIVER_PYTHON,/Users/wmcabee/_NBC/nbc_analysis/venv/bin/python3,notebook_spark
 environ,PYSPARK_PYTHON,/Users/wmcabee/_NBC/nbc_analysis/venv/bin/python3,notebook_spark
 environ,PYTHONHASHSEED,0,notebook_spark
 environ,PYTHONPATH,/Users/wmcabee/opt/spark/python/lib/pyspark.zip:/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip:/Users/wmcabee/opt/spark-2.4.4/jars/spark-core_2.11-2.4.4.jar,notebook_spark
 environ,PYTHONUNBUFFERED,YES,notebook_spark
-environ,PYTHON_WORKER_FACTORY_SECRET,d53256a929873b15147513a5de1dd4bf8b011377e47050f7917eec3482ea7975,notebook_spark
+environ,PYTHON_WORKER_FACTORY_SECRET,cba78392c362d7ac452fa2adbc88f6452e42f28f8675de49313cf043896f7458,notebook_spark
 environ,SHELL,/bin/bash,notebook_spark
 environ,SHLVL,1,notebook_spark
 environ,SKILL_LAB_D,/tmp/skill-lab,notebook_spark
 environ,SPARK_CONF_DIR,/Users/wmcabee/opt/spark/conf,notebook_spark
 environ,SPARK_ENV_LOADED,1,notebook_spark
 environ,SPARK_HOME,/Users/wmcabee/opt/spark,notebook_spark
-environ,SPARK_LOCAL_DIRS,/private/var/folders/zg/vyq842cx20s66ytjhf0bl43dxzgtx0/T/blockmgr-b543fc72-7c02-4f5a-b6dd-0789f30a43b4,notebook_spark
+environ,SPARK_LOCAL_DIRS,/private/var/folders/zg/vyq842cx20s66ytjhf0bl43dxzgtx0/T/blockmgr-211fc588-a1b7-47ee-af04-3fe50b824c99,notebook_spark
 environ,SPARK_LOCAL_IP,127.0.0.1,notebook_spark
 environ,SPARK_REUSE_WORKER,1,notebook_spark
 environ,SPARK_SCALA_VERSION,2.12,notebook_spark
@@ -55,9 +51,9 @@ environ,USER,wmcabee,notebook_spark
 environ,VIRTUAL_ENV,/Users/wmcabee/_NBC/nbc_analysis/venv,notebook_spark
 environ,XPC_FLAGS,0x0,notebook_spark
 environ,XPC_SERVICE_NAME,0,notebook_spark
-environ,_PYSPARK_DRIVER_CONN_INFO_PATH,/var/folders/zg/vyq842cx20s66ytjhf0bl43dxzgtx0/T/tmpaxbdm4_e/tmp6081mjwq,notebook_spark
+environ,_PYSPARK_DRIVER_CONN_INFO_PATH,/var/folders/zg/vyq842cx20s66ytjhf0bl43dxzgtx0/T/tmp6j0eqcso/tmp4e5rjiqx,notebook_spark
 environ,__CF_USER_TEXT_ENCODING,0x7BF7EBA0:0x0:0x0,notebook_spark
-environ,__INTELLIJ_COMMAND_HISTFILE__,/Users/wmcabee/Library/Preferences/PyCharm2018.3/terminal/history/history-1266,notebook_spark
+environ,__INTELLIJ_COMMAND_HISTFILE__,/Users/wmcabee/Library/Preferences/PyCharm2018.3/terminal/history/history-1375,notebook_spark
 environ,__PYVENV_LAUNCHER__,/Users/wmcabee/_NBC/nbc_analysis/venv/bin/python3,notebook_spark
 module,__future__,<module '__future__' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/__future__.py'>,notebook_spark
 module,__main__,<module 'pyspark.daemon' from '/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/daemon.py'>,notebook_spark
@@ -400,6 +396,8 @@ module,warnings,<module 'warnings' from '/usr/local/Cellar/python/3.7.4/Framewor
 module,weakref,<module 'weakref' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/weakref.py'>,notebook_spark
 module,zipimport,<module 'zipimport' (built-in)>,notebook_spark
 module,zlib,<module 'zlib' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/zlib.cpython-37m-darwin.so'>,notebook_spark
+path,_hashlib,/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_hashlib.cpython-37m-darwin.so,notebook_spark
 path,cwd,/Users/wmcabee/_NBC/nbc_analysis/tests/test_app_io/clickstream_events,notebook_spark
 sys,executable,/Users/wmcabee/_NBC/nbc_analysis/venv/bin/python3,notebook_spark
+sys,path,"['/Users/wmcabee/_NBC/nbc_analysis/tests/test_app_io/clickstream_events', '/private/var/folders/zg/vyq842cx20s66ytjhf0bl43dxzgtx0/T/spark-72b3bbe2-3a13-45c5-98a1-e750b3c54e10/userFiles-2d9fa871-86a0-4d0b-a05e-cb4ad281306a', '/Users/wmcabee/opt/spark/python/lib/pyspark.zip', '/Users/wmcabee/opt/spark/python/lib/py4j-0.10.7-src.zip', '/Users/wmcabee/opt/spark-2.4.4/jars/spark-core_2.11-2.4.4.jar', '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python37.zip', '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7', '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload', '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages', '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/setuptools-39.1.0-py3.7.egg', '/Users/wmcabee/_NBC/nbc_analysis/venv/lib/python3.7/site-packages/pip-10.0.1-py3.7.egg', '/Users/wmcabee/_NBC/nbc_analysis/src']",notebook_spark
 sys,script,/Users/wmcabee/opt/spark/python/lib/pyspark.zip/pyspark/daemon.py,notebook_spark
