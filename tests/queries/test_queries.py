@@ -24,6 +24,6 @@ def test_queries_traveler():
 
 def test_query_detail():
     mpid = MULTI_GENRES_MPID
-    mpid = TRAVELER_MPID
+    #mpid = TRAVELER_MPID
     config = _get_config()
     return query_detail(config=config, mpid=mpid)
